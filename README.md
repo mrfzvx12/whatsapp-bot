@@ -90,10 +90,9 @@ and done
 - [x] Group Setting
 - [x] Antidelete group
 - [x] Antilink group
-- [x] Wellcome image
 - [x] On/Of Command in group
 - [x] Game
-- [x] Don't use apikey to rest api
+- [x] Make sticker with image/video/gif
 - [x] And much more
 
 ### WhatsApp Group
