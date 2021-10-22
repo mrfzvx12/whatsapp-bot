@@ -126,3 +126,5 @@ For more detailed information, please contact me via social media below:
 ![Dcode-denpa](https://github.com/dcode-denpa.png?size=70)[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=dcode-denpa&repo=bitch-boot&theme=buefy)](https://github.com/dcode-denpa/bitch-boot)
 
 </details>
+
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=mrfzvx12&show_icons=true&hide_border=true&&count_private=true&include_all_commits=true" />
