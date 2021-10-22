@@ -121,4 +121,4 @@ For more detailed information, please contact me via social media below:
 
 ![Mhankbarbar](https://github.com/MhankBarBar.png?size=70)[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=MhankBarBar&repo=weabot&theme=buefy)](https://github.com/MhankBarBar/weabot)
 
-![Dcode-denpa](https://github.com/MhankBarBar.png?size=70)[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=dcode-denpa&repo=bitch-boot&theme=buefy)](https://github.com/dcode-denpa/bitch-boot)
+![Dcode-denpa](https://github.com/dcode-denpa.png?size=70)[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=dcode-denpa&repo=bitch-boot&theme=buefy)](https://github.com/dcode-denpa/bitch-boot)
