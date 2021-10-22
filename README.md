@@ -84,7 +84,9 @@ and done
 
 ## Feature
 
-- [x] Multilingual, For now there is only English and Indonesian
+- [x] Multilingual
+  - English
+  - Indonesian
 - [x] Group Setting
 - [x] Antidelete group
 - [x] Antilink group
