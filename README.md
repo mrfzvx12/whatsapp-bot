@@ -93,7 +93,7 @@ and done
 - [x] On/Of Command in group
 - [x] Game
 - [x] Make sticker with image/video/gif
-- [x] And much more
+- [ ] And much more
 
 ### WhatsApp Group
 
