@@ -30,7 +30,7 @@ For now bots can run using the termux application, You can download it here [Dow
 
 After downloading, make sure everything is in the latest version, use 
 ```bash 
-- apt update -y && apt upgrade -y
+• apt update -y && apt upgrade -y
 ```
 For perfect results you must have the original version of the WhatsApp application, it is not recommended to use the WhatsApp business application
 
