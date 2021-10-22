@@ -48,18 +48,18 @@ Make sure everything is in good condition
 
 First, install
 ```bash
-- pkg install git
-- pkg install ffmpeg
-- pkg install nodejs
+• pkg install git
+• pkg install ffmpeg
+• pkg install nodejs
 ```
 
 For all questions in installation just select y
 
 If everything has been confirmed to be safe and installed, continue with the clone repo
 ```bash
-- git clone https://github.com/mrfzvx12/whatsapp-bot
-- cd whatsapp-bot
-- bash install.sh
+• git clone https://github.com/mrfzvx12/whatsapp-bot
+• cd whatsapp-bot
+• bash install.sh
 ```
 For all questions in installation just select y
 
@@ -75,7 +75,7 @@ Default :
 ```
 Save settings and proceed to the last stage
 ```bash
-- npm start
+• npm start
 ```
 When the QR appears, scan it using the WhatsApp application that will be used for bot
 and done
@@ -95,7 +95,7 @@ and done
 - [x] And much more
 
 ### WhatsApp Group
-If in doubt, before installing, try the bot here first
+
 <p>
 <a href="https://chat.whatsapp.com/JqgBJHtYHgZ2SuR36aDDCo" target="blank"><img src="https://img.shields.io/badge/Im Lexa-30302f?style=flat&logo=whatsapp" /></a>
 </p>
