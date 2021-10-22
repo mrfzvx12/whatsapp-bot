@@ -97,7 +97,7 @@ and done
 ### WhatsApp Group
 
 <p>
-<a href="https://chat.whatsapp.com/JqgBJHtYHgZ2SuR36aDDCo" target="blank"><img src="https://img.shields.io/badge/Im Lexa-30302f?style=flat&logo=whatsapp" /></a>
+<a href="https://chat.whatsapp.com/JqgBJHtYHgZ2SuR36aDDCo" target="blank"><img src="https://img.shields.io/badge/WhatsApp Bot Group-30302f?style=flat&logo=whatsapp" /></a>
 </p>
 
 ### Contact
