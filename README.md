@@ -129,11 +129,8 @@ For more detailed information, please contact me via social media below:
 
 ### Github Stats
 
-[![Sourav Dey's Blog Cards](https://github-cards-external-blogs.souravdey777.vercel.app/getMediumBlogs?username=marufmaarij0612&type=horizontal)](https://medium.com/@marufmaarij0612)
-
 <img height="180em" src="https://github-readme-stats.vercel.app/api?username=mrfzvx12&show_icons=true&hide_border=true&&count_private=true&include_all_commits=true" />
 
 
-
-### Code
+### Language
 <a href="https://github.com/mrfzvx12"><img src="https://img.shields.io/badge/JS-f5f542.svg?style=for-the-badge&logo=javascript&logoColor=f5f542&labelColor=ffffff" alt="javascript"></a>
