@@ -1,1 +1,21 @@
-
+{
+	"ownerNumber": [
+		"6282223014661@s.whatsapp.net",
+		"14073073082@s.whatsapp.net"
+	],
+	"nama": "WhatsApp Bot",
+	"author": "WhatsApp Bot Lexa ",
+	"packname": " @MrfZvx",
+	"wm": "Follow me on Instagram\nhttps://www.instagram.com/mrf.zvx",
+	"prefix": "/",
+	"listprefix": [
+		".",
+		"/",
+		"!",
+		"#"
+	],
+	"gameWaktu": 30000,
+	"poinGame": 100,
+	"poinAwal": 500,
+	"totalcommand": 242
+}
