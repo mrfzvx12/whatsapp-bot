@@ -1,2 +1,1 @@
-# whatsapp-bot
-WhatsApp bot using baileys
+<h3 align="center">MAINTENANCE</h3>
