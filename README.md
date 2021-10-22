@@ -26,7 +26,7 @@
 
 WhatsApp bot is a robot will reply your messages Automatically, WhatsApp bot connects with WhatsApp web using [@adiwajshing/baileys](https://github.com/adiwajshing/Baileys)
 
-For now bots can run using the termux application, You can download it here [⎙ Download](https://play.google.com/store/apps/details?id=com.termux) 
+For now bots can run using the termux application, You can download it here [⎙Download](https://play.google.com/store/apps/details?id=com.termux) 
 
 After downloading, make sure everything is in the latest version, use 
 ```bash 
