@@ -115,6 +115,8 @@ For more detailed information, please contact me via social media below:
 
 ### Some WhatsApp bots are recommended
 
-![Moo-d](https://github.com/Moo-d.png?size=70)[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=moo-d&repo=termux-whatsapp-bot&theme=buefy)](https://github.com/moo-d/termux-whatsapp-bot)!
+![Moo-d](https://github.com/Moo-d.png?size=70)[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=moo-d&repo=termux-whatsapp-bot&theme=buefy)](https://github.com/moo-d/termux-whatsapp-bot)
+
 ![Nurutomo](https://github.com/Nurutomo.png?size=70)[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=Nurutomo&repo=wabot-aq&theme=buefy)](https://github.com/Nurutomo/wabot-aq)
+
 ![Mhankbarbar](https://github.com/MhankBarBar.png?size=70)[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=MhankBarBar&repo=weabot&theme=buefy)](https://github.com/MhankBarBar/weabot)
