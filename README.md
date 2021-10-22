@@ -132,3 +132,5 @@ For more detailed information, please contact me via social media below:
 
 ### Code
 <a href="https://github.com/mrfzvx12"><img src="https://img.shields.io/badge/JS-f5f542.svg?style=for-the-badge&logo=javascript&logoColor=f5f542&labelColor=ffffff" alt="javascript"></a>
+
+[![Sourav Dey's Blog Cards](https://github-cards-external-blogs.souravdey777.vercel.app/getMediumBlogs?username=mrfzvx12&type=vertical)](https://www.github.com/mrfzvx12)
