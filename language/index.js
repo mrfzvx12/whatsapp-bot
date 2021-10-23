@@ -1,1 +1,2 @@
-// Not yet
+exports.ind = require('./id')
+exports.eng = require('./en')
