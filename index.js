@@ -566,6 +566,36 @@ try {
         });
         break;
 
+  case 'upsw':
+    const colors = [
+    0xff26c4dc, 0xff792138,
+    0xff8b6990, 0xfff0b330,
+    0xffae8774, 0xff5696ff,
+    0xffff7b6b, 0xff57c9ff,
+    0xff243640, 0xffb6b327,
+    0xffc69fcc, 0xff54c265,
+    0xff6e257e, 0xffc1a03f,
+    0xff90a841, 0xff7acba5,
+    0xff8294ca, 0xffa62c71,
+    0xffff8a8c, 0xff7e90a3,
+    0xff74676a
+]
+    let _m = Promise.resolve({ key: { id: '' }})
+    if (!m.quoted && !value) m.reply('reply pesan atau sebagai argumen')
+    if (m.quoted && m.quoted.mtype !== 'conversation' && !value) _m = m.quoted.forward('status@broadcast')
+    if (m.quoted && m.quoted.mtype === 'conversation' && !value) _m = client.sendMessage('status@broadcast', {
+        text: m.quoted.text,
+        textArgb: 0xffffffff,
+        backgroundArgb: pickRandom(colors)
+    }, 'extendedTextMessage')
+    if (!m.quoted && value) _m =client.sendMessage('status@broadcast', {
+        value,
+        textArgb: 0xffffffff,
+        backgroundArgb: pickRandom(colors)
+    }, 'extendedTextMessage')
+    if (m.quoted && value) _m = client.forwardMessage('status@broadcast', await m.quoted.cMod('status@broadcast', value))
+    m.reply((await _m).key.id)
+    break
   case 'hidetag':
   case 'notif':
         if(!isOwner && !isAdmins) return m.reply(msg.admin)
@@ -972,7 +1002,8 @@ try {
     }
 
 // game answer
-   if (!m.quoted || !m.quoted.fromMe || !m.quoted.isBaileys || !m.quoted.text) return
+   if (!m.quoted || !m.quoted.fromMe || !m.quoted.isBaileys || !m.quoted.text) return 
+   if (!(from in client.game)) return
     if (m.quoted.from == client.game[from][0].from) {
         let json = JSON.parse(JSON.stringify(client.game[from][1]))
         if (m.text.toLowerCase() == json.jawaban.toLowerCase().trim()) {
