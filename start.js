@@ -5,7 +5,7 @@ let fs = require('fs')
 let package = require('./package.json')
 const CFonts  = require('cfonts')
 CFonts.say(`'${package.name}' By @${package.author.name || package.author}`, {
-  font: 'console',
+  font: 'pallet',
   align: 'center',
   colors: ['green'],
 });
