@@ -10,6 +10,7 @@ exports.admin = 'Sorry, this command can only be run by group admins';
 exports.group = 'Sorry, this command can only be run in groups';
 exports.premium = 'Sorry, this command can only be used by premium users';
 exports.botadmin = 'This command can be used when the bot becomes admin';
+exports.owner = 'This command can be used by owner bots';
 exports.isprem = 'User is the previous premium user';
 exports.noprem = 'The user is not yet a premium user';
 exports.ban = 'User status has been banned before';
