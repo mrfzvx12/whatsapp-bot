@@ -1003,7 +1003,7 @@ try {
 
 // game answer
    if (!m.quoted || !m.quoted.fromMe || !m.quoted.isBaileys || !m.quoted.text) return 
-   if (!(from in client.game)) return
+   if (!client.game) return
     if (m.quoted.from == client.game[from][0].from) {
         let json = JSON.parse(JSON.stringify(client.game[from][1]))
         if (m.text.toLowerCase() == json.jawaban.toLowerCase().trim()) {
