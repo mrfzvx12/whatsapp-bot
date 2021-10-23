@@ -174,55 +174,6 @@ const getRandom = (ext) => {
 	return `${Math.floor(Math.random() * 10000)}${ext}`;
 };
 
-const spinner = { 
-  "interval": 120,
-  "frames":  [
-"-           ",
-"--          ",
-"---         ",
-"----        ",
-"-----       ",
-"------      ",
-"-------     ",
-"--------    ",
-"---------   ",
-"----------  ",
-"----------- ",
-"------------",
-  ]};
-let globalSpinner;
-
-const getGlobalSpinner = (disableSpins = false) => {
-  if(!globalSpinner) globalSpinner = new spin({ color: 'blue', succeedColor: 'green', spinner, disableSpins});
-  return globalSpinner;
-};
-
-spins = getGlobalSpinner(false);
-
-const start = (id, text) => {
-  spins.add(id, {text: text});
-};
-	       
-const info = (id, text) => {
-  spins.update(id, {text: text});
-};
-        
-const success = (id, text) => {
-  spins.succeed(id, {text: text});
-};
-
-const fail = (id, text) => {
-  spins.fail(id, {text: text});
-};
- 
-const banner = cfonts.render((`Bot Whatsapp`), {
-  font: 'chrome',
-  color: 'candy',
-  align: 'center',
-  gradient: ["red","magenta"],
-  lineHeight: 3
-});
-
 module.exports = { 
   getBuffer, 
   createExif,
@@ -232,12 +183,7 @@ module.exports = {
   pickRandom,
   generateMessageID, 
   getGroupAdmins, 
-  getRandom, 
-  start, 
-  info, 
-  success, 
-  banner, 
-  fail, 
+  getRandom,
   kyun,
   time,
   WIB,
@@ -250,4 +196,3 @@ module.exports = {
   waktu,
   tanggal
 }
-;

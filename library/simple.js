@@ -710,6 +710,7 @@ END:VCARD
             },
           },
         },
+        contextInfo: { mentionedJid: this.parseMention(teks) }
       });
     };
     /**
