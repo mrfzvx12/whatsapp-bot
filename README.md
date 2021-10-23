@@ -57,7 +57,7 @@ If everything has been confirmed to be safe and installed, continue with the clo
 ```bash
 • git clone https://github.com/mrfzvx12/whatsapp-bot
 • cd whatsapp-bot
-• bash install.sh
+• npm i
 ```
 For all questions in installation just select y
 
