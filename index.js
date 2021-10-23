@@ -124,7 +124,7 @@ const {
 } = require('./functions/setting-bot'); // mengubah data dalam ./database/setting-bot
 const { msgFilter } = require('./functions/antispam')
 const { menu } = require('./functions/menu'); // tampilan menu dalam functions/menu
-const { ind, eng, sund } = require('./language/index');
+const { ind, eng } = require('./language/index');
 
 // functions dalam ./functions/setting-bot
 let ownerNumber = st.ownerNumber; // nomor owner
