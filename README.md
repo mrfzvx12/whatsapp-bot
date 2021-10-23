@@ -1,5 +1,3 @@
-<h3 align="center">MAINTENANCE</h3>
-
 <p align="center">
 <a href="https://github.com/mrfzvx12"><img title="mrfzvx12" src="https://img.shields.io/badge/github-Mrfzvx12-orange.svg?style=social&logo=github"></a>
 </p>
@@ -90,7 +88,7 @@ and done
 - [x] Group Setting
 - [x] Antidelete group
 - [x] Antilink group
-- [x] On/Of Command in group
+- [x] On/Off Command in group
 - [x] Game
 - [x] Make sticker with image/video/gif
 - [ ] And much more
