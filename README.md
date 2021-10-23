@@ -80,6 +80,30 @@ and done
 
 ***
 
+### Send Message
+Example
+
+Send message
+```javascript
+const { text } = MessageType
+teks = 'Hello world'
+client.sendMessage(from, teks, text)
+```
+
+Send message with reply
+```bash
+m.reply('Hello world')
+```
+
+Send Button message
+```bash
+text = 'Hello world'
+desk = 'Click button'
+button = 'Click here'
+row = 'This button'
+client.sendButton(from, text, desk, button, row)
+```
+
 ## Feature
 
 - [x] Multilingual
