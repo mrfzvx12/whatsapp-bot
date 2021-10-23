@@ -271,8 +271,8 @@ module.exports = client = async (client, mek) => {
     if (isCmd && !isOwner) msgFilter.addFilter(from)
 
 
-if (budy && isCmd) addUser(sender); // menambah informasi user kedalam database
-if (budy && isCmd) addGroup(from); // menambah informasi group kedalam database
+if (budy) addUser(sender); // menambah informasi user kedalam database
+if (budy) addGroup(from); // menambah informasi group kedalam database
 if (isCmd) addCmd() // menambah jumlah total command ketika user menggunakan command
 if (isCmd) addPoin(sender); // menambah poin user ketika menggunakan command
 
