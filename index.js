@@ -385,7 +385,7 @@ try {
       hasil = lxa.hacker()
     }
     capt = "‣ *"+command.toUpperCase()+"*\n"+hasil
-    client.sendButton(from, capt, msg.next(command), 'Next', '.truth')
+    client.sendButton(from, capt, msg.next(command), 'Next', prefix+command)
     break
     
   case 'fitnah':
