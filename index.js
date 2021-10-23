@@ -780,22 +780,20 @@ try {
     if(!isOwner) return m.reply(msg.owner)
     //if(!dia) return m.reply(msg.notag)
     users = value.replace(/[^0-9]/g, '')+"@s.whatsapp.net"
-    if(!value) {
-      users = dia
-    }
+    user = dia ? dia : users
     try {
-    response = await client.groupAdd(from, [users])
+    response = await client.groupAdd(from, [user])
     v = response.participants[0]
     invit = (Object.values(v))
     if(invit[0].code == 409) return m.reply(msg.onwa)
     else if(invit[0].code == 403){
-    capt = msg.sendlink+"@"+users.split('@')[0]
+    capt = msg.sendlink+"@"+user.split('@')[0]
     m.reply(capt, null, {
           contextInfo: {
             mentionedJid: client.parseMention(capt),
           },
         });
-    client.sendGroupV4Invite(from, users, invit[0].invite_code, invit[0].invite_code_exp, groupMetadata.subject , `Invite you, to join a group`)
+    client.sendGroupV4Invite(from, user, invit[0].invite_code, invit[0].invite_code_exp, groupMetadata.subject , `Invite you, to join a group`)
     }
     } catch (e) {
       m.reply(msg.nonum)
