@@ -259,7 +259,7 @@ module.exports = client = async (client, mek) => {
   
 // console log pesan tanpa command
     if (!isCmd && !mek.key.fromMe && !mek.isBaileys) {
-      console.log("‣", bgcolor('Message','grey'));
+      console.log("‣", bgcolor('Message','magenta'));
       console.log(" From :", color(pushname, "yellow"), "Tanggal :", bgcolor(tanggal, 'grey'));
       console.log(" Message :", color(budy, "orange"), "MessageType :", bgcolor(type, "orange"));
     }
