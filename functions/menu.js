@@ -71,6 +71,7 @@ exports.menu = () => {
 ├ delpremium @user
 ├ banned @user
 ├ unbanned @user
+├ upsw
 ├ $
 ├ >
 ╰────────`;
