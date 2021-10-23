@@ -10,6 +10,7 @@ exports.admin = 'Maaf, perintah ini hanya dapat dijalankan oleh admin group';
 exports.group = 'Maaf, perintah ini hanya dapat dijalankan dalam group';
 exports.premium = 'Maaf, perintah ini hanya dapat digunakan oleh user premium';
 exports.botadmin = 'Perintah ini bisa digunakan ketika bot menjadi admin';
+exports.owner = 'Perintah ini bisa digunakan owner bot';
 exports.isprem = 'User adalah user premium sebelumnya';
 exports.noprem = 'User belum menjadi user premium';
 exports.ban = 'Status user sudah di banned sebelumnya';
