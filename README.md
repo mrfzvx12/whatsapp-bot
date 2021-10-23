@@ -91,12 +91,12 @@ client.sendMessage(from, teks, text)
 ```
 
 Send message with reply
-```bash
+```javascript
 m.reply('Hello world')
 ```
 
 Send Button message
-```bash
+```javascript
 text = 'Hello world'
 desk = 'Click button'
 button = 'Click here'
