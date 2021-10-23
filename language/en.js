@@ -17,7 +17,8 @@ exports.noban = 'User does not have banned status';
 exports.isadmin = 'Bot can\'t log admin';
 // -- text
 exports.notag = 'Tag a group member';
-exports.notext = 'Please repeat by adding text';
+exports.notext = 'Please repeat by adding textby'
+exports.nonum = 'Please repeat by adding the target number';
 exports.reply = 'Reply target message...';
 exports.replyStic = 'Reply message sticker...';
 exports.noreply = 'The message you replied to did not contain a reply';
