@@ -21,6 +21,7 @@ const addGroup = (id) => {
           badword: false,
           antidelete: false,
           detect: false,
+          viewOnce: false,
         };
         Group.push(obj);
         fs.writeFileSync('./database/group.json', JSON.stringify(Group, null, "\t"));

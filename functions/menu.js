@@ -62,6 +62,8 @@ exports.menu = () => {
 ├ antidelete off
 ├ detect on
 ├ detect off
+├ antilink on
+├ antilink off
 ╰────────
 ╭─⊷❲ *OWNER* ❳
 ├ join <link>
