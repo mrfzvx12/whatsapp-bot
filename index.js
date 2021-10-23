@@ -359,7 +359,8 @@ try {
   
   case 'owner':
   case 'author':
-    client.fakeStatus(from, `Nih owner ku @${sender.split('@')[0]}, chat aja kalo ada perlu`, 'Owner Bot', await getBuffer(pp))
+    number = '6282223014661@s.whatsapp.net'
+    client.fakeStatus(from, `Nih owner ku @${number.split('@')[0]}, chat aja kalo ada perlu`, 'Owner Bot', await getBuffer(pp))
     break
     
   case 'truth':
