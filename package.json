@@ -10,12 +10,6 @@
     "type": "git",
     "url": "git+https://github.com/mrfzvx12/whatsapp-bot.git"
   },
-  "keywords": [
-    "WhatsApp",
-    "WhatsApp-bot",
-    "Baileys",
-    "WhatsApp-web"
-  ],
   "dependencies": {
     "@adiwajshing/baileys": "^3.5.0",
     "@vitalets/google-translate-api": "^7.0.0",
@@ -63,7 +57,7 @@
     "yt-search": "^2.7.6"
   },
   "scripts": {
-    "start": "node start",
+    "start": "node start.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ma'ruf",
