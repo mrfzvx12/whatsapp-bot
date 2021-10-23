@@ -18,7 +18,7 @@ async function starts() {
 	client.version = [2, 2119, 6];
 	client.logger.level = 'warn';
 	client.on('qr', () => {
-	console.log(color('[QR]','white'), color('Scan untuk menyambung koneksi'));
+	console.log(color('[QR]','white'), color('Scan to establish connection'));
 	});
 
 	fs.existsSync('./whatsapp/sessions.json') && client.loadAuthInfo('./whatsapp/sessions.json');
