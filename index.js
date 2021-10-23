@@ -779,8 +779,7 @@ try {
     if(!isBotAdmins) return m.reply(msg.botadmin)
     if(!isOwner) return m.reply(msg.owner)
     //if(!dia) return m.reply(msg.notag)
-    users = value.replace(/[^0-9]/g, '')+"@s.whatsapp.net"
-    user = dia ? dia : users
+    user = value.replace(/[^0-9]/g, '')+"@s.whatsapp.net"
     try {
     response = await client.groupAdd(from, [user])
     v = response.participants[0]
