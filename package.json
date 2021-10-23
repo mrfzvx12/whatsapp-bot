@@ -1,5 +1,5 @@
 {
-  "name": "WhatsApp Bot Lexa ",
+  "name": "whatsapp-bot",
   "version": "0.0.1",
   "description": "WhatsApp Bot using Baileys",
   "main": "main.js",
