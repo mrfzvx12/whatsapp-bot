@@ -110,8 +110,8 @@ client.sendButton(from, text, desk, button, row)
   - English
   - Indonesian
 - [x] Group Setting
-- [x] Antidelete group
-- [x] Antilink group
+- [x] Antidelete
+- [x] Antilink
 - [x] On/Off Command in group
 - [x] Game
 - [x] Make sticker with image/video/gif
