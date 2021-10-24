@@ -33,9 +33,9 @@ const fs = require("fs");
 const similarity = require('similarity');
 const threshold = 0.72;
 const lxa = require('./result/index');
-
+const package = require('./package.json');
 // functions dalam library
-const simple = require('./library/simple');
+const simple = require('./whatsapp/connecting');
 const { color, bgcolor } = require('./library/color');
 const { 
   getBuffer,
@@ -351,7 +351,7 @@ try {
 `
     capt += readMore
     capt += menu()
-    client.send2ButtonLoc(from, await getBuffer(pp), capt, 'Total hit : 'isTotalcmd+'\n'+isWm, 'Menu', '.menu', 'Owner', '.owner')
+    client.send2ButtonLoc(from, await getBuffer(pp), capt, 'Total hit : 'isTotalcmd+'\n'+isWm, 'Info', '.info', 'Owner', '.owner')
     break
   
   case 'bahasa':
@@ -372,6 +372,54 @@ try {
     number = '6282223014661@s.whatsapp.net'
     client.fakeStatus(from, `Nih owner ku @${number.split('@')[0]}, chat aja kalo ada perlu`, 'Owner Bot', await getBuffer(pp))
     break
+    
+   case 'info':
+   const unread = await client.loadAllUnreadMessages ();
+   i = []
+   giid = []
+				for (mem of totalchat){
+					i.push(mem.jid)
+				}
+				for (id of i){
+					if (id && id.includes('g.us')){
+						giid.push(id)
+					}
+				}
+   uptime = process.uptime()
+   teks = `*INFORMASI*
+- Nama : ${client.user.name}
+- Versi Bot : ${package.version}
+- Author: ${package.author}
+- Speed : ${process.uptime()}
+- Runtime : ${kyun(uptime)}
+
+*WHATSAPP*
+- Kontak : ${Object.keys(client.contacts).length}
+- Total pesan : ${totalchat.length}
+- Personal Chat : ${totalchat.length - giid.length}
+- Total group : ${giid.length}
+- Pesan belum dibaca : ${unread.length}
+- Versi Wa : ${client.user.phone.wa_version}
+
+*DEVICE*
+- Baterai : ${baterai.baterai}%
+- Charge : ${baterai.cas === 'true' ? 'Charging' : 'Not charging'}
+- Device : ${device_manufacturer}
+- Versi OS : ${os_version}
+- Versi Device : ${device_model}
+- RAM : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
+- Browser : *${client.browserDescription[1]}*
+- Versi Browser : *${client.browserDescription[2]}*
+
+*OWNER*
+- Instagram : https://www.instagram.com/mrf.zvx
+- WhatsApp : wa.me/6282223014661
+
+*SCRIPT*
+- Git : ${package.homepage}
+- License : ${package.license}` 
+  client.fakeLink(from, teks, await getBuffer(pp), tanggal, 'https://www.instagram.com/mrf.zvx', mek)
+   break
     
   case 'truth':
   case 'dare':
