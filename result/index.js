@@ -1,5 +1,8 @@
 const fs = require('fs');
 
+// -- result download
+const { pinterest } = require('./download/pinterest_img');
+
 // new function
 function readfile(file) {
   return JSON.parse(fs.readFileSync(file));
@@ -55,5 +58,6 @@ module.exports = {
   ilham,
   fakta,
   gombal,
-  hacker
+  hacker,
+  pinterest
 };
