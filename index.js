@@ -990,7 +990,7 @@ break
     if (value.toLowerCase() === "on") {
       if(isWelcome === true ) return m.reply(msg.Thison(command.toUpperCase()))
       await addWelcome(from)
-      m.reply(msg.welcomeOn)
+      m.reply(msg.On(command.toUpperCase()))
     } else if (value.toLowerCase() === "off") {
       if(isWelcome === false ) return m.reply(msg.Thisoff(command.toUpperCase()))
       await delWelcome(from)
