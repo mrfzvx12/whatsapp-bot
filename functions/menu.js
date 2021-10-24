@@ -37,6 +37,17 @@ exports.menu = () => {
 ├ take <author>|<packname>
 ├ toimg
 ╰────────
+╭─⊷❲ *DATABASE* ❳
+├ addimg <text>
+├ addvid <text>
+├ addstik <text>
+├ addvn <text>
+├ getimg <text>
+├ getvid <text>
+├ getstik <text>
+├ getvn <text>
+├ listmedia
+╰────────
 ╭─⊷❲ *ADMIN* ❳
 ├ open
 ├ close
