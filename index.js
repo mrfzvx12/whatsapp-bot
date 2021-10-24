@@ -61,6 +61,16 @@ const {
 } = require('./library/functions');
 
 // functions
+
+const {
+  direc,
+  addImage,
+  addVideo,
+  addStiker,
+  addAudio
+} = require('./functions/directory');
+
+
 const { 
   User, 
   cekRegis,
@@ -597,6 +607,132 @@ try {
     if (m.quoted && value) _m = client.forwardMessage('status@broadcast', await m.quoted.cMod('status@broadcast', value))
     m.reply((await _m).key.id)
     break
+
+  case 'listmedia':
+   listimg = direc.image
+   listvid = direc.video
+   listaud = direc.audio
+   liststik = direc.sticker
+   teks = msg.liston+'\n'
+   teks += '╭─⊷❲ *IMAGE* ❳\n'
+   	for ( v of listimg) { 
+   	  teks += `├  ${v}\n`
+	  }
+	  teks += '╰────────\n'
+	  teks += '╭─⊷❲ *VIDEO* ❳\n'
+	  for ( x of listvid) { 
+   	  teks += `├  ${x}\n`
+	  }
+	  teks += '╰────────\n'
+	  teks += '╭─⊷❲ *AUDIO* ❳\n'
+	  for ( y of listaud) { 
+   	  teks += `├  ${y}\n`
+	  }
+	  teks += '╰────────\n'
+	  teks += '╭─⊷❲ *STICKER* ❳\n'
+	  for ( z of liststik) { 
+   	  teks += `├  ${z}\n`
+	  }
+	  teks += '╰────────\n'
+	  teks += msg.getlist
+	  m.reply(teks.trim())
+   break
+ 
+ case 'addimg':
+   if(!value) return m.reply(msg.notext)
+   if(isMedia || isQuotedImage) {
+     for ( i of direc.image) {
+        if(i === value.toLowerCase()) return m.reply(msg.packon)
+        }
+   q = m.quoted ? m.quoted : m 
+   let img = await q.download() 
+   fs.writeFileSync(`./database/media/image/${value.toLowerCase()}.jpeg`, img)
+   m.reply(msg.done)
+   await addImage(value.toLowerCase())
+   } else {
+     m.reply(msg.replyImg)
+   }
+   break
+
+ case 'getimg':
+   try { 
+     mage = fs.readFileSync(`./database/media/image/${value.toLowerCase()}.jpeg`) 
+     client.sendMessage(from, mage, image, { quoted: mek, caption: 'Result : database image' })
+     } catch {
+       m.reply(msg.packoff)
+     }
+     break
+
+ case 'addvid':
+   if(!value) return m.reply(msg.notext)
+   if(isMedia || isQuotedVideo) { 
+     for ( i of direc.video) {
+        if(i === value.toLowerCase()) return m.reply(msg.packon)
+        }
+   q = m.quoted ? m.quoted : m 
+   vid = await q.download()
+   fs.writeFileSync(`./database/media/video/${value.toLowerCase()}.mp4`, vid)
+   m.reply(msg.done)
+   await addVideo(value.toLowerCase())
+   } else {
+     m.reply(msg.replyVid)
+   }
+   break
+
+ case 'getvid':
+   try { 
+     vid = fs.readFileSync(`./database/media/video/${value.toLowerCase()}.mp4`) 
+     client.sendMessage(from, vid, video, { quoted: mek, caption: 'Result : database video' })
+     } catch {
+       m.reply(msg.packoff)
+     }
+     break
+
+
+ case 'addvn':
+   if(!isQuotedAudio) return m.reply(msg.replyVn)
+   if(!value) return m.reply(msg.notext)
+   for ( i of direc.audio) {
+        if(i === value.toLowerCase()) return m.reply(msg.packon)
+        }
+   q = m.quoted ? m.quoted : m 
+   let aud = await q.download()
+   fs.writeFileSync(`./database/media/audio/${value.toLowerCase()}.mp3`, aud)
+   m.reply(msg.done)
+   await addAudio(value.toLowerCase())
+   break
+
+ case 'getvn':
+   try { 
+     vn = fs.readFileSync(`./database/media/audio/${value.toLowerCase()}.mp3`) 
+     client.sendMessage(from, vn, audio, { quoted: mek, ptt: true})
+     } catch {
+       m.reply(msg.packoff)
+     }
+     break
+
+ case 'addstik':
+   if(!isQuotedSticker) return m.reply(msg.replyStic)
+   if (!value) return m.reply(msg.notext)
+   for ( i of direc.sticker) {
+        if(i === value.toLowerCase()) return m.reply(msg.packon)
+        }
+   q = m.quoted ? m.quoted : m 
+   let stic = await q.download()
+   fs.writeFileSync(`./database/media/sticker/${value.toLowerCase()}.webp`, stic) 
+   m.reply(msg.done)
+   await addStiker(value.toLowerCase())
+break
+
+ case 'getstik':
+   try { 
+     tik = fs.readFileSync(`./database/media/sticker/${value.toLowerCase()}.webp`) 
+     client.sendMessage(from, tik, sticker, { quoted: mek })
+     } catch {
+       m.reply(msg.packoff)
+     }
+     break
+
   case 'hidetag':
   case 'notif':
         if(!isOwner && !isAdmins) return m.reply(msg.admin)
