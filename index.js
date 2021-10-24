@@ -150,6 +150,11 @@ let isWm = st.wm; // wm ini di gunakan untuk deskripsi dalam button message
 let isTotalcmd = st.totalcommand; // informasi jumlah command yang di gunakan user 
 let pp = 'https://telegra.ph/file/7c0b1068736040b515d81.jpg'; // thumbnail button message
 
+let baterai = {
+    baterai: 0,
+    cas: false
+};
+
 module.exports = client = async (client, mek) => {
   try {
     if (!mek.hasNewMessage) return;
@@ -241,6 +246,14 @@ module.exports = client = async (client, mek) => {
      } else {
        prem = "No";
      }
+     
+// -- baterai
+client.on('CB:action,,battery', json => {
+	const a = json[2][0][1].value;
+	const b = json[2][0][1].live;
+	baterai.baterai = a;
+	baterai.cas = b;
+});
      
 // detected quoted 
      const isMedia = type === "imageMessage" || type === "videoMessage";
