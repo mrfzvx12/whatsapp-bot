@@ -11,7 +11,7 @@ const {
   cekDetect
 } = require('./functions/group');
 const fs = require("fs");
-const { week, time, tanggal} = require("./library/functions");
+const { getBuffer, week, time, tanggal} = require("./library/functions");
 const { color } = require("./library/color");
 async function starts() {
 	client.autoReconnect = ReconnectMode.onConnectionLost;
