@@ -5,6 +5,10 @@ exports.done = `Finished...`;
 exports.next = (value) => {
   return 'Click next for '+value+'  next';
 };
+exports.packon = 'Pack name already registered';
+exports.packoff = 'The name of the media pack is not registered in the database';
+exports.liston = 'List of media stored in database';
+exports.getlist = 'Use the command getimg/getvid/getvn/getstik to fetch each media pack\n*Example* : .getimg lexa';
 // -- message only
 exports.admin = 'Sorry, this command can only be run by group admins';
 exports.group = 'Sorry, this command can only be run in groups';
@@ -18,10 +22,13 @@ exports.noban = 'User does not have banned status';
 exports.isadmin = 'Bot can\'t log admin';
 // -- text
 exports.notag = 'Tag a group member';
-exports.notext = 'Please repeat by adding textby'
 exports.nonum = 'Please repeat by adding the target number';
+exports.notext = 'Please repeat by adding text';
 exports.reply = 'Reply target message...';
 exports.replyStic = 'Reply message sticker...';
+exports.replyVid = 'Reply the video...';
+exports.replyVn = 'Reply the audio...';
+exports.replyImg = 'Reply the imagenya...';
 exports.noreply = 'The message you replied to did not contain a reply';
 exports.addwarn = `⚠️ Warning\nYou get 1 warning`;
 exports.delwarn = `⚠️ Warning\nYour warning has decreased by 1 warning`;

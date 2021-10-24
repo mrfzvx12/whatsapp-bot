@@ -5,6 +5,10 @@ exports.done = `Selesai...`;
 exports.next = (value) => {
   return 'Klik next untuk '+value+' selanjutnya';
 };
+exports.packon = 'Nama pack sudah terdaftar';
+exports.packoff = 'Nama pack media tidak terdaftar dalam database';
+exports.liston = 'List media yang tersimpan dalam database';
+exports.getlist = 'Gunakan perintah getimg/getvid/getvn/getstik untuk mengambil setiap pack media\n*Contoh* : .getimg lexa';
 // -- message only
 exports.admin = 'Maaf, perintah ini hanya dapat dijalankan oleh admin group';
 exports.group = 'Maaf, perintah ini hanya dapat dijalankan dalam group';
@@ -23,6 +27,9 @@ exports.nonum = 'Silahkan ulangi dengan menambahkan nomor target';
 exports.notext = 'Silahkan ulangi dengan menambahkan text';
 exports.reply = 'Reply pesan target...';
 exports.replyStic = 'Reply pesan stickernya...';
+exports.replyVid = 'Reply videonya...';
+exports.replyVn = 'Reply audionya...';
+exports.replyImg = 'Reply imagenya...';
 exports.noreply = 'Pesan yang kamu reply tidak mengandung reply';
 exports.addwarn = `⚠️ Peringatan\nKamu mendapatkan 1 peringatan`;
 exports.delwarn = `⚠️ Peringatan\nWarning kamu telah berkurang 1 peringatan`;
