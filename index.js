@@ -674,7 +674,7 @@ try {
     go = await lxa.pinterest(push)
     pin = pickRandom(go)
     if(!pin) return m.reply('Error')
-    client.sendButtonImg(from, await getBuffer(pin), 'Result from : *PINTEREST*\n'+pin, msg.next(command), 'Next', '.cecan', mek)
+    client.sendButtonImg(from, await getBuffer(pin), 'Result from : *PINTEREST*\n'+pin, msg.next(command), 'Next', '.cyberpunk', mek)
  break
 
   case 'wallpaper':
@@ -684,7 +684,7 @@ try {
     go = await lxa.pinterest(push)
     pin = pickRandom(go)
     if(!pin) return m.reply('Error')
-    client.sendButtonImg(from, await getBuffer(pin), 'Result from : *PINTEREST*\n'+pin, msg.next(command), 'Next', '.cecan', mek)
+    client.sendButtonImg(from, await getBuffer(pin), 'Result from : *PINTEREST*\n'+pin, msg.next(command), 'Next', '.wallpaper', mek)
  break
 
   case 'upsw':
