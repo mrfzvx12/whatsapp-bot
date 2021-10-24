@@ -625,6 +625,55 @@ try {
         });
         break;
 
+   case 'pinterest':
+    if(!value) return m.reply(no.text)
+    m.reply(msg.wait)
+    go = await lxa.pinterest(value)
+    pin = pickRandom(go)
+    if(!pin) return m.reply('Error')
+    client.sendMessage(from, await getBuffer(pin), image, { quoted: mek, caption: 'Result from *PINTEREST*\n'+pin })
+ break
+
+  case 'cogan':
+    cogan = ['cogan indo', 'pap cogan', 'cogan']
+    push = pickRandom(cogan)
+    m.reply(msg.wait)
+    go = await lxa.pinterest(push)
+    pin = pickRandom(go)
+    if(!pin) return m.reply('Error')
+    client.sendButtonImg(from, await getBuffer(pin), 'Result from : *PINTEREST*\n'+pin, msg.next(command), 'Next', '.cogan', mek)
+ break
+
+  case 'cecan':
+    cecan = ['cecan indo', 'pap cecan', 'cecan']
+    push = pickRandom(cecan)
+    m.reply(msg.wait)
+    go = await lxa.pinterest(push)
+    pin = pickRandom(go)
+    if(!pin) return m.reply('Error')
+    client.sendButtonImg(from, await getBuffer(pin), 'Result from : *PINTEREST*\n'+pin, msg.next(command), 'Next', '.cecan', mek)
+ break
+
+  case 'cyberpunk':
+    cyberpunk = ['cyberpunk jepang', 'cyberpunk']
+    push = pickRandom(cyberpunk)
+    m.reply(msg.wait)
+    go = await lxa.pinterest(push)
+    pin = pickRandom(go)
+    if(!pin) return m.reply('Error')
+    client.sendButtonImg(from, await getBuffer(pin), 'Result from : *PINTEREST*\n'+pin, msg.next(command), 'Next', '.cecan', mek)
+ break
+
+  case 'wallpaper':
+    wall = ['wallpaper cute', 'wallpaper anime','wallpaper aesthetic']
+    push = pickRandom(wall)
+    m.reply(msg.wait)
+    go = await lxa.pinterest(push)
+    pin = pickRandom(go)
+    if(!pin) return m.reply('Error')
+    client.sendButtonImg(from, await getBuffer(pin), 'Result from : *PINTEREST*\n'+pin, msg.next(command), 'Next', '.cecan', mek)
+ break
+
   case 'upsw':
     if(!isOwner) return m.reply(msg.owner)
     const colors = [
