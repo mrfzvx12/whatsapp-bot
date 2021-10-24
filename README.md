@@ -15,8 +15,7 @@
 <a href="https://github.com/mrfzvx12/whatsapp-bot/watchers"><img title="Contributor" src="https://img.shields.io/github/contributors/mrfzvx12/whatsapp-bot?logo=github&style=social"></a>
 </p>
 <p align="center">
-<a href="https://github.com/mrfzvx12/whatsapp-bot"><img src="https://img.shields.io/github/repo-size/mrfzvx12/whatsapp-bot?label=Repo%20size&style=plastic"></a>
-<a href="https://github.com/mrfzvx12/whatsapp-bot"><img src="https://img.shields.io/github/search/mrfzvx12/mrfzvx12/whatsapp?label=Search&style=plastic"></a>
+<a href="https://github.com/mrfzvx12/whatsapp-bot"><img src="https://img.shields.io/github/repo-size/mrfzvx12/whatsapp-bot?label=Repo%20size&style=flat"></a>
 </p>
 
 
@@ -37,7 +36,7 @@ For perfect results you must have the original version of the WhatsApp applicati
 ## Example
 You can try the bot first here for example here
 
-<a href="" target="blank"><img src="https://img.shields.io/badge/Whatsapp Bot-30302f?style=flat&logo=whatsapp" /></a>
+<a href="" target="blank"><img src="https://img.shields.io/badge/Whatsapp Bot-30302f?style=social&logo=whatsapp" /></a>
 
 ***
 
@@ -120,16 +119,16 @@ client.sendButton(from, text, desk, button, row)
 ### WhatsApp Group
 
 <p>
-<a href="https://chat.whatsapp.com/JqgBJHtYHgZ2SuR36aDDCo" target="blank"><img src="https://img.shields.io/badge/WhatsApp Bot Group-30302f?style=flat&logo=whatsapp" /></a>
+<a href="https://chat.whatsapp.com/JqgBJHtYHgZ2SuR36aDDCo" target="blank"><img src="https://img.shields.io/badge/WhatsApp Bot Group-30302f?style=social&logo=whatsapp" /></a>
 </p>
 
 ### Contact
 For more detailed information, please contact me via social media below:
 
 <p>
-<a href="http://wa.me/6282223014661" target="blank"><img src="https://img.shields.io/badge/Whatsapp-30302f?style=flat&logo=whatsapp" /></a>
-<a href="http://www.instagram.com/mrf.zvx/" target="blank"><img src="https://img.shields.io/badge/Instagram-30302f?style=flat&logo=instagram" /></a>
-<a href="https://www.facebook.com/profile.php?id=100028409167054" target="blank"><img src="https://img.shields.io/badge/Facebook-30302f?style=flat&logo=facebook" /></a>
+<a href="http://wa.me/6282223014661" target="blank"><img src="https://img.shields.io/badge/Whatsapp-30302f?style=social&logo=whatsapp" /></a>
+<a href="http://www.instagram.com/mrf.zvx/" target="blank"><img src="https://img.shields.io/badge/Instagram-30302f?style=social&logo=instagram" /></a>
+<a href="https://www.facebook.com/profile.php?id=100028409167054" target="blank"><img src="https://img.shields.io/badge/Facebook-30302f?style=social&logo=facebook" /></a>
 </p>
 
 ***
@@ -154,5 +153,9 @@ For more detailed information, please contact me via social media below:
 <img height="180em" src="https://github-readme-stats.vercel.app/api?username=mrfzvx12&show_icons=true&hide_border=true&&count_private=true&include_all_commits=true" />
 
 
-### Language
-<a href="https://github.com/mrfzvx12"><img src="https://img.shields.io/badge/JS-f5f542.svg?style=for-the-badge&logo=javascript&logoColor=f5f542&labelColor=ffffff" alt="javascript"></a>
+### Language and tools
+<a href="https://github.com/mrfzvx12"><img src="https://img.shields.io/badge/-JavaScript-eed718?style=flat&logo=javascript&logoColor=ffffff"></a>
+<a href="https://github.com/mrfzvx12"><img
+src="https://img.shields.io/badge/-Node.js-3C873A?style=flat&logo=Node.js&logoColor=white"></a>
+<a href="https://github.com/mrfzvx12"><img src="http://img.shields.io/badge/-Git-F1502F?style=flat&logo=git&logoColor=FFFFFF"></a>
+<a href="https://github.com/mrfzvx12"><img src="http://img.shields.io/badge/-Github-000000?style=flat&logo=github&logoColor=FFFFFF"></a>
