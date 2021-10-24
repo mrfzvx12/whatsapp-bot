@@ -37,6 +37,13 @@ exports.menu = () => {
 ├ take <author>|<packname>
 ├ toimg
 ╰────────
+╭─⊷❲ *PICTURE* ❳
+├ pinterest <query>
+├ cogan
+├ cecan
+├ cyberpunk
+├ wallpaper
+╰────────
 ╭─⊷❲ *DATABASE* ❳
 ├ addimg <text>
 ├ addvid <text>
