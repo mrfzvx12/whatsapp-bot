@@ -54,7 +54,7 @@ async function starts() {
 	    }
 	    capt = `Hai @${num.split('@')[0]} selamat datang di group ${mdata.subject}\nJangan lupa Perkenalkan diri`;
 	    let buff = await getBuffer(ppimg);
-	    client.sendButtonLoc(mdata.id, buff, capt, '© WhatsApp Bot Lexa\nFollow me on Instagram\nhttps://www.instagram.com/mrf.zvx', 'Menu', '.menu', false, {
+	    client.sendButtonLoc(mdata.id, buff, capt, 'Follow me on Instagram\nhttps://www.instagram.com/mrf.zvx', 'Menu', '.menu', false, {
 	      contextInfo: {
             mentionedJid: client.parseMention(capt)
 	      }
