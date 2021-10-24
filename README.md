@@ -34,9 +34,9 @@ For perfect results you must have the original version of the WhatsApp applicati
 ***
 
 ## Example
-You can try the bot first here for example here
+You can try the bot first here for example
 
-<a href="" target="blank"><img src="https://img.shields.io/badge/Whatsapp Bot-30302f?style=social&logo=whatsapp" /></a>
+<a href="https://chat.whatsapp.com/JqgBJHtYHgZ2SuR36aDDCo" target="blank"><img src="https://img.shields.io/badge/Whatsapp Bot-30302f?style=social&logo=whatsapp" /></a>
 
 ***
 
