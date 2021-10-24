@@ -351,7 +351,7 @@ try {
 `
     capt += readMore
     capt += menu()
-    client.send2ButtonLoc(from, await getBuffer(pp), capt, isWm, 'Menu', '.menu', 'Owner', '.owner')
+    client.send2ButtonLoc(from, await getBuffer(pp), capt, 'Total hit : 'isTotalcmd+'\n'+isWm, 'Menu', '.menu', 'Owner', '.owner')
     break
   
   case 'bahasa':
