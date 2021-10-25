@@ -108,6 +108,7 @@ exports.menu = () => {
 ├ banned @user
 ├ unbanned @user
 ├ upsw
+├ setppbot
 ├ setthumb
 ├ setfakethumb
 ├ $
