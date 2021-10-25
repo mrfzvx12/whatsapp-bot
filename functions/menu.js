@@ -45,7 +45,7 @@ exports.menu = () => {
 ├ wallpaper
 ├ fakethumb
 ╰────────
-╭─⊷❲ *PICTURE* ❳
+╭─⊷❲ *INTERNET* ❳
 ├ playstore <query>
 ╰────────
 ╭─⊷❲ *DATABASE* ❳
