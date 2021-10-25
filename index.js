@@ -897,6 +897,56 @@ break
      m.reply(store);
    break;
 
+ case 'igvid':
+ case 'igimg':
+ case 'igdl':
+   if(isUrl(value) && !value.match("instagram.com/p/")) return m.reply('Link invalid');
+   m.reply(msg.wait)
+   igdl = await lxa.igDl(value)
+   buffer = await getBuffer(igdl.result.link)
+   desk = igdl.result.desc
+   if(!buffer) return m.reply('Error')
+   if(igdl.result.link.match('.mp4')){
+     if(!isPremium) return m.reply('Kamu bukan user premium, download sendiri melalui link di bawah\n*LINK* : '+igdl.result.link)
+     client.sendMessage(from, buffer, video, {quoted: mek, caption: desk})
+   } else {
+     client.sendMessage(from, buffer, image, {quoted: mek, caption: desk, thumbnail: fakethumb})
+   }
+   break
+
+ case 'reels':
+ case 'reel':
+   if(isUrl(value) && !value.match("instagram.com/reel")) return m.reply('Link invalid');
+   m.reply(msg.wait)
+   igdl = await lxa.igDl(value)
+   buffer = await getBuffer(igdl.result.link)
+   desk = igdl.result.desc
+   if(!buffer) return m.reply('Error')
+   if(!isPremium) return m.reply('Kamu bukan user premium, download sendiri melalui link di bawah\n*LINK* : '+igdl.result.link)
+   client.sendMessage(from, buffer, video, {quoted: mek, caption: desk})
+   break
+
+ case 'tiktok':
+ case 'tiktoknowm':
+ case 'tiktokaudio':
+   if(isUrl(value) && !value.match("tiktok.com")) return m.reply('Link invalid');
+   m.reply(msg.wait)
+   ttdl = await lxa.Ttdl(value)
+   if(command.includes('nowm')) {
+   buffer = await getBuffer(ttdl.result.nowatermark)
+   if(!buffer) return m.reply('Error')
+   client.sendMessage(from, buffer, video, {quoted: mek, caption: msg.done})
+   } else if (command.includes('audio')) {
+     buffer = await getBuffer(ttdl.result.nowatermark)
+     if(!buffer) return m.reply('Error')
+     client.sendMessage(from, buffer, document, {quoted: mek, mimetype: 'audio/mp4', filename: `Tiktokdownloader.mp3`})
+   } else {
+     buffer = await getBuffer(ttdl.result.watermark)
+     if(!buffer) return m.reply('Error')
+     client.sendMessage(from, buffer, video, {quoted: mek, caption: msg.done})
+   }
+   break
+
   case 'hidetag':
   case 'notif':
         if(!isOwner && !isAdmins) return m.reply(msg.admin)
