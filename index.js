@@ -723,6 +723,25 @@ try {
     m.reply((await _m).key.id)
     break
 
+ case 'tomp3':
+   if(isMedia || isQuotedVideo) {
+     m.reply(msg.wait)
+     q = m.quoted ? m.quoted : m 
+     mp3 = await q.download()
+     client.sendMessage(from, mp3, audio, {quoted: mek})
+   } else {
+     m.reply(msg.replyVid)
+   }
+   break
+
+ case 'tovn':
+   if(!isQuotedAudio) return m.reply(msg.replyVn)
+   m.reply(msg.wait)
+   q = m.quoted ? m.quoted : m 
+   vn = await q.download()
+  client.sendMessage(from, vn, audio, {ptt: true, quoted: mek})
+   break
+
   case 'listmedia':
    listimg = direc.image
    listvid = direc.video
