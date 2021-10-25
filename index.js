@@ -883,6 +883,20 @@ break
    }
    break
 
+ case "playstore":
+     if(!value) return m.reply(msg.notext)
+     m.reply(msg.wait)
+     let play = await lxa.playstore(value); 
+     store = '*PLAY STORE*\n'
+     for (let i of play) {
+       store += `*Nama* : ${i.name}
+*Link* : ${i.link}
+*Dev* : ${i.developer}
+*Link Dev* : ${i.link_dev}\n────────────────\n`;
+        } 
+     m.reply(store);
+   break;
+
   case 'hidetag':
   case 'notif':
         if(!isOwner && !isAdmins) return m.reply(msg.admin)
