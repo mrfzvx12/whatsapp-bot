@@ -62,5 +62,6 @@ module.exports = {
   fakta,
   gombal,
   hacker,
-  pinterest
+  pinterest,
+  playstore
 };
