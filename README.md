@@ -5,7 +5,7 @@
 <img src="https://gpvc.arturio.dev/mrfzvx12" />
 <p/>
 <p align="center">
-<a href="https://github.com/mrfzvx12"><img title="Author" src="https://img.shields.io/badge/Termux Whatsapp Bot-black?style=for-the-badge&logo=github"></a>
+<a href="https://github.com/mrfzvx12"><img title="Author" src="https://img.shields.io/badge/Whatsapp Bot-black?style=for-the-badge&logo=whatsApp"></a>
 <p/>
 <p align="center">
 <a href="https://github.com/mrfzvx12/followers"><img title="Followers" src="https://img.shields.io/github/followers/mrfzvx12?label=Followers&style=social"></a>
