@@ -148,7 +148,11 @@ let isAuthor = st.author; // author digunakan dalam fitur sticker
 let isPackname = st.packname; // packname digunakan dalam fitur sticker
 let isWm = st.wm; // wm ini di gunakan untuk deskripsi dalam button message
 let isTotalcmd = st.totalcommand; // informasi jumlah command yang di gunakan user 
-let pp = 'https://telegra.ph/file/7c0b1068736040b515d81.jpg'; // thumbnail button message
+
+// -- thumbnail
+let thumb = fs.readFileSync('./temp/thumb.jpeg'); // !! jangan ganti, mau ganti ada casenya
+
+let fakethumb = fs.readFileSync('./temp/thumbnail.jpeg'); // !! jangan ganti, mau ganti ada casenya
 
 let baterai = {
     baterai: 0,
@@ -364,7 +368,7 @@ try {
 `
     capt += readMore
     capt += menu()
-    client.send2ButtonLoc(from, await getBuffer(pp), capt, 'Total hit : '+isTotalcmd+'\n'+isWm, 'Info', '.info', 'Owner', '.owner')
+    client.send2ButtonLoc(from, thumb, capt, 'Total hit : '+isTotalcmd+'\n'+isWm, 'Info', '.info', 'Owner', '.owner')
     break
   
   case 'bahasa':
@@ -644,7 +648,7 @@ try {
     go = await lxa.pinterest(value)
     pin = pickRandom(go)
     if(!pin) return m.reply('Error')
-    client.sendMessage(from, await getBuffer(pin), image, { quoted: mek, caption: 'Result from *PINTEREST*\n'+pin })
+    client.sendMessage(from, await getBuffer(pin), image, { quoted: mek, caption: 'Result from *PINTEREST*\n'+pin, thumbnail: fakethumb })
  break
 
   case 'cogan':
@@ -768,7 +772,7 @@ try {
  case 'getimg':
    try { 
      mage = fs.readFileSync(`./database/media/image/${value.toLowerCase()}.jpeg`) 
-     client.sendMessage(from, mage, image, { quoted: mek, caption: 'Result : database image' })
+     client.sendMessage(from, mage, image, { quoted: mek, caption: 'Result : database image', thumbnail: fakethumb })
      } catch {
        m.reply(msg.packoff)
      }
@@ -843,6 +847,41 @@ break
        m.reply(msg.packoff)
      }
      break
+
+  case 'setfakethumb':
+   if(!isOwner) return m.reply(msg.owner)
+   if(isMedia || isQuotedImage) {
+   q = m.quoted ? m.quoted : m 
+   thumb = await q.download() 
+   fs.writeFileSync(`./temp/thumbnail.jpeg`, thumb)
+   m.reply(msg.done)
+   } else {
+     m.reply(msg.replyImg)
+   }
+   break
+
+ case 'setthumb':
+ case 'setthumb':
+   if(!isOwner) return m.reply(msg.owner)
+   if(isMedia || isQuotedImage) {
+   q = m.quoted ? m.quoted : m 
+   thumb = await q.download() 
+   fs.writeFileSync(`./temp/thumb.jpeg`, thumb)
+   m.reply(msg.done)
+   } else {
+     m.reply(msg.replyImg)
+   }
+   break
+
+ case 'fakethumb':
+   if(isMedia || isQuotedImage) {
+   q = m.quoted ? m.quoted : m 
+   hasil = await q.download() 
+   client.sendMessage(from, hasil, image, {quoted: mek, caption: msg.done, thumbnail: fakethumb})
+   } else {
+     m.reply(msg.replyImg)
+   }
+   break
 
   case 'hidetag':
   case 'notif':
