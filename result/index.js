@@ -3,6 +3,9 @@ const fs = require('fs');
 // -- result download
 const { pinterest } = require('./download/pinterest_img');
 
+// -- result search
+const { playstore } = require('./search/playstore');
+
 // new function
 function readfile(file) {
   return JSON.parse(fs.readFileSync(file));
