@@ -907,7 +907,7 @@ break
    desk = igdl.result.desc
    if(!buffer) return m.reply('Error')
    if(igdl.result.link.match('.mp4')){
-     if(!isPremium) return m.reply('Kamu bukan user premium, download sendiri melalui link di bawah\n*LINK* : '+igdl.result.link)
+     if(!isPremium) return m.reply(msg.premdl+igdl.result.link)
      client.sendMessage(from, buffer, video, {quoted: mek, caption: desk})
    } else {
      client.sendMessage(from, buffer, image, {quoted: mek, caption: desk, thumbnail: fakethumb})
@@ -922,7 +922,7 @@ break
    buffer = await getBuffer(igdl.result.link)
    desk = igdl.result.desc
    if(!buffer) return m.reply('Error')
-   if(!isPremium) return m.reply('Kamu bukan user premium, download sendiri melalui link di bawah\n*LINK* : '+igdl.result.link)
+   if(!isPremium) return m.reply(msg.premdl+igdl.result.link)
    client.sendMessage(from, buffer, video, {quoted: mek, caption: desk})
    break
 
