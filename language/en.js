@@ -16,6 +16,7 @@ exports.premium = 'Sorry, this command can only be used by premium users';
 exports.botadmin = 'This command can be used when the bot becomes admin';
 exports.owner = 'This command can be used by owner bots';
 exports.isprem = 'User is the previous premium user';
+exports.premdl = 'You are not a premium user, download it yourself via the link below\n*LINK* : ';
 exports.noprem = 'The user is not yet a premium user';
 exports.ban = 'User status has been banned before';
 exports.noban = 'User does not have banned status';
