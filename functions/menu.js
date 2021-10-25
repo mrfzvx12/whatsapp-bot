@@ -80,6 +80,7 @@ exports.menu = () => {
 ├ online
 ├ offline
 ├ hidetag
+├ setppgc
 ├ setname <text>
 ├ setdesk <text>
 ├ add <nomor>
