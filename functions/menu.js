@@ -48,6 +48,15 @@ exports.menu = () => {
 ╭─⊷❲ *INTERNET* ❳
 ├ playstore <query>
 ╰────────
+╭─⊷❲ *DOWNLOAD* ❳
+├ igdl <link>
+├ igvid <link>
+├ igimg <link>
+├ reels <link>
+├ tiktok <link>
+├ tiktoknowm <link>
+├ tiktokaudio <link>
+╰────────
 ╭─⊷❲ *DATABASE* ❳
 ├ addimg <text>
 ├ addvid <text>
