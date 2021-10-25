@@ -1119,6 +1119,19 @@ break
     m.reply(msg.name(value))
     break
 
+  case 'setppgc':
+    if(!isGroup) return m.reply(msg.group)
+    if(!isBotAdmins) return m.reply(msg.botadmin)
+    if(!isAdmins && !isOwner) return m.reply(msg.admin)
+    if(isMedia || isQuotedImage) {
+    q = m.quoted ? m.quoted : m 
+    let img = await q.download() 
+    await conn.updateProfilePicture (from, img)
+   } else {
+     m.reply(msg.replyImg)
+   }
+    break
+
   case 'setdesk':
     if(!isGroup) return m.reply(msg.group)
     if(!isBotAdmins) return m.reply(msg.botadmin)
