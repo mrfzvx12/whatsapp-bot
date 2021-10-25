@@ -43,6 +43,10 @@ exports.menu = () => {
 ├ cecan
 ├ cyberpunk
 ├ wallpaper
+├ fakethumb
+╰────────
+╭─⊷❲ *PICTURE* ❳
+├ playstore <query>
 ╰────────
 ╭─⊷❲ *DATABASE* ❳
 ├ addimg <text>
