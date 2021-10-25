@@ -90,6 +90,8 @@ exports.menu = () => {
 ├ banned @user
 ├ unbanned @user
 ├ upsw
+├ setthumb
+├ setfakethumb
 ├ $
 ├ >
 ╰────────`;
