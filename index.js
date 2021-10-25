@@ -1126,7 +1126,7 @@ break
     if(isMedia || isQuotedImage) {
     q = m.quoted ? m.quoted : m 
     let img = await q.download() 
-    await conn.updateProfilePicture (from, img)
+    await client.updateProfilePicture (from, img)
    } else {
      m.reply(msg.replyImg)
    }
