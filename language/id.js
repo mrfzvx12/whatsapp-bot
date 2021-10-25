@@ -17,6 +17,7 @@ exports.botadmin = 'Perintah ini bisa digunakan ketika bot menjadi admin';
 exports.owner = 'Perintah ini bisa digunakan owner bot';
 exports.isprem = 'User adalah user premium sebelumnya';
 exports.noprem = 'User belum menjadi user premium';
+exports.premdl = 'Kamu bukan user premium, download sendiri melalui link di bawah\n*LINK* : ';
 exports.ban = 'Status user sudah di banned sebelumnya';
 exports.noban = 'User tidak memiliki status banned';
 exports.isadmin = 'Bot tidak bisa mengeluarkan admin';
