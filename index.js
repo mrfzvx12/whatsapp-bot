@@ -901,7 +901,35 @@ break
      m.reply(msg.replyImg)
    }
    break
-
+ 
+ case 'tr':
+ case 'translate':
+   if(!value) return m.reply(msg.notext)
+   to = args[0]
+   bahasa = {
+     id: 'indonesia',
+     en: 'english',
+     ja: 'jepang',
+     ko: 'korea',
+     pt: 'portugal',
+     ar: 'arab'
+   }
+   var lang = to || 'id' 
+   if (!bahasa[lang]) return m.reply('Language not supported : ' + lang);
+   if(!m.quoted) {
+     word = value.split(lang)[1]
+   } else if(m.quoted){
+     word = m.quoted.text
+   }
+   await translate(word, { to: lang }).then(res => {
+     capt = 'Translate ' + bahasa[to].toUpperCase()
+     capt += '\nResult : ' + res.text
+      return m.reply(capt) 
+   }).catch(err => {
+        return m.reply('Error')
+      })
+   break
+ 
  case 'covid':
    covid = await lxa.covid()
    capt = '*INFORMASI COVID INDONESIA*\n'
