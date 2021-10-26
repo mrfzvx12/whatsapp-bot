@@ -4,7 +4,6 @@ exports.menu = () => {
 ├ menu
 ├ help
 ├ info
-├ q
 ├ bahasa
 ├ ping
 ╰────────
@@ -48,6 +47,7 @@ exports.menu = () => {
 ├ fakethumb
 ├ tomp3
 ├ tovn
+├ q
 ╰────────
 ╭─⊷❲ *INTERNET* ❳
 ├ playstore <query>
