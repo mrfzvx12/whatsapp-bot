@@ -31,6 +31,9 @@ exports.replyVid = 'Reply the video...';
 exports.replyVn = 'Reply the audio...';
 exports.replyImg = 'Reply the imagenya...';
 exports.noreply = 'The message you replied to did not contain a reply';
+exports.nolink = (value) => {
+  return 'Please repeat by adding a link ' + value;
+};
 exports.addwarn = `⚠️ Warning\nYou get 1 warning`;
 exports.delwarn = `⚠️ Warning\nYour warning has decreased by 1 warning`;
 exports.cekwarn = (warn) => {
