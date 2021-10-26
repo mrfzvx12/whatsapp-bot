@@ -1,2 +1,5 @@
 exports.ind = require('./id')
 exports.eng = require('./en')
+exports.jv = require('./jv')
+exports.snd = require('./snd')
+exports.ar = require('./ar')
