@@ -135,7 +135,7 @@ const {
 } = require('./functions/setting-bot'); // mengubah data dalam ./database/setting-bot
 const { msgFilter } = require('./functions/antispam')
 const { menu } = require('./functions/menu'); // tampilan menu dalam functions/menu
-const { ind, eng } = require('./language/index');
+const { ind, eng, jv, snd, ar } = require('./language/index');
 
 // functions dalam ./functions/setting-bot
 let ownerNumber = st.ownerNumber; // nomor owner
@@ -241,6 +241,12 @@ module.exports = client = async (client, mek) => {
        msg = ind;
      } else if (msg === "english") {
        msg = eng;
+     } else if (msg === "jawa") {
+       msg = jv;
+     } else if (msg === "sunda") {
+       msg = snd;
+     } else if (msg === "arab") {
+       msg = ar;
      } else {
        msg = ind;
      }
@@ -380,6 +386,15 @@ try {
     } else if (value.toLowerCase() === "english") {
       await addBahasa(sender, "english")
       m.reply("Selected English\nNow the bot will reply to your message in English")
+    } else if (value.toLowerCase() === "jawa") {
+      await addBahasa(sender, "jawa")
+      m.reply("Basa Jawa sing dipilih\nSaiki bot bakal bales pesen sampeyan nganggo basa Jawa")
+    } else if (value.toLowerCase() === "sunda") {
+      await addBahasa(sender, "sunda")
+      m.reply("Basa Sunda kapilih\nSaiki bot bakal ngabales pesen anjeun dina basa Sunda")
+    } else if (value.toLowerCase() === "arab") {
+      await addBahasa(sender, "arab")
+      m.reply("العربية مختارة\n الآن سيرد الروبوت على رسالتك باللغة العربية")
     } else {
       m.reply(msg.nobahasa)
     }
