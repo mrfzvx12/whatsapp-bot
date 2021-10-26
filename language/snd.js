@@ -69,10 +69,10 @@ exports.desk = (value) => {
   return `Robah pedaran grup kana ${value}`;
 };
 exports.promote = (value) => {
-  return `Successfully promoted ${value} as admin`;
+  return `Hasil naék pangkat ${value} salaku admin`;
 };
 exports.demote = (value) => {
-  return 'Berhasil downgrade' + value;
+  return 'Berhasil diturunkeun' + value;
 };
 
 exports.kick = (value) => {
