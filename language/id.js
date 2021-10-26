@@ -9,9 +9,6 @@ exports.packon = 'Nama pack sudah terdaftar';
 exports.packoff = 'Nama pack media tidak terdaftar dalam database';
 exports.liston = 'List media yang tersimpan dalam database';
 exports.getlist = 'Gunakan perintah getimg/getvid/getvn/getstik untuk mengambil setiap pack media\n*Contoh* : .getimg lexa';
-exports.nolink = (value) => {
-  return 'Silahkan ulangi dengan menambahkan link ' + value
-}
 // -- message only
 exports.admin = 'Maaf, perintah ini hanya dapat dijalankan oleh admin group';
 exports.group = 'Maaf, perintah ini hanya dapat dijalankan dalam group';
@@ -35,6 +32,9 @@ exports.replyVid = 'Reply videonya...';
 exports.replyVn = 'Reply audionya...';
 exports.replyImg = 'Reply imagenya...';
 exports.noreply = 'Pesan yang kamu reply tidak mengandung reply';
+exports.nolink = (value) => {
+  return 'Silahkan ulangi dengan menambahkan link ' + value;
+};
 exports.addwarn = `⚠️ Peringatan\nKamu mendapatkan 1 peringatan`;
 exports.delwarn = `⚠️ Peringatan\nWarning kamu telah berkurang 1 peringatan`;
 exports.cekwarn = (warn) => {
