@@ -27,6 +27,7 @@ const speed = require('performance-now');
 const moment = require("moment-timezone");
 const { spawn, exec, execSync } = require("child_process");
 let path = require('path');
+const translate = require('@iamtraction/google-translate');
 const ffmpeg = require("fluent-ffmpeg");
 const toMs = require('ms');
 const fs = require("fs");
