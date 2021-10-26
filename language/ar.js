@@ -45,6 +45,7 @@ exports.Pbahasa = `حدد اللغة التي تريد استخدامها
 لغة قابلة للاستخدام
 - Indonesia
 - English
+- Arab
 - Jawa
 - Sunda`;
 exports.nobahasa = `اللغة غير متوفرة
@@ -52,6 +53,7 @@ exports.nobahasa = `اللغة غير متوفرة
 لغة قابلة للاستخدام
 - Indonesia
 - English
+- Arab
 - Jawa
 - Sunda`;
 exports.online = 'نجح تشغيل الروبوت في هذه المجموعة'
