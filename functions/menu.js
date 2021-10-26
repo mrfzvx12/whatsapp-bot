@@ -49,8 +49,13 @@ exports.menu = () => {
 ├ tovn
 ├ q
 ╰────────
+╭─⊷❲ *INFORMASI* ❳
+├ covid
+├ translate <lang><text>
+╰────────
 ╭─⊷❲ *INTERNET* ❳
 ├ playstore <query>
+├ cerpen
 ╰────────
 ╭─⊷❲ *DOWNLOAD* ❳
 ├ igdl <link>
