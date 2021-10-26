@@ -44,6 +44,7 @@ exports.Pbahasa = `Pilih basa nu rék dipaké
 Basa nu bisa dipaké
 - Indonesia
 - English
+- Arab
 - Jawa
 - Sunda`;
 exports.nolanguage = `Basa teu sadia
@@ -51,6 +52,7 @@ exports.nolanguage = `Basa teu sadia
 Basa nu bisa dipaké
 - Indonesia
 - English
+- Arab
 - Jawa
 - Sunda`;
 exports.online = 'Suksés ngaktipkeun bot dina grup ieu'
