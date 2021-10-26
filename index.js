@@ -973,7 +973,13 @@ break
   case 'notif':
         if(!isOwner && !isAdmins) return m.reply(msg.admin)
         if (!isGroup) return m.reply(msg.group);
-        tag = value || ''
+        if(!m.quoted) {
+          tag = value
+        } else if(m.quoted){
+          tag = m.quoted.text
+        } else {
+          tag = ''
+        }
         group = await client.groupMetadata(from);
         mention = groupMembers.map(u => u.jid) 
         var optionshidetag = {
