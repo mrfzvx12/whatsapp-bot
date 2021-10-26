@@ -919,6 +919,7 @@ break
  case 'igvid':
  case 'igimg':
  case 'igdl':
+   if(!isUrl(value) && !value) return m.reply(msg.nolink('instagram'));
    if(isUrl(value) && !value.match("instagram.com/p/")) return m.reply('Link invalid');
    m.reply(msg.wait)
    igdl = await lxa.igDl(value)
@@ -935,6 +936,7 @@ break
 
  case 'reels':
  case 'reel':
+   if(!isUrl(value) && !value) return m.reply(msg.nolink('instagram reel'));
    if(isUrl(value) && !value.match("instagram.com/reel")) return m.reply('Link invalid');
    m.reply(msg.wait)
    igdl = await lxa.igDl(value)
@@ -948,6 +950,7 @@ break
  case 'tiktok':
  case 'tiktoknowm':
  case 'tiktokaudio':
+   if(!isUrl(value) && !value) return m.reply(msg.nolink('tiktok'));
    if(isUrl(value) && !value.match("tiktok.com")) return m.reply('Link invalid');
    m.reply(msg.wait)
    ttdl = await lxa.Ttdl(value)
