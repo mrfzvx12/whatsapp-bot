@@ -7,6 +7,10 @@ const { Ttdl } = require('./download/tiktokPost_dl.js');
 
 // -- result search
 const { playstore } = require('./search/playstore');
+const { RandomCerpen } = require('./search/cerpen');
+
+// -- result informasi
+const { covid } = require('./informasi/corona');
 
 // new function
 function readfile(file) {
