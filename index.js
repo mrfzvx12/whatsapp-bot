@@ -403,7 +403,20 @@ try {
   case 'owner':
   case 'author':
     number = '6282223014661@s.whatsapp.net'
-    client.fakeStatus(from, `Nih owner ku @${number.split('@')[0]}, chat aja kalo ada perlu`, 'Owner Bot', await getBuffer(pp))
+    capt = `Nomor : @${number.split('@')[0]}\n`
+    capt += 'Instagram : https://www.instagram.com/mrf.zvx'
+    await client.fakeLink(from, capt, thumb, 'Click in here', 'https://www.instagram.com/mrf.zvx', mek)
+   /* client.sendContact(from, '6282223014661', 'owner', {
+	 key: {
+          fromMe: false,
+	      participant: `0@s.whatsapp.net`, ...(from ? 
+	 { remoteJid: from } : {}) 
+                },
+	 message: { 
+		"extendedTextMessage": {
+                 "text":"Nih owner ku"
+                        }
+	                  }})*/
     break
     
    case 'info':
