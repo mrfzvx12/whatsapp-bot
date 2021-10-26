@@ -33,14 +33,14 @@ For perfect results you must have the original version of the WhatsApp applicati
 
 ***
 
-## Example
+### Example
 You can try the bot first here for example
 
 <a href="https://chat.whatsapp.com/JqgBJHtYHgZ2SuR36aDDCo" target="blank"><img src="https://img.shields.io/badge/Whatsapp Bot-30302f?style=social&logo=whatsapp" /></a>
 
 ***
 
-## Install
+### Install
 Make sure everything is in good condition
 
 First, install
@@ -103,7 +103,7 @@ row = 'This button'
 client.sendButton(from, text, desk, button, row)
 ```
 
-## Feature
+### Feature
 
 - [x] Multilingual
   - English
@@ -134,6 +134,13 @@ For more detailed information, please contact me via social media below:
 </p>
 
 ***
+
+
+### Admin & Moderator
+[![mrfzvx12](https://github.com/mrfzvx12.png?size=100)](https://github.com/mrfzvx12) | [![moo-d](https://github.com/moo-d.png?size=100)](https://github.com/moo-d) | [![HansUan010101](https://github.com/HansUan010101.png?size=100)](https://github.com/HansUan010101) 
+----|----|----
+[MrfZvx12](https://github.com/mrfzvx12) | [Moo-d](https://github.com/moo-d) | [HansUan010101](https://github.com/HansUan010101)
+Admin | Moderator | Moderator
 
 
 ### Some WhatsApp bots are recommended
