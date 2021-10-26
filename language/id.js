@@ -45,6 +45,7 @@ exports.Pbahasa = `Pilih bahasa yang ingin kamu gunakan
 Bahasa yang dapat digunakan
 - Indonesia
 - English
+- Arab
 - Jawa
 - Sunda`;
 exports.nobahasa = `Bahasa tidak tersedia
@@ -52,6 +53,7 @@ exports.nobahasa = `Bahasa tidak tersedia
 Bahasa yang dapat digunakan
 - Indonesia
 - English
+- Arab
 - Jawa
 - Sunda`;
 exports.online = 'Berhasil menyalakan bot di group ini'
