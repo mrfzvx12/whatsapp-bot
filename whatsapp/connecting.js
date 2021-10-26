@@ -720,7 +720,7 @@ END:VCARD
 			  previewType: "PHOTO",
 			  thumbnail : thumb,
 			  sourceUrl : url
-			}
+			}, mentionedJid: this.parseMention(teks)
 			}
 			})
 		}
