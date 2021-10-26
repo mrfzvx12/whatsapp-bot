@@ -44,6 +44,7 @@ exports.Pbahasa = `Select the language you want to use
 Usable language
 - Indonesia
 - English
+- Arab
 - Jawa
 - Sunda`;
 exports.nobahasa = `Language not available
@@ -51,6 +52,7 @@ exports.nobahasa = `Language not available
 Usable language
 - Indonesia
 - English
+- Arab
 - Jawa
 - Sunda`;
 exports.online = 'Successfully turned on the bot in this group';
