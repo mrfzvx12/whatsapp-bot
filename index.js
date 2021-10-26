@@ -902,6 +902,31 @@ break
    }
    break
 
+ case 'covid':
+   covid = await lxa.covid()
+   capt = '*INFORMASI COVID INDONESIA*\n'
+   capt += 'Positif : ' + covid.indo.indoP
+   capt += '\nMeninggal : ' + covid.indo.indoM
+   capt += '\nSembuh : ' + covid.indo.indoS
+   capt += '\nLast Update : ' + covid.indo.indoU
+   capt += '\n\n*INFORMASI COVID GLOBAL*' 
+   capt += '\nJumlah : ' + covid.global.negara + ' Negara'
+   capt += '\nPositif : ' + covid.global.positif
+   capt += '\nMeninggal : ' + covid.global.meninggal
+   capt += '\nLast Update : ' + covid.global.update
+   m.reply(capt)
+   break
+
+ case 'cerpen':
+   cerpen = await lxa.RandomCerpen()
+   if(cerpen.status === 500) return m.reply('Error')
+   capt = '*Judul* : ' + cerpen.result.Judul
+   capt += '\n*Karangan* : ' + cerpen.result.Penulis
+   capt += '\n\n' + readMore + cerpen.result.cerita
+   capt += '\n*Sumber* : ' + cerpen.result.sumber
+   m.reply(capt)
+   break
+
  case "playstore":
      if(!value) return m.reply(msg.notext)
      m.reply(msg.wait)
