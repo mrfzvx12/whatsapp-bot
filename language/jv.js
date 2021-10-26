@@ -48,6 +48,7 @@ exports.Pbahasa = `Pilih basa sing pengin digunakake
 Basa sing bisa digunakake
 - Indonesia
 - English 
+- Arab
 - Jawa
 - Sunda`;
 exports.nobahasa = `Basa ora kasedhiya
@@ -55,6 +56,7 @@ exports.nobahasa = `Basa ora kasedhiya
 Basa sing bisa digunakake
 - Indonesia
 - English
+- Arab
 - Jawa
 - Sunda`;
 exports.online = 'Kasil nguripake bot ing grup iki'
