@@ -1169,7 +1169,7 @@ break
     if(!isBotAdmins) return m.reply(msg.botadmin)
     if(!isOwner) return m.reply(msg.owner)
     if(!dia) return m.reply(msg.notag)
-    if(dia === isAdmins) return m.reply(msg.isadmin)
+    if(dia = isAdmins) return m.reply(msg.isadmin)
     anu = "@"+dia.split('@')[0]
     capt = msg.kick(anu)
     m.reply(capt, null, {
