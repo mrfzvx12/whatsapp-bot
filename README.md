@@ -107,7 +107,10 @@ client.sendButton(from, text, desk, button, row)
 
 - [x] Multilingual
   - English
-  - Indonesian
+  - Indonesian 
+  - Jawa 
+  - Sunda 
+  - Arab
 - [x] Group Setting
 - [x] Antidelete
 - [x] Antilink
