@@ -465,7 +465,7 @@ try {
 *SCRIPT*
 - Git : ${package.homepage}
 - License : ${package.license}` 
-  client.fakeLink(from, teks, await getBuffer(pp), tanggal, 'https://www.instagram.com/mrf.zvx', mek)
+  client.fakeLink(from, teks, thumb, tanggal, 'https://www.instagram.com/mrf.zvx', mek)
    break
     
  case 'namaninja':
