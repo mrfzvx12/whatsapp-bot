@@ -365,14 +365,13 @@ try {
 //-- Rapiin dikit:v -hns
   case 'menu': case 'help':
     m.reply(msg.wait)
-    capt = `Hii Kak ${pushname}🙋${ucapanWaktu} 
-┏━━━⊷ *USER* ⊶
-┣⊱ *🏅Level akun* : ${isLevel}
-┣⊱ *🎰Total Poin* : ${isPoin}
-┣⊱ *👑Premium* : ${prem}
-┣⊱ *📅Tanggal* : ${tanggal}
-┣⊱ *⌛Runtime* : ${kyun(process.uptime())}
-┗━━━━━━━━━━━━━━
+    capt = `Hii Kak ${pushname}🙋 ${ucapanWaktu}
+    
+*Level akun* : ${isLevel}
+*Total Poin* : ${isPoin}
+*Premium* : ${prem}
+*Tanggal* : ${tanggal}
+*Runtime* : ${kyun(process.uptime())}
 `
     capt += readMore
     capt += menu()
@@ -466,6 +465,19 @@ try {
 - Git : ${package.homepage}
 - License : ${package.license}` 
   client.fakeLink(from, teks, await getBuffer(pp), tanggal, 'https://www.instagram.com/mrf.zvx', mek)
+   break
+    
+ case 'namaninja':
+ case 'blackpill':
+ case 'typewriter':
+  if(command === "namaninja" ) {
+      hasil = await lxa.namaninja(value)
+  } else if(command === "blackpill"){
+    hasil = await lxa.blackpill(value)
+  } else if(command === "typewriter"){
+    hasil = await lxa.typewriter(value)
+  }
+   m.reply(hasil)
    break
     
   case 'truth':
