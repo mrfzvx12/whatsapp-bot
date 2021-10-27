@@ -11,6 +11,11 @@ const { RandomCerpen } = require('./search/cerpen');
 
 // -- result informasi
 const { covid } = require('./informasi/corona');
+const {
+  namaninja,
+  blackpill,
+  typewriter
+} = require('./informasi/text_generator');
 
 // new function
 function readfile(file) {
@@ -68,6 +73,9 @@ module.exports = {
   fakta,
   gombal,
   hacker,
+  namaninja,
+  blackpill,
+  typewriter,
   pinterest,
   playstore,
   RandomCerpen,
