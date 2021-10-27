@@ -374,7 +374,7 @@ try {
 *Runtime* : ${kyun(process.uptime())}
 `
     capt += readMore
-    capt += menu()
+    capt += menu(prefix)
     client.send2ButtonLoc(from, await getBuffer(pp), capt, 'Total hit : '+isTotalcmd+'\n'+isWm, '📝 Menu', '.menu', '👥 Owner', '.owner')
     break
   
