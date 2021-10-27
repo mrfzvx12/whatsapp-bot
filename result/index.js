@@ -70,6 +70,7 @@ module.exports = {
   hacker,
   pinterest,
   playstore,
+  RandomCerpen,
   igDl,
   Ttdl
 };
