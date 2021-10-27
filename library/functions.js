@@ -60,21 +60,21 @@ const kyun = (s) =>{
 
 // -- salam
       if (time < "24:59:00") {
-       ucapanWaktu = "Selamat malam";
+       ucapanWaktu = "Selamat Tengah Malam🕛🌜🌚🌑Waktunya tidur😼";
     }
       if (time < "18:00:00") {
-       ucapanWaktu = "Selamat sore";
+       ucapanWaktu = "Selamat Sore menjelang Petang🕕🌛";
     }
       if (time < "15:00:00") {
-       ucapanWaktu = "Selamat siang";
+       ucapanWaktu = "Selamat Sore🕒🌆";
     }
       if (time < "11:00:00") {
-       ucapanWaktu = "Selamat pagi";
+       ucapanWaktu = "Selamat Pagi Menjelang Siang🕛🌤🌞️";
     }
       if (time < "05:00:00") {
-      ucapanWaktu = "Selamat malam";
+      ucapanWaktu = "Selamat Subuh🕓🌅☀️";
     }
-
+    
 const h2k = (number) => {
     var SI_POSTFIXES = ["", " K", " M", " G", " T", " P", " E"];
     var tier = Math.log10(Math.abs(number)) / 3 | 0;
