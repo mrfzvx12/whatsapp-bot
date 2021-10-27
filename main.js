@@ -11,6 +11,7 @@ const {
   cekDetect
 } = require('./functions/group');
 const fs = require("fs");
+const thumb = fs.readFileSync('./temp/thumb.jpeg')
 const { getBuffer, week, time, tanggal} = require("./library/functions");
 const { color } = require("./library/color");
 async function starts() {
@@ -50,7 +51,7 @@ async function starts() {
           try {
 	      ppimg = await client.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`);
 	    } catch {
-	      ppimg = 'https://telegra.ph/file/7c0b1068736040b515d81.jpg';
+	      ppimg = thumb;
 	    }
 	    capt = `Hai @${num.split('@')[0]} selamat datang di group ${mdata.subject}\nJangan lupa Perkenalkan diri`;
 	    let buff = await getBuffer(ppimg);
