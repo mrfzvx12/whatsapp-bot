@@ -362,10 +362,11 @@ try {
     const latensi = speed() - timestamp 
     m.reply(`Speed : ${latensi.toFixed(3)} Second`)
   break 
+  
 //-- Rapiin dikit:v -hns
   case 'menu': case 'help':
     m.reply(msg.wait)
-    capt = `Hii Kak ${pushname}🙋 ${ucapanWaktu}
+    capt = `Hai Kak ${pushname}🙋 ${ucapanWaktu}
     
 *Level akun* : ${isLevel}
 *Total Poin* : ${isPoin}
@@ -375,7 +376,7 @@ try {
 `
     capt += readMore
     capt += menu(prefix)
-    client.send2ButtonLoc(from, await getBuffer(pp), capt, 'Total hit : '+isTotalcmd+'\n'+isWm, '📝 Menu', '.menu', '👥 Owner', '.owner')
+    client.send2ButtonLoc(from, thumb, capt, 'Total hit : '+isTotalcmd+'\n'+isWm, '📝 Menu', '.menu', '👥 Owner', '.owner')
     break
   
   case 'bahasa':
