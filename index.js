@@ -307,7 +307,7 @@ client.on('CB:action,,battery', json => {
 // auto respon
 lexa = ['lexa', 'Lexa', '@'+client.user.jid.split('@')[0]]
 for ( var L of lexa){
-  if(!isBaileys && budy.match(L)){
+  if(!mek.isBaileys && budy.match(L)){
     lari = fs.readFileSync('./database/media/sticker/lari.webp')
    //return client.sendMessage(from, lari, sticker, {quoted: mek})
    capt = 'Hai @'+sender.split('@')[0]+' Lexa disini'
