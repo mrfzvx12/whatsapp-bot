@@ -304,6 +304,20 @@ client.on('CB:action,,battery', json => {
 					}
     if (isCmd && !isOwner) msgFilter.addFilter(from)
 
+// auto respon
+lexa = ['lexa', 'Lexa', '@'+client.user.jid.split('@')[0]]
+for ( var L of lexa){
+  if(!isBaileys && budy.match(L)){
+    lari = fs.readFileSync('./database/media/sticker/lari.webp')
+   //return client.sendMessage(from, lari, sticker, {quoted: mek})
+   capt = 'Hai @'+sender.split('@')[0]+' Lexa disini'
+   return client.send2ButtonLoc(from, thumb, capt, 'Klik button untuk menampilkan menu dan informasi', 'Menu', '.menu', 'Informasi', '.informasi', false, {
+          contextInfo: {
+            mentionedJid: client.parseMention(capt),
+          },
+        });
+  }
+}
 
 if (budy) addUser(sender); // menambah informasi user kedalam database
 if (budy) addGroup(from); // menambah informasi group kedalam database
