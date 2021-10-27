@@ -78,6 +78,7 @@ module.exports = {
   typewriter,
   pinterest,
   playstore,
+  covid,
   RandomCerpen,
   igDl,
   Ttdl
