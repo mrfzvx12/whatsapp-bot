@@ -9,10 +9,14 @@ exports.packon = 'Ngaran pek geus didaptarkeun';
 exports.packoff = 'Ngaran pakét média henteu kadaptar dina pangkalan data';
 exports.liston = 'Daptar média anu disimpen dina pangkalan data';
 exports.getlist = 'Anggo paréntah getimg/getvid/getvn/getstik pikeun nyandak unggal pak média\n*Conto* : .getimg lexa';
+exports.nolink = (value) => {
+  return 'Mangga malikan deui ku nambahkeun tumbu ' + value
+}
 // -- message only
 exports.admin = 'Hampura, paréntah ieu ngan bisa dilaksanakeun ku admin grup'; 
 exports.group = 'Hampura, paréntah ieu ngan bisa dijalankeun dina grup'; 
 exports.premium = 'Hampura, paréntah ieu ngan bisa dipaké ku pamaké premium'; 
+exports.premdl = 'Hapunten anjeun sanés pangguna premium, unduh nyalira nganggo tautan\n*LINK* : ';
 exports.botadmin = 'Paréntah ieu tiasa dianggo nalika bot janten admin'; 
 exports.owner = 'Paréntah ieu bisa dipaké ku nu boga bot'; 
 exports.isprem = 'Pamaké nyaéta pamaké premium saméméhna'; 
@@ -34,7 +38,7 @@ exports.nolink = (value) => {
   return 'Mangga malikan deui ku nambahkeun link ' + value;
 };
 exports.addwarn = `⚠️ Awas\nAnjeun meunang 1 warning`; 
-exports.delwarn = `⚠️ Perhatosan\nPeringatan anjeun geus ngurangan ku 1 pépéling`; 
+exports.delwarn = `⚠️ Perhatosan\nPeringatan anjeun geus ngurangan ku 1 warning`; 
 exports.cekwarn = (warn) => {
   return `Pamaké boga warning total ${warn}`; 
   };
@@ -44,7 +48,6 @@ exports.Pbahasa = `Pilih basa nu rék dipaké
 Basa nu bisa dipaké
 - Indonesia
 - English
-- Arab
 - Jawa
 - Sunda`;
 exports.nolanguage = `Basa teu sadia
@@ -52,7 +55,6 @@ exports.nolanguage = `Basa teu sadia
 Basa nu bisa dipaké
 - Indonesia
 - English
-- Arab
 - Jawa
 - Sunda`;
 exports.online = 'Suksés ngaktipkeun bot dina grup ieu'
@@ -72,7 +74,7 @@ exports.promote = (value) => {
   return `Hasil naék pangkat ${value} salaku admin`;
 };
 exports.demote = (value) => {
-  return 'Berhasil diturunkeun' + value;
+  return 'Hasil diturunkeun' + value;
 };
 
 exports.kick = (value) => {

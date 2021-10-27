@@ -9,10 +9,14 @@ exports.packon = 'Pack name already registered';
 exports.packoff = 'The name of the media pack is not registered in the database';
 exports.liston = 'List of media stored in database';
 exports.getlist = 'Use the command getimg/getvid/getvn/getstik to fetch each media pack\n*Example* : .getimg lexa';
+exports.nolink = (value) => {
+  return 'Please repeat by adding a link ' + value;
+};
 // -- message only
 exports.admin = 'Sorry, this command can only be run by group admins';
 exports.group = 'Sorry, this command can only be run in groups';
 exports.premium = 'Sorry, this command can only be used by premium users';
+exports.premdl = 'Sorry you are not a premium user, download it yourself using the link\n*LINK* : ';
 exports.botadmin = 'This command can be used when the bot becomes admin';
 exports.owner = 'This command can be used by owner bots';
 exports.isprem = 'User is the previous premium user';
@@ -44,7 +48,6 @@ exports.Pbahasa = `Select the language you want to use
 Usable language
 - Indonesia
 - English
-- Arab
 - Jawa
 - Sunda`;
 exports.nobahasa = `Language not available
@@ -52,7 +55,6 @@ exports.nobahasa = `Language not available
 Usable language
 - Indonesia
 - English
-- Arab
 - Jawa
 - Sunda`;
 exports.online = 'Successfully turned on the bot in this group';

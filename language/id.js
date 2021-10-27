@@ -10,12 +10,13 @@ exports.packoff = 'Nama pack media tidak terdaftar dalam database';
 exports.liston = 'List media yang tersimpan dalam database';
 exports.getlist = 'Gunakan perintah getimg/getvid/getvn/getstik untuk mengambil setiap pack media\n*Contoh* : .getimg lexa';
 exports.nolink = (value) => {
-  return 'Silahkan ulangi dengan menambahkan link ' + value
-}
+  return 'Silahkan ulangi dengan menambahkan link ' + value;
+};
 // -- message only
 exports.admin = 'Maaf, perintah ini hanya dapat dijalankan oleh admin group';
 exports.group = 'Maaf, perintah ini hanya dapat dijalankan dalam group';
 exports.premium = 'Maaf, perintah ini hanya dapat digunakan oleh user premium';
+exports.premdl = 'Maaf kamu bukan user premium, download sendiri menggunakan link\n*LINK* : ';
 exports.botadmin = 'Perintah ini bisa digunakan ketika bot menjadi admin';
 exports.owner = 'Perintah ini bisa digunakan owner bot';
 exports.isprem = 'User adalah user premium sebelumnya';
@@ -34,6 +35,9 @@ exports.replyVid = 'Reply videonya...';
 exports.replyVn = 'Reply audionya...';
 exports.replyImg = 'Reply imagenya...';
 exports.noreply = 'Pesan yang kamu reply tidak mengandung reply';
+exports.nolink = (value) => {
+  return 'Silahkan ulangi dengan menambahkan link ' + value;
+};
 exports.addwarn = `⚠️ Peringatan\nKamu mendapatkan 1 peringatan`;
 exports.delwarn = `⚠️ Peringatan\nWarning kamu telah berkurang 1 peringatan`;
 exports.cekwarn = (warn) => {
@@ -45,7 +49,6 @@ exports.Pbahasa = `Pilih bahasa yang ingin kamu gunakan
 Bahasa yang dapat digunakan
 - Indonesia
 - English
-- Arab
 - Jawa
 - Sunda`;
 exports.nobahasa = `Bahasa tidak tersedia
@@ -53,7 +56,6 @@ exports.nobahasa = `Bahasa tidak tersedia
 Bahasa yang dapat digunakan
 - Indonesia
 - English
-- Arab
 - Jawa
 - Sunda`;
 exports.online = 'Berhasil menyalakan bot di group ini'
