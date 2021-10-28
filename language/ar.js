@@ -14,7 +14,6 @@ exports.nolink = (value) => {
 }
 
 // -- Saying time
-
 exports.night = 'مساء الخير'
 exports.evening = 'مساء الخير'
 exports.day = 'مساء الخير'
