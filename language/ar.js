@@ -13,13 +13,8 @@ exports.nolink = (value) => {
   return 'من فضلك كرر بإضافة ارتباط ' + value
 }
 
-/**
- * Ucapan waktu
- * Saying time
- * قول الوقت
- * Nyarios waktos
- * Ngomong wektu
- */
+// -- Saying time
+
 exports.night = 'مساء الخير'
 exports.evening = 'مساء الخير'
 exports.day = 'مساء الخير'
