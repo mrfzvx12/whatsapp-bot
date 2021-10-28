@@ -12,7 +12,8 @@ const {
 } = require('./functions/group');
 const fs = require("fs");
 const thumb = fs.readFileSync('./temp/thumb.jpeg')
-const { getBuffer, week, time, tanggal} = require("./library/functions");
+const { getBuffer } = require('./library/fetcher')
+const { week, time, tanggal} = require("./library/functions");
 const { color } = require("./library/color");
 async function starts() {
 	client.autoReconnect = ReconnectMode.onConnectionLost;
