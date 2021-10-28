@@ -37,9 +37,9 @@ const lxa = require('./result/index');
 const package = require('./package.json');
 // functions dalam library
 const simple = require('./whatsapp/connecting');
+const { fetchJson, fakeText, getBuffer } = require('./library/fetcher');
 const { color, bgcolor } = require('./library/color');
 const { 
-  getBuffer,
   createExif,
   modStick,
   h2k, 
