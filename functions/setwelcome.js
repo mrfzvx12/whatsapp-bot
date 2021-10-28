@@ -81,6 +81,6 @@ const delCustomWelcome = (chatId, _dir) => {
 module.exports = {
   addCustomWelcome,
   getCustomWelcome,
-  setcustomwelcome,
+  setCustomWelcome,
   delCustomWelcome
 };
