@@ -1,26 +1,27 @@
-const fs = require("fs")
+const fs = require("fs");
+const Wel = JSON.parse(fs.readFileSync('./database/welcome.json'));
 
 /**
  * Add welcome text to db
  * @param {string} chatId
  * @param {string} text
- * @param {object} _dir
+ * @param {object} Wel
  * @returns {boolean}
  */
-const addCustomWelcome = (chatId, _dir) => {
+const addCustomWelcome = (chatId) => {
   let position = false;
-  Object.keys(_dir).forEach((i) => {
-    if (_dir[i].from === chatId) {
+  Object.keys(Wel).forEach((i) => {
+    if (Wel[i].from === chatId) {
       position = true;
     }
   });
   if (position === false) {
-    const obj = {
-      from: chatId,
-      textwelcome: false
-    }
-    _dir.push(obj);
-    fs.writeFileSync('./database/customwelcome.json', JSON.stringify(_dir));
+    const obj = { 
+      from: chatId, 
+      textwelcome: "default",
+    };
+    Wel.push(obj);
+    fs.writeFileSync('./database/welcome.json', JSON.stringify(Wel, null, "\t"));
     return false;
   }
 };
@@ -28,18 +29,18 @@ const addCustomWelcome = (chatId, _dir) => {
 /**
  * Get Custom Welcome Text
  * @param {string} chatId
- * @param {object} _dir
+ * @param {object} Wel
  * @returns {Number}
  */
-const getCustomWelcome = (chatId, _dir) => {
+const getCustomWelcome = (chatId) => {
   let position = false;
-  Object.keys(_dir).forEach((i) => {
-    if (_dir[i].from === chatId) {
+  Object.keys(Wel).forEach((i) => {
+    if (Wel[i].from === chatId) {
       position = i;
     }
   });
   if (position !== false) {
-    return _dir[position].textwelcome;
+    return Wel[position].textwelcome;
   }
 };
 
@@ -47,38 +48,39 @@ const getCustomWelcome = (chatId, _dir) => {
  * Set Custom Welcome
  * @param {string} chatId
  * @param {string} text
- * @param {object} _dir
+ * @param {object} Wel
  */
-const setCustomWelcome = (chatId, value, _dir) => {
+const setCustomWelcome = (chatId, value) => {
   let position = false;
-  Object.keys(_dir).forEach((i) => {
-    if (_dir[i].from === chatId) {
+  Object.keys(Wel).forEach((i) => {
+    if (Wel[i].from === chatId) {
       position = i;
     }
   });
   if (position !== false) {
-    _dir[position].textwelcome = value;
+    Wel[position].textwelcome = value;
   }
 };
 
 /**
  * Reset Custom Welcome
  * @param {string} chatId
- * @param {object} _dir
+ * @param {object} Wel
  */
-const delCustomWelcome = (chatId, _dir) => {
+const delCustomWelcome = (chatId) => {
   let position = false;
-  Object.keys(_dir).forEach((i) => {
-    if (_dir[i].from === chatId) {
+  Object.keys(Wel).forEach((i) => {
+    if (Wel[i].from === chatId) {
       position = i;
     }
   });
   if (position !== false) {
-    _dir[position].textwelcome = false;
+    Wel[position].textwelcome = "default";
   }
 };
 
 module.exports = {
+  Wel,
   addCustomWelcome,
   getCustomWelcome,
   setCustomWelcome,
