@@ -52,15 +52,23 @@ async function starts() {
           try {
 	      ppimg = await client.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`);
 	    } catch {
-	      ppimg = thumb;
+	      ppimg = 'https://telegra.ph/file/7c0b1068736040b515d81.jpg';
 	    }
-	    capt = `Hai @${num.split('@')[0]} selamat datang di group ${mdata.subject}\nJangan lupa Perkenalkan diri`;
+	    let username = client.getName(num)
+      let about = (await client.getStatus(num).catch(console.error) || {}).status || ''
+      let member = mdata.participants.length
+	    capt = '*Welcome* @' + num.split('@')[0];
+	    capt += '\n\n*Username* : ' + username
+	    capt += '\n*Bio* : ' + about 
+	    capt += '\n*Date* : ' + tanggal 
+	    capt += '\n\nDon\'t forget to read the group description'
 	    let buff = await getBuffer(ppimg);
-	    client.sendButtonLoc(mdata.id, buff, capt, 'Follow me on Instagram\nhttps://www.instagram.com/mrf.zvx', 'Menu', '.menu', false, {
+	   /* client.sendButtonLoc(mdata.id, buff, capt, 'Follow me on Instagram\nhttps://www.instagram.com/mrf.zvx', 'Menu', '.menu', false, {
 	      contextInfo: {
             mentionedJid: client.parseMention(capt)
 	      }
-	    });
+	    });*/
+	    client.adReply(mdata.id, capt, MessageType.text, 'Welcome New Member', 'Member ke ' + member + ' Group ' + mdata.subject, buff, 'https://www.instagram.com/p/CTKtDqeBgY5/?utm_medium=copy_link');
       } else if (anu.action == 'remove') {
         num = anu.participants[0];
 	    capt = `Selamat tinggal 👋🏻 @${num.split('@')[0]}`;
