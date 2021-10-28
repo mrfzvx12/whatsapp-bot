@@ -41,7 +41,7 @@ const getCustomWelcome = (chatId, _dir) => {
   if (position !== false) {
     return _dir[position].textwelcome;
   }
-}
+};
 
 /**
  * Set Custom Welcome
@@ -59,4 +59,28 @@ const setCustomWelcome = (chatId, value, _dir) => {
   if (position !== false) {
     _dir[position].textwelcome = value;
   }
-}
+};
+
+/**
+ * Reset Custom Welcome
+ * @param {string} chatId
+ * @param {object} _dir
+ */
+const delCustomWelcome = (chatId, _dir) => {
+  let position = false;
+  Object.keys(_dir).forEach((i) => {
+    if (_dir[i].from === chatId) {
+      position = i;
+    }
+  });
+  if (position !== false) {
+    _dir[position].textwelcome = false;
+  }
+};
+
+module.exports = {
+  addCustomWelcome,
+  getCustomWelcome,
+  setcustomwelcome,
+  delCustomWelcome
+};
