@@ -27,7 +27,6 @@ const speed = require('performance-now');
 const moment = require("moment-timezone");
 const { spawn, exec, execSync } = require("child_process");
 let path = require('path');
-const yts = require("yt-search");
 const translate = require('@iamtraction/google-translate');
 const ffmpeg = require("fluent-ffmpeg");
 const toMs = require('ms');
@@ -486,12 +485,18 @@ try {
  case 'namaninja':
  case 'blackpill':
  case 'typewriter':
+ case 'sans':
+ case 'castle':
   if(command === "namaninja" ) {
       hasil = await lxa.namaninja(value)
   } else if(command === "blackpill"){
     hasil = await lxa.blackpill(value)
   } else if(command === "typewriter"){
     hasil = await lxa.typewriter(value)
+  } else if(command === "sans"){
+    hasil = await lxa.sans(value)
+  } else if(command === "castle"){
+    hasil = await lxa.castle(value)
   }
    m.reply(hasil)
    break
