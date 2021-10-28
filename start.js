@@ -38,11 +38,11 @@ function start(file) {
   p.on('exit', code => {
     isRunning = false;
     console.error('Exited with code:', code);
-    if (code === 0) return;
-    fs.watchFile(args[0], () => {
-      fs.unwatchFile(args[0]);
+    //if (code === 0) return;
+    //fs.watchFile(args[0], () => {
+    //  fs.unwatchFile(args[0]);
       start(file);
-    });
+    // });
   });
 
 }
