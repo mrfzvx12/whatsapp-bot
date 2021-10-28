@@ -447,6 +447,7 @@ END:VCARD
         filename: title,
         mimetype: 'audio/mp4',
         contextInfo: {
+          mentionedJid: this.parseMention(path),
           externalAdReply: {
             title: title,
             body: body,
