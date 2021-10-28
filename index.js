@@ -251,6 +251,25 @@ module.exports = client = async (client, mek) => {
      } else {
        msg = ind;
      }
+
+     /** Ucapan waktu menurut Timezone 
+      * Saying time according to Timezone
+      */
+     if (time < "24:59:00") {
+       ucapanWaktu = msg.night;
+     }
+     if (time < "18:00:00") {
+       ucapanWaktu = msg.evening;
+     }
+     if (time < "15:00:00") {
+       ucapanWaktu = msg.day;
+     }
+     if (time < "11:00:00") {
+       ucapanWaktu = msg.morning;
+     }
+     if (time < "05:00:00") {
+       ucapanWaktu = msg.night;
+     }
      
      // functions penyebutan user premium
      if (isPremium) {
