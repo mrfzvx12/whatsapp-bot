@@ -1,22 +1,4 @@
 const fs = require('fs');
-
-// -- result download
-const { pinterest } = require('./download/pinterest_img');
-const { igDl } = require('./download/instagramPost_dl.js');
-const { Ttdl } = require('./download/tiktokPost_dl.js');
-
-// -- result search
-const { playstore } = require('./search/playstore');
-const { RandomCerpen } = require('./search/cerpen');
-
-// -- result informasi
-const { covid } = require('./informasi/corona');
-const {
-  namaninja,
-  blackpill,
-  typewriter
-} = require('./informasi/text_generator');
-
 // new function
 function readfile(file) {
   return JSON.parse(fs.readFileSync(file));
@@ -65,6 +47,21 @@ const hacker = () => {
 };
 
 
+// -- result download
+const { pinterest } = require('./download/pinterest_img');
+const { igDl } = require('./download/instagramPost_dl.js');
+const { Ttdl } = require('./download/tiktokPost_dl.js');
+const { joox } = require('./download/jooxDl.js');
+
+// -- result search
+const { playstore } = require('./search/playstore');
+const { RandomCerpen } = require('./search/cerpen');
+
+// information
+const { covid  } = require('./informasi/corona');
+const { namaninja, blackpill, typewriter, sans, castle } =  require('./informasi/text_generator');
+
+
 module.exports = {
   truth,
   dare,
@@ -73,13 +70,16 @@ module.exports = {
   fakta,
   gombal,
   hacker,
+  covid,
   namaninja,
-  blackpill,
-  typewriter,
+  blackpill, 
+  typewriter, 
+  sans, 
+  castle,
   pinterest,
   playstore,
-  covid,
   RandomCerpen,
   igDl,
-  Ttdl
+  Ttdl,
+  joox
 };
