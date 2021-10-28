@@ -55,6 +55,8 @@ exports.menu = (v) => {
 ╰────────
 ╭─⊷❲ *INTERNET* ❳
 ├ ${v}playstore <query>
+├ ${v}yts <query>
+├ ${v}ytsearch <query>
 ├ ${v}cerpen
 ╰────────
 ╭─⊷❲ *DOWNLOAD* ❳
@@ -65,11 +67,14 @@ exports.menu = (v) => {
 ├ ${v}tiktok <link>
 ├ ${v}tiktoknowm <link>
 ├ ${v}tiktokaudio <link>
+├ ${v}joox <query>
 ╰────────
 ╭─⊷❲ *TEXT GENERATOR* ❳
 ├ ${v}namaninja <text>
 ├ ${v}typewriter <text>
 ├ ${v}blackpill <text>
+├ ${v}castle <text>
+├ ${v}sans <text>
 ╰────────
 ╭─⊷❲ *DATABASE* ❳
 ├ ${v}addimg <text>
