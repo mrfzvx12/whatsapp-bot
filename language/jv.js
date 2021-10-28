@@ -12,6 +12,14 @@ exports.getlist = '';
 exports.nolink = (value) => {
   return 'Mangga mbaleni kanthi nambah link ' + value
 }
+
+// Saying time
+exports.night = 'Sugeng dalu'
+exports.evening = 'Sugeng sonten'
+exports.day = 'Sugeng siang'
+exports.morning = 'Sugeng enjang'
+
+
 // -- message only
 exports.admin = 'Nuwun sewu, printah iki mung bisa ditindakake dening admin grup';
 exports.group = 'Nuwun sewu, printah iki mung bisa mbukak ing grup';
