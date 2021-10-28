@@ -13,7 +13,7 @@ exports.nolink = (value) => {
   return 'Mangga mbaleni kanthi nambah link ' + value
 }
 
-// Saying time
+// -- Saying time
 exports.night = 'Sugeng dalu'
 exports.evening = 'Sugeng sonten'
 exports.day = 'Sugeng siang'
