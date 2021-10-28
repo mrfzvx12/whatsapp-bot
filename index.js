@@ -27,6 +27,7 @@ const speed = require('performance-now');
 const moment = require("moment-timezone");
 const { spawn, exec, execSync } = require("child_process");
 let path = require('path');
+const yts = require("yt-search");
 const translate = require('@iamtraction/google-translate');
 const ffmpeg = require("fluent-ffmpeg");
 const toMs = require('ms');
@@ -529,6 +530,11 @@ try {
     client.fakeReply(from, text1, dia, text2, from)
     break
   
+  case 'say':
+    if(!value) return m.reply(msg.notext)
+    client.sendMessage(from, value, text)
+    break
+  
   case 'apakah':
     if(!value) return m.reply(msg.notext)
     apa = ['Tidak', 'Iya', 'Tidak']
@@ -1011,6 +1017,45 @@ break
    capt += '\n*Sumber* : ' + cerpen.result.sumber
    m.reply(capt)
    break
+
+case 'joox':
+    if (!value) return m.reply(msg.notext)
+    m.reply(msg.wait) 
+    res = await lxa.joox(value)
+    let json = JSON.parse(JSON.stringify(res))
+    let hasil = json.data[0]
+    judul = hasil.lagu
+    artis = hasil.penyanyi
+    album = hasil.album
+    foto = hasil.img
+    lagu = hasil.mp3
+    jooxy = await getBuffer(foto)
+    path = await getBuffer(lagu)
+    client.adReply(from, path, document, judul+' - '+artis, artis+' ('+album+')', jooxy, 'https://www.instagram.com/p/CTKtDqeBgY5/?utm_medium=copy_link')
+  break
+
+ case 'ytsearch':
+ case 'yts':
+   if(!value) return m.reply(msg.notext)
+   try {
+     url = await yts(value);
+   link = url.all
+   //capt = ''
+   m.reply(msg.wait)
+   link.map((video) => {
+    // capt += "\n________________________\n\n"
+     capt = '*Title* : ' + video.title
+     capt += '\n*Link* : ' + video.url
+     capt += '\n*Durasi* : ' + video.timestamp
+     capt += '\n*Upload* : ' + video.ago
+    // capt += "\n________________________\n\n"
+   })
+   //capt += ''
+   await client.adReply(from, capt, text, 'YT Search : ' + value, tanggal, thumb, link[0].url)
+   } catch {
+     return m.reply('Musik tidak ditemukan')
+   }
+  break
 
  case "playstore":
      if(!value) return m.reply(msg.notext)
