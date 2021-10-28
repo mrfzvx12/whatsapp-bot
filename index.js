@@ -215,10 +215,11 @@ module.exports = client = async (client, mek) => {
      const isOwner = ownerNumber.includes(sender) || false;
      const isBotAdmins = groupAdmins.includes(botNumber) || false;
      const isAdmins = groupAdmins.includes(sender) || false;
-     let conts = mek.key.fromMe ? client.user.jid : client.contacts[sender] || { notify: jid.replace(/@.+/, '') };
-     const pushname = mek.key.fromMe ? client.user.name : conts.name || conts.vname || conts.notify || '-';
+     //let conts = mek.key.fromMe ? client.user.jid : client.contacts[sender] || { notify: jid.replace(/@.+/, '') };
+     //const pushname = mek.key.fromMe ? client.user.name : conts.name || conts.vname || conts.notify || '-';
      let siapa = mek.quoted ? mek.quoted.sender : mek.mentionedJid && mek.mentionedJid[0] ? mek.mentionedJid[0] : mek.fromMe ? client.user.jid : mek.sender;
      let dia = mek.quoted ? mek.quoted.sender : mek.mentionedJid && mek.mentionedJid[0] ? mek.mentionedJid[0] : false;
+     const pushname = client.getName(siapa);
 
 // cek Informasi user
      let isPoin = cekPoin(sender);
