@@ -12,6 +12,14 @@ exports.getlist = 'Use the command getimg/getvid/getvn/getstik to fetch each med
 exports.nolink = (value) => {
   return 'Please repeat by adding a link ' + value;
 };
+
+// -- Saying time
+exports.night = 'Good night'
+exports.evening = 'Good afternoon'
+exports.day = 'Good day'
+exports.morning = 'Good morning'
+
+
 // -- message only
 exports.admin = 'Sorry, this command can only be run by group admins';
 exports.group = 'Sorry, this command can only be run in groups';
