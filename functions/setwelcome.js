@@ -7,7 +7,7 @@ const fs = require("fs")
  * @param {object} _dir
  * @returns {boolean}
  */
-const addCustomWelcome = (chatId, text, _dir) => {
+const addCustomWelcome = (chatId, _dir) => {
   let position = false;
   Object.keys(_dir).forEach((i) => {
     if (_dir[i].from === chatId) {
@@ -17,7 +17,7 @@ const addCustomWelcome = (chatId, text, _dir) => {
   if (position === false) {
     const obj = {
       from: chatId,
-      textwelcome: text
+      textwelcome: false
     }
     _dir.push(obj);
     fs.writeFileSync('./database/customwelcome.json', JSON.stringify(_dir));
@@ -40,5 +40,23 @@ const getCustomWelcome = (chatId, _dir) => {
   });
   if (position !== false) {
     return _dir[position].textwelcome;
+  }
+}
+
+/**
+ * Set Custom Welcome
+ * @param {string} chatId
+ * @param {string} text
+ * @param {object} _dir
+ */
+const setCustomWelcome = (chatId, value, _dir) => {
+  let position = false;
+  Object.keys(_dir).forEach((i) => {
+    if (_dir[i].from === chatId) {
+      position = i;
+    }
+  });
+  if (position !== false) {
+    _dir[position].textwelcome = value;
   }
 }
