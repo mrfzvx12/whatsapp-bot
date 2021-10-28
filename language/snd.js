@@ -12,6 +12,14 @@ exports.getlist = 'Anggo paréntah getimg/getvid/getvn/getstik pikeun nyandak un
 exports.nolink = (value) => {
   return 'Mangga malikan deui ku nambahkeun tumbu ' + value
 }
+
+// -- Saying time
+exports.night = 'Wilujeng wengi'
+exports.evening = 'Wilujeng sonten'
+exports.day = 'Wilujeng sonten'
+exports.morning = 'Wilujeng énjing'
+
+
 // -- message only
 exports.admin = 'Hampura, paréntah ieu ngan bisa dilaksanakeun ku admin grup'; 
 exports.group = 'Hampura, paréntah ieu ngan bisa dijalankeun dina grup'; 
