@@ -12,6 +12,20 @@ exports.getlist = 'استخدم الأمر getimg / getvid / getvn / getstik ل�
 exports.nolink = (value) => {
   return 'من فضلك كرر بإضافة ارتباط ' + value
 }
+
+/**
+ * Ucapan waktu
+ * Saying time
+ * قول الوقت
+ * Nyarios waktos
+ * Ngomong wektu
+ */
+exports.night = 'مساء الخير'
+exports.evening = 'مساء الخير'
+exports.day = 'مساء الخير'
+exports.morning = 'صباح الخير'
+
+
 // -- message only
 exports.admin = 'عذرًا ، لا يمكن تشغيل هذا الأمر إلا بواسطة مسؤولي المجموعة';
 exports.group = 'عذرًا ، لا يمكن تشغيل هذا الأمر إلا في مجموعات';
