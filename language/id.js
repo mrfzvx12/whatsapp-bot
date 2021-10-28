@@ -12,6 +12,13 @@ exports.getlist = 'Gunakan perintah getimg/getvid/getvn/getstik untuk mengambil 
 exports.nolink = (value) => {
   return 'Silahkan ulangi dengan menambahkan link ' + value;
 };
+
+// -- Saying time
+exports.night = 'Selamat Malam'
+exports.evening = 'Selamat Sore'
+exports.day = 'Selamat Siang'
+exports.morning = 'Selamat Pagi'
+
 // -- message only
 exports.admin = 'Maaf, perintah ini hanya dapat dijalankan oleh admin group';
 exports.group = 'Maaf, perintah ini hanya dapat dijalankan dalam group';
