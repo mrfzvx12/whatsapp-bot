@@ -6,13 +6,6 @@
 	"author": "WhatsApp Bot Lexa",
 	"packname": " @MrfZvx",
 	"wm": "Follow me on Instagram\nhttps://www.instagram.com/mrf.zvx",
-	"prefix": "/",
-	"listprefix": [
-		".",
-		"/",
-		"!",
-		"#"
-	],
 	"gameWaktu": 30000,
 	"poinGame": 100,
 	"poinAwal": 500,
