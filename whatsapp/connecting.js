@@ -458,6 +458,24 @@ END:VCARD
         }
       })
     }
+    
+    async adReplyAudio(from, path, type, title, body, thumbnail, url, quoted, ptt){
+      this.sendMessage(from, path, type, {
+        ptt: ptt,
+        quoted: quoted,
+        filename: title,
+        mimetype: 'audio/mp4',
+        contextInfo: {
+          externalAdReply: {
+            title: title,
+            body: body,
+            mediaType: 2,
+            thumbnail: thumbnail,
+            mediaUrl: url 
+          }
+        }
+      })
+    }
 
     async sendVideo(jid, url, caption, quoted, opt) {
       await download(url, 'mp4', async ({ buffer, filename }) => {
