@@ -10,6 +10,10 @@ const {
   cekAntidelete,
   cekDetect
 } = require('./functions/group');
+const {
+  getCustomWelcome,
+  getCustomBye
+} = require('./functions/welcome')
 const fs = require("fs");
 const thumb = fs.readFileSync('./temp/thumb.jpeg')
 const { getBuffer } = require('./library/fetcher')
