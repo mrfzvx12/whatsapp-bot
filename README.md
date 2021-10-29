@@ -175,4 +175,5 @@ src="https://img.shields.io/badge/-Node.js-3C873A?style=flat&logo=Node.js&logoCo
 
 
 ## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmrfzvx12%2Fwhatsapp-bot.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmrfzvx12%2Fwhatsapp-bot?ref=badge_shield)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmrfzvx12%2Fwhatsapp-bot.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmrfzvx12%2Fwhatsapp-bot?ref=badge_large)
