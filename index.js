@@ -1533,6 +1533,113 @@ break
         });
     break
 
+  case 'absenstart':
+   if(!isGroup) return m.reply(msg.group)
+   if(!isAdmins) return m.reply(msg.admin)
+   client.absen = client.absen ? client.absen : {}
+    if (from in client.absen) {
+        await m.reply(msg.absen)
+        return false
+    }
+    client.absen[from] = [
+        await client.send2Button(from, `Absen dimulai`, isWm, 'Absen', prefix + 'absen', 'Izin', prefix + 'izin'),
+        [],
+        [],
+    ]
+    break
+ 
+ case 'hapusabsen':
+ case 'delabsen':
+   if(!isGroup) return m.reply(msg.group)
+   if(!isAdmins) return m.reply(msg.admin)
+    if (!(from in client.absen)) {
+        await m.reply(msg.noabsen)
+        throw false
+    }
+    delete client.absen[from]
+    m.reply(msg.hapus('Absensi'))
+    break
+ 
+ case 'izin':
+   if(!isGroup) return m.reply(msg.group)
+   if (!(from in client.absen)) {
+       m.reply(msg.noabsen)
+       return false
+    }
+    absen = client.absen[from][1]
+    izin = client.absen[from][2]
+    inAbsen = absen.includes(sender)
+    inIzin = izin.includes(sender)
+    if (inAbsen) return m.reply(msg.inabsen)
+    if (inIzin) return m.reply(msg.inabsen)
+    izin.push(sender)
+    listAbsen = absen.map((v, i) => `${i + 1}.  @${v.split`@`[0]}`).join('\n')
+    listIzin = izin.map((v, i) => `${i + 1}.  @${v.split`@`[0]}`).join('\n')
+        caption = `
+Tanggal: ${tanggal}
+
+Daftar Absen
+Total: ${absen.length}
+${listAbsen}
+
+Daftar Izin
+Total: ${izin.length}
+${listIzin}`.trim()
+    await client.send3Button(from, caption, isWm, 'Absen', prefix + 'absen', 'Izin', prefix + 'izin', 'Cek Absen', prefix + 'cekabsen', false, { contextInfo: { mentionedJid: client.parseMention(caption) } })
+    break
+
+ case 'absen':
+   if(!isGroup) return m.reply(msg.group)
+   if (!(from in client.absen)) {
+       m.reply(msg.noabsen)
+       return false
+    }
+    absen = client.absen[from][1]
+    izin = client.absen[from][2]
+    inAbsen = absen.includes(sender)
+    inIzin = izin.includes(sender)
+    if (inAbsen) return m.reply(msg.inabsen)
+    if (inIzin) return m.reply(msg.inabsen)
+    absen.push(sender)
+    listAbsen = absen.map((v, i) => `${i + 1}.  @${v.split`@`[0]}`).join('\n')
+    listIzin = izin.map((v, i) => `${i + 1}.  @${v.split`@`[0]}`).join('\n')
+    caption = `
+Tanggal: ${tanggal}
+
+Daftar Absen
+Total: ${absen.length}
+${listAbsen}
+
+Daftar Izin
+Total: ${izin.length}
+${listIzin}`.trim()
+    await client.send3Button(from, caption, isWm, 'Absen', prefix + 'absen', 'Izin', prefix + 'izin', 'Cek Absen', prefix + 'cekabsen', false, { contextInfo: { mentionedJid: client.parseMention(caption) } })
+ break
+
+ case 'cekabsen':
+   if(!isGroup) return m.reply(msg.group)
+   if(!isAdmins) return m.reply(msg.admin)
+   if (!(from in client.absen)) {
+        await m.reply(msg.noabsen)
+        throw false
+    }
+    absen = client.absen[from][1]
+    izin = client.absen[from][2]
+    listAbsen = absen.map((v, i) => `${i + 1}.  @${v.split`@`[0]}`).join('\n')
+    listIzin = izin.map((v, i) => `${i + 1}.  @${v.split`@`[0]}`).join('\n')
+    caption = `
+Tanggal: ${tanggal}
+
+Daftar Absen
+Total: ${absen.length}
+${listAbsen}
+
+Daftar Izin
+Total: ${izin.length}
+${listIzin}`.trim()
+    await client.send3Button(from, caption, isWm, 'Absen', prefix + 'absen', 'Izin', prefix + 'izin', 'Hapus Absen', prefix + 'hapusabsen', false, { contextInfo: { mentionedJid: client.parseMention(caption) } })
+break
+
   case 'welcome':
     if(!isGroup) return m.reply(msg.group)
     if(!isAdmins && !isOwner) return m.reply(msg.admin)
