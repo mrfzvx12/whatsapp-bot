@@ -340,7 +340,7 @@ for ( var L of lexa){
 }
 
 if (budy) addUser(sender); // menambah informasi user kedalam database
-if (budy) addGroup(from); // menambah informasi group kedalam database
+if (isGroup && budy) addGroup(from); // menambah informasi group kedalam database
 if (isCmd) addCmd() // menambah jumlah total command ketika user menggunakan command
 if (isCmd) addPoin(sender); // menambah poin user ketika menggunakan command
 
