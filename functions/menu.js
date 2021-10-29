@@ -45,9 +45,12 @@ exports.menu = (v) => {
 ╰────────
 ╭─⊷❲ *TOOLS* ❳
 ├ ${v}fakethumb
+├ ${v}say <text>
 ├ ${v}tomp3
 ├ ${v}tovn
 ├ ${v}q
+├ ${v}del
+├ ${v}delete
 ╰────────
 ╭─⊷❲ *INFORMASI* ❳
 ├ ${v}covid
