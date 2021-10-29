@@ -170,7 +170,7 @@ let baterai = {
 };
 
 let Use = {
-  prefix: '.',
+  prefix: '!',
   multi: true,
   nopref: false,
   onepref: false
@@ -1606,7 +1606,7 @@ case 'joox':
       Use.multi = false
       Use.nopref = false
       Use.onepref = true
-      m.reply(msg.done)
+      m.reply(msg.done + ' Prefix ' + prefix)
     }
     break
 
