@@ -104,6 +104,30 @@ return value+ ' ora diuripake sadurunge';
 };
 exports.OnorOff = 'Mangga mbaleni kanthi nambah on/off';
 exports.antilink = 'Sampeyan wis dideteksi ngirim link grup whatsapp liyane';
+exports.setwel = (value) => {
+  return `Baleni kanthi nambah teks
+*Tuladha :*
+!setwelcome Sugeng rawuh @tag ing @group
+Jeneng : @nama
+Bio : @about 
+Tanggal : @tanggal 
+
+Aja lali maca deskripsi grup, oke?
+
+*Conto kanggo saben fungsi*` + value;
+};
+
+exports.setbye = (value) => {
+  return `Baleni kanthi nambah teks
+*Tuladha :*
+!setbye pamit @tag
+
+*Conto kanggo saben fungsi*` + value;
+};
+
+exports.default = (value) => {
+  return value + ' Bali menyang setelan wiwitan';
+};
 
 // game
 exports.onGame = 'Isih ana pitakonan sing durung dijawab ing obrolan iki';
