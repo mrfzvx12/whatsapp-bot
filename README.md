@@ -119,7 +119,7 @@ client.sendButton(from, text, desk, button, row)
 - [x] Make sticker with image/video/gif
 - [ ] And much more
 
-You can open menu [In here](https://github.com/mrfzvx12/whatsapp-bot/blob/b16acde1ca41c3f9cfe72f18fcd6893098af8ab3/functions/menu.js)
+You can open menu [In here](https://github.com/mrfzvx12/whatsapp-bot/blob/main/functions/menu.js)
 
 ### WhatsApp Group
 
