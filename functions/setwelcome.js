@@ -1,6 +1,15 @@
 const fs = require("fs");
 const Wel = JSON.parse(fs.readFileSync('./database/welcome.json'));
 
+const welAwal = `*Selamat Datang* @tag di @group
+
+*Nama* : @nama
+*Bio* : @about 
+*Tanggal* : @tanggal 
+
+Jangan lupa baca deskripsi group ya`;
+
+const byeAwal = `Selamat tinggal @tag`;
 /**
  * Add welcome text to db
  * @param {string} chatId
@@ -18,7 +27,7 @@ const addCustomWelcome = (chatId) => {
   if (position === false) {
     const obj = { 
       from: chatId, 
-      textwelcome: "default",
+      textwelcome: welAwal
     };
     Wel.push(obj);
     fs.writeFileSync('./database/welcome.json', JSON.stringify(Wel, null, "\t"));
@@ -75,7 +84,7 @@ const delCustomWelcome = (chatId) => {
     }
   });
   if (position !== false) {
-    Wel[position].textwelcome = "default";
+    Wel[position].textwelcome = welAwal;
   }
 };
 
