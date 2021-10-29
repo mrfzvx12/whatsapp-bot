@@ -165,7 +165,6 @@ module.exports = {
   WIB,
   WITA,
   WIT,
-  ucapanWaktu,
   weton,
   week,
   date,
