@@ -140,7 +140,8 @@ For more detailed information, please contact me via social media below:
 
 
 ### Admin & Moderator
-[![mrfzvx12](https://github.com/mrfzvx12.png?size=100)](https://github.com/mrfzvx12) | [![moo-d](https://github.com/moo-d.png?size=100)](https://github.com/moo-d) | [![Hans](https://github.com/HansUan010101.png?size=100)](https://github.com/HansUan010101) 
+[![mrfzvx12](https://github.com/mrfzvx12.png?size=100)](https://github.com/mrfzvx12) [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmrfzvx12%2Fwhatsapp-bot.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmrfzvx12%2Fwhatsapp-bot?ref=badge_shield)
+| [![moo-d](https://github.com/moo-d.png?size=100)](https://github.com/moo-d) | [![Hans](https://github.com/HansUan010101.png?size=100)](https://github.com/HansUan010101) 
 ----|----|----
 [MrfZvx12](https://github.com/mrfzvx12) | [Moo-d](https://github.com/moo-d) | [Hans](https://github.com/HansUan010101)
 Moderator & Author | Author | Contributors
@@ -171,3 +172,7 @@ Moderator & Author | Author | Contributors
 src="https://img.shields.io/badge/-Node.js-3C873A?style=flat&logo=Node.js&logoColor=white"></a>
 <a href="https://github.com/mrfzvx12"><img src="http://img.shields.io/badge/-Git-F1502F?style=flat&logo=git&logoColor=FFFFFF"></a>
 <a href="https://github.com/mrfzvx12"><img src="http://img.shields.io/badge/-Github-000000?style=flat&logo=github&logoColor=FFFFFF"></a>
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmrfzvx12%2Fwhatsapp-bot.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmrfzvx12%2Fwhatsapp-bot?ref=badge_large)
