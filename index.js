@@ -1104,7 +1104,7 @@ case 'joox':
     lagu = hasil.mp3
     jooxy = await getBuffer(foto)
     path = await getBuffer(lagu)
-    client.adReply(from, path, document, judul+' - '+artis, artis+' ('+album+')', jooxy, 'https://www.instagram.com/p/CTKtDqeBgY5/?utm_medium=copy_link')
+    client.adReplyAudio(from, path, document, judul+' - '+artis, artis+' ('+album+')', jooxy, 'https://www.instagram.com/p/CTKtDqeBgY5/?utm_medium=copy_link')
   break
 
  case 'ytsearch':
