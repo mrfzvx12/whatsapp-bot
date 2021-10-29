@@ -400,7 +400,7 @@ try {
 //-- Rapiin dikit:v -hns
   case 'menu': case 'help':
     m.reply(msg.wait)
-    capt = `Hai Kak ${pushname}🙋 ${ucapanWaktu}
+    capt = `Hi ${pushname} ${ucapanWaktu}
     
 *Level akun* : ${isLevel}
 *Total Poin* : ${isPoin}
