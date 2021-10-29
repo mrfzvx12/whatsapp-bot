@@ -410,7 +410,7 @@ try {
 `
     capt += readMore
     capt += menu(prefix)
-    client.send2ButtonLoc(from, thumb, capt, 'Total hit : '+isTotalcmd+'\n'+isWm, '📝 Menu', '.menu', '👥 Owner', '.owner')
+    client.send2ButtonLoc(from, thumb, capt, 'Total hit : '+isTotalcmd+'\n'+isWm, 'INFORMASI', '.informasi', 'OWNER', '.owner')
     break
   
   case 'bahasa':
@@ -455,6 +455,7 @@ try {
     break
     
    case 'info':
+   case 'informasi':
    const unread = await client.loadAllUnreadMessages ();
    i = []
    giid = []
