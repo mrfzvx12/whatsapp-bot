@@ -143,7 +143,7 @@ For more detailed information, please contact me via social media below:
 [![mrfzvx12](https://github.com/mrfzvx12.png?size=100)](https://github.com/mrfzvx12) | [![moo-d](https://github.com/moo-d.png?size=100)](https://github.com/moo-d) | [![Hans](https://github.com/HansUan010101.png?size=100)](https://github.com/HansUan010101) 
 ----|----|----
 [MrfZvx12](https://github.com/mrfzvx12) | [Moo-d](https://github.com/moo-d) | [Hans](https://github.com/HansUan010101)
-Admin & Author | Author | Moderator
+Moderator & Author | Author | Contributors
 
 
 ### Some WhatsApp bots are recommended
