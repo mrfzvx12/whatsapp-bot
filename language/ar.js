@@ -101,6 +101,32 @@ return value+ ' لم يتم تشغيله من قبل';
 };
 exports.OnorOff = 'من فضلك كرر بإضافة تشغيل / إيقاف';
 exports.antilink = 'لقد تم اكتشاف إرسال رابط آخر لمجموعة whatsapp';
+exports.setwel = (value) => {
+  return `من فضلك كرر بإضافة نص
+*مثال :*
+!setwelcome أهلا بك @tag في @group
+اسم : @nama
+السيرة الذاتية : @about 
+تاريخ : @tanggal 
+
+لا تنس قراءة وصف المجموعة ، حسنًا؟
+
+*أمثلة لكل وظيفة*` + value;
+};
+
+exports.setbye = (value) => {
+  return `من فضلك كرر بإضافة نص
+*مثال :*
+!setbye مع السلامة @tag
+
+*أمثلة لكل وظيفة*` + value;
+};
+
+exports.default = (value) => {
+  return value + ' العودة إلى الإعدادات الأولية';
+};
+
+
 
 // game
 exports.onGame = 'لا تزال هناك أسئلة بدون إجابة في هذه الدردشة';
