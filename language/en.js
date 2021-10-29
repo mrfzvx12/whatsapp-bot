@@ -57,14 +57,16 @@ Usable language
 - Indonesia
 - English
 - Jawa
-- Sunda`;
+- Sunda
+- Arab`;
 exports.nobahasa = `Language not available
 
 Usable language
 - Indonesia
 - English
 - Jawa
-- Sunda`;
+- Sunda
+- Arab`;
 exports.online = 'Successfully turned on the bot in this group';
 exports.offline = 'Successfully turned off bots in this group';
 
@@ -121,6 +123,16 @@ exports.setbye = (value) => {
 !setbye Goodbye @tag
 
 *Examples for each function*` + value;
+};
+
+exports.setweldone = (value, fungsi) => {
+  return `Successfully changed welcome\n\n`
++ value + `\n\n*Examples for each function*` + fungsi;
+};
+
+exports.setbyedone = (value, fungsi) => {
+  return `Successfully replaced bye\n\n`
++ value + `\n\n*Examples for each function*` + fungsi;
 };
 
 exports.default = (value) => {
