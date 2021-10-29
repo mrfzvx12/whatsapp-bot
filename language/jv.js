@@ -58,14 +58,16 @@ Basa sing bisa digunakake
 - Indonesia
 - English 
 - Jawa
-- Sunda`;
+- SJawa
+- Arab`;
 exports.nobahasa = `Basa ora kasedhiya
 
 Basa sing bisa digunakake
 - Indonesia
 - English
 - Jawa
-- Sunda`;
+- Sunda
+- Arab`;
 exports.online = 'Kasil nguripake bot ing grup iki'
 exports.offline = 'Sukses mateni bot ing grup iki'
 
@@ -123,6 +125,16 @@ exports.setbye = (value) => {
 !setbye pamit @tag
 
 *Conto kanggo saben fungsi*` + value;
+};
+
+exports.setweldone = (value, fungsi) => {
+  return `Kasil diganti sambutan\n\n`
++ value + `\n\n*Conto kanggo saben fungsi*` + fungsi;
+};
+
+exports.setbyedone = (value, fungsi) => {
+  return `Berhasil diganti bye\n\n`
++ value + `\n\n*Conto kanggo saben fungsi*` + fungsi;
 };
 
 exports.default = (value) => {
