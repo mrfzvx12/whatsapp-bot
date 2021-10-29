@@ -538,17 +538,17 @@ try {
  case 'sans':
  case 'castle':
   if(command === "namaninja" ) {
-      hasil = await lxa.namaninja(value)
+    has = await lxa.namaninja(value)
   } else if(command === "blackpill"){
-    hasil = await lxa.blackpill(value)
+    has = await lxa.blackpill(value)
   } else if(command === "typewriter"){
-    hasil = await lxa.typewriter(value)
+    has = await lxa.typewriter(value)
   } else if(command === "sans"){
-    hasil = await lxa.sans(value)
+    has = await lxa.sans(value)
   } else if(command === "castle"){
-    hasil = await lxa.castle(value)
+    has = await lxa.castle(value)
   }
-   m.reply(hasil)
+   m.reply(has)
    break
     
   case 'truth':
