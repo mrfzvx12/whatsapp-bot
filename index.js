@@ -1251,6 +1251,7 @@ case 'joox':
  
   case 'profile':
    //if(!siapa) return m.reply(msg.notag)
+   if(!isGroup) return m.reply(msg.group)
    try {
 	      ppimg = await client.getProfilePicture(siapa);
 	    } catch {
@@ -1271,6 +1272,7 @@ case 'joox':
  
  case 'infogroup':
  case 'infogc':
+   if(!isGroup) return m.reply(group)
    try {
 	      ppimg = await client.getProfilePicture(from);
 	    } catch {
