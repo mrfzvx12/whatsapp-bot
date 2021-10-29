@@ -91,6 +91,13 @@ exports.menu = (v) => {
 ├ ${v}getvn <text>
 ├ ${v}listmedia
 ╰────────
+╭─⊷❲ *ABSENSI* ❳
+├ ${v}absenstart
+├ ${v}delabsen
+├ ${v}cekabsen
+├ ${v}absen
+├ ${v}izin
+╰────────
 ╭─⊷❲ *ADMIN* ❳
 ├ ${v}open
 ├ ${v}close
