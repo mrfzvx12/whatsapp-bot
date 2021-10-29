@@ -344,12 +344,14 @@ client.on('CB:action,,battery', json => {
       console.log(" From :", color(pushname, "yellow"), "Tanggal :", bgcolor(tanggal, 'grey'));
       console.log(" Message :", color(budy, "orange"), "MessageType :", bgcolor(type, "orange"));
     }
-
+    
+/**
 // Anti spam yang ikut ikutan nyepam :v
     if (isCmd && msgFilter.isFiltered(from)) {
          return m.reply('jangan spam')
 					}
     if (isCmd && !isOwner) msgFilter.addFilter(from)
+*/
 
 // auto respon
 lexa = ['lexa', 'Lexa', '@'+client.user.jid.split('@')[0]]
