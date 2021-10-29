@@ -57,8 +57,7 @@ const {
   time,
   WIB,
   WITA,
-  WIT,
-  ucapanWaktu,
+  WIT
 } = require('./library/functions');
 
 // functions
