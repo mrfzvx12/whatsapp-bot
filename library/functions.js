@@ -65,24 +65,6 @@ const kyun = (s) =>{
      const WIB = moment().tz("Asia/Jakarta").format("HH:mm:ss");
      const WIT = moment().tz("Asia/Jayapura").format("HH:mm:ss");
      const WITA = moment().tz("Asia/Makassar").format("HH:mm:ss");
-
-/** Ucapan waktu menurut Timezone 
- */
-      if (time < "24:59:00") {
-       ucapanWaktu = "Selamat Malam";
-    }
-      if (time < "18:00:00") {
-       ucapanWaktu = "Selamat Sore";
-    }
-      if (time < "15:00:00") {
-       ucapanWaktu = "Selamat Siang";
-    }
-      if (time < "11:00:00") {
-       ucapanWaktu = "Selamat Pagi";
-    }
-      if (time < "05:00:00") {
-      ucapanWaktu = "Selamat Malam";
-    }
     
 /**
  * Penyebutan bilangan ribuan dan seterusnya
