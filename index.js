@@ -150,8 +150,6 @@ const { ind, eng, jv, snd, ar } = require('./language/index');
 
 // functions dalam ./functions/setting-bot
 let ownerNumber = st.ownerNumber; // nomor owner
-let prefix = st.prefix; // prefix
-let listprefix = st.listprefix; // list prefi
 let isPoingame = st.poinGame; // menampilkan poin hadiah keberhasilan dalam game
 let isGamewaktu = st.gameWaktu; // waktu yang dibutuhkan untuk game
 let isPoinawal = st.poinAwal; // poin awal adalah poin yang harus di capai untuk menaikkan level
@@ -171,6 +169,13 @@ let baterai = {
     cas: false
 };
 
+let Use = {
+  prefix: '.',
+  multi: true,
+  nopref: false,
+  onepref: false
+};
+
 module.exports = client = async (client, mek) => {
   try {
     if (!mek.hasNewMessage) return;
@@ -188,25 +193,30 @@ module.exports = client = async (client, mek) => {
     const { text, extendedText, contact, location, liveLocation, image, video, sticker, document, audio, product } = MessageType;
     const { wa_version, mcc, mnc, os_version, device_manufacturer, device_model } = client.user.phone;
 //--
-    let body =
-      type === "conversation" && mek.message.conversation
-        ? mek.message.conversation
-        : type == "imageMessage" && mek.message.imageMessage.caption
-        ? mek.message.imageMessage.caption
-        : type == "videoMessage" && mek.message.videoMessage.caption
-        ? mek.message.videoMessage.caption
-        : type == "extendedTextMessage" && mek.message.extendedTextMessage.text
-        ? mek.message.extendedTextMessage.text
-        : type == "buttonsResponseMessage" && mek.message[type].selectedButtonId
-        ? mek.message[type].selectedButtonId
-        : '';
-      for(var v of listprefix){
-			if(body.startsWith(v)){
-			  prefix = v ;
-			}
-      }
+    const cmd = 
+    type === 'conversation' && mek.message.conversation ? mek.message.conversation :
+    type === 'imageMessage' && mek.message.imageMessage.caption ? mek.message.imageMessage.caption : 
+    type === 'videoMessage' && mek.message.videoMessage.caption ? mek.message.videoMessage.caption : 
+    type === 'extendedTextMessage' && mek.message.extendedTextMessage.text ? mek.message.extendedTextMessage.text : 
+    type === 'buttonsResponseMessage' && mek.message[type].selectedButtonId ? mek.message[type].selectedButtonId : ''.slice(1).trim().split(/ +/).shift().toLowerCase();
+
+      if(Use.multi){
+        var prefix = /^[°•π÷×¶∆£¢€¥®™✓=|~zZ+×_*!#%^&./\\©^]/.test(cmd) ? cmd.match(/^[°•π÷×¶∆£¢€¥®™✓=|~xzZ+×_*!#,|`÷?;:%^&./\\©^]/gi) : '-';
+      } else if (Use.nopref) {
+        prefix = '';
+      } else if (Use.onepref) {
+        prefix = Use.prefix;
+        }
+
+    const body = 
+    type === 'conversation' && mek.message.conversation.startsWith(prefix) ? mek.message.conversation : 
+    type === 'imageMessage' && mek.message.imageMessage.caption.startsWith(prefix) ? mek.message.imageMessage.caption : 
+    type === 'videoMessage' && mek.message.videoMessage.caption.startsWith(prefix) ? mek.message.videoMessage.caption : 
+    type === 'extendedTextMessage' && mek.message.extendedTextMessage.text.startsWith(prefix) ? mek.message.extendedTextMessage.text : 
+    type === 'buttonsResponseMessage' && mek.message[type].selectedButtonId.startsWith(prefix) ? mek.message[type].selectedButtonId : ''
+     
      const budy = (type === 'conversation') ? mek.message.conversation : (type === 'extendedTextMessage') ? mek.message.extendedTextMessage.text : '';
-     const command = body.slice(1).trim().split(/ +/).shift().toLowerCase();
+     const command = body.replace(prefix, '').trim().split(/ +/).shift().toLowerCase();
      const args = body.trim().split(/ +/).slice(1);
      const more = String.fromCharCode(8206);
      const readMore = more.repeat(4000);
@@ -226,8 +236,6 @@ module.exports = client = async (client, mek) => {
      const isOwner = ownerNumber.includes(sender) || false;
      const isBotAdmins = groupAdmins.includes(botNumber) || false;
      const isAdmins = groupAdmins.includes(sender) || false;
-     //let conts = mek.key.fromMe ? client.user.jid : client.contacts[sender] || { notify: jid.replace(/@.+/, '') };
-     //const pushname = mek.key.fromMe ? client.user.name : conts.name || conts.vname || conts.notify || '-';
      let siapa = mek.quoted ? mek.quoted.sender : mek.mentionedJid && mek.mentionedJid[0] ? mek.mentionedJid[0] : mek.fromMe ? client.user.jid : mek.sender;
      let dia = mek.quoted ? mek.quoted.sender : mek.mentionedJid && mek.mentionedJid[0] ? mek.mentionedJid[0] : false;
      const pushname = client.getName(siapa);
@@ -1569,6 +1577,39 @@ case 'joox':
         }, isGamewaktu)
     ]
  break
+
+  case 'mode':
+   if(!isOwner) return m.reply(msg.owner)
+   capt = 'USE MODE *ONEPREF*, *NOPREF*, *MULTI*'
+   client.send3Button(from, capt, 'Choose what you want', 'One Prefix', prefix + 'onepref', 'No Prefix', prefix + 'nopref', 'Multi Prefix', prefix + 'multi')
+   break
+ 
+  case 'multi':
+  case 'onepref':
+  case 'nopref':
+    if (!isOwner) return m.reply(msg.owner)
+    //if (!value) return m.reply(msg.notext)
+    if (command === 'multi') {
+      if(Use.multi) return m.reply(msg.Thison(command.toUpperCase()))
+      Use.multi = true
+      Use.nopref = false
+      Use.onepref = false
+      m.reply(msg.done)
+    } else if (command === 'nopref') {
+      if(Use.nopref) return m.reply(msg.Thison(command.toUpperCase()))
+      Use.multi = false
+      Use.onepref = false
+      Use.nopref = true
+      m.reply(msg.done)
+    } else if (command === 'onepref') {
+      if(Use.onepref) return m.reply(msg.Thison(command.toUpperCase()))
+      Use.multi = false
+      Use.nopref = false
+      Use.onepref = true
+      m.reply(msg.done)
+    }
+    break
+
   case 'delwelcome':
   case 'delbye':
     if(!isGroup) return m.reply(msg.group)
