@@ -108,6 +108,12 @@ exports.menu = (v) => {
 ├ ${v}warn @user
 ├ ${v}delwarn @user
 ├ ${v}cekwarn @user
+├ ${v}setwelcome <text>
+├ ${v}setbye <text>
+├ ${v}delwelcome
+├ ${v}delbye
+├ ${v}simulasi welcome
+├ ${v}simulasi bye
 ╰────────
 ╭─⊷❲ *GROUP* ❳
 ├ ${v}welcome on
