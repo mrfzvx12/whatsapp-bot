@@ -122,6 +122,16 @@ exports.setbye = (value) => {
 *أمثلة لكل وظيفة*` + value;
 };
 
+exports.setweldone = (value, fungsi) => {
+  return `تم تغيير الترحيب بنجاح\n\n`
++ value + `\n\n*أمثلة لكل وظيفة*` + fungsi;
+};
+
+exports.setbyedone = (value, fungsi) => {
+  return `تم استبداله بنجاح وداعا\n\n`
++ value + `\n\n*أمثلة لكل وظيفة*` + fungsi;
+};
+
 exports.default = (value) => {
   return value + ' العودة إلى الإعدادات الأولية';
 };
