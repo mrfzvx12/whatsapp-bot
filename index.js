@@ -290,6 +290,14 @@ module.exports = client = async (client, mek) => {
        ucapanWaktu = msg.night;
      }
      
+     if (Use.multi) {
+        modepref = 'Multi Prefix'
+      } else if (Use.nopref) {
+        modepref = 'No Prefix'
+      } else if (Use.onepref) {
+        modepref = 'Prefix ' + Use.prefix
+      }
+     
      // functions penyebutan user premium
      if (isPremium) {
        prem = "Yes";
@@ -426,6 +434,7 @@ try {
 *Total Poin* : ${isPoin}
 *Premium* : ${prem}
 *Tanggal* : ${tanggal}
+*Mode* : ${modepref}
 *Runtime* : ${kyun(process.uptime())}
 `
     capt += readMore
