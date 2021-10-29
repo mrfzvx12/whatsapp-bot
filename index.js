@@ -1606,7 +1606,7 @@ case 'joox':
       Use.multi = false
       Use.nopref = false
       Use.onepref = true
-      m.reply(msg.done + ' Prefix ' + prefix)
+      m.reply(msg.done + ' Prefix ' + Use.prefix)
     }
     break
 
