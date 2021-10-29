@@ -102,6 +102,32 @@ exports.Thisoff = (value) => {
 return value+ ' not turned on before';
 };
 exports.OnorOff = 'Please repeat by adding on/off';
+exports.setwel = (value) => {
+  return `Please repeat by adding text
+*Example :*
+!setwelcome Welcome @tag in @group
+Name : @nama
+Bio : @about 
+Date : @tanggal 
+
+Don't forget to read the group description, okay?
+
+*Examples for each function*` + value;
+};
+
+exports.setbye = (value) => {
+  return `Please repeat by adding text
+*Example :*
+!setbye Goodbye @tag
+
+*Examples for each function*` + value;
+};
+
+exports.default = (value) => {
+  return value + ' Return to initial settings';
+};
+
+
 
 // game
 exports.onGame = 'There are still unanswered questions in this chat';
