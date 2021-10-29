@@ -831,6 +831,22 @@ try {
   client.sendMessage(from, vn, audio, {ptt: true, quoted: mek})
    break
 
+  case 'del' : 
+  case 'delete':
+  case 'd':
+    if (!isAdmins && !isOwner) return m.reply(msg.admin)
+    try{
+      pesan = {
+        id: mek.message.extendedTextMessage.contextInfo.stanzaId, 
+        remoteJid: from, 
+        fromMe: true 
+      }
+      client.deleteMessage(from, pesan)
+    } catch(e) {
+      m.reply('Reply bot message')
+    }
+    break
+
   case 'listmedia':
    listimg = direc.image
    listvid = direc.video
