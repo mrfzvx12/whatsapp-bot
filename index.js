@@ -1589,6 +1589,31 @@ case 'joox':
     ]
  break
 
+   case 'susunkata':
+    client.game = client.game ? client.game : {}
+    if (from in client.game) {
+        client.reply(from, msg.onGame, client.game[from][0])
+        return false
+        } 
+        data = fs.readFileSync(`./result/game/susunkata.js`);
+        list = JSON.parse(data);
+        random = Math.floor(Math.random() * list.length);
+        json = list[random]
+        caption = msg.soal(json.soal + '\n\n*Tipe* : ' + json.tipe, (isGamewaktu / 1000).toFixed(2), isPoingame).trim()
+    client.game[from] = [
+        await client.reply(from, caption, m),
+        json, isPoingame,
+        setTimeout(() => {
+          capt = json.jawaban.replace(/[aiueoAIUEO]/gi, '▢')
+          m.reply("*Clue*\n"+capt.toUpperCase())
+        }, isGamewaktu - 10000),
+        setTimeout(() => {
+            if (client.game[from]) client.reply(from, msg.timeout+json.jawaban.toUpperCase(), client.game[from][0])
+            delete client.game[from]
+        }, isGamewaktu)
+    ]
+ break
+
   case 'mode':
    if(!isOwner) return m.reply(msg.owner)
    capt = 'USE MODE *ONEPREF*, *NOPREF*, *MULTI*'
