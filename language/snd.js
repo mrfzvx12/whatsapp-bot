@@ -57,14 +57,16 @@ Basa nu bisa dipaké
 - Indonesia
 - English
 - Jawa
-- Sunda`;
+- Sunda
+- Arab`;
 exports.nolanguage = `Basa teu sadia
 
 Basa nu bisa dipaké
 - Indonesia
 - English
 - Jawa
-- Sunda`;
+- Sunda
+- Arab`;
 exports.online = 'Suksés ngaktipkeun bot dina grup ieu'
 exports.offline = 'Geus hasil mareuman bot dina grup ieu'
 // -- group
@@ -121,6 +123,16 @@ exports.setbye = (value) => {
 !setbye Dadah @tag
 
 *Conto pikeun tiap fungsi*` + value;
+};
+
+exports.setweldone = (value, fungsi) => {
+  return `Suksés robah wilujeng sumping\n\n`
++ value + `\n\n*Conto pikeun tiap fungsi*` + fungsi;
+};
+
+exports.setbyedone = (value, fungsi) => {
+  return `Berhasil diganti aduh\n\n`
++ value + `\n\n*Conto pikeun tiap fungsi*` + fungsi;
 };
 
 exports.default = (value) => {
