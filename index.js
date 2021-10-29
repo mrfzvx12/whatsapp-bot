@@ -414,11 +414,11 @@ switch (command) {
   case 'restart': // restart bot !!
     if(!isOwner) return m.reply(msg.owner)
     m.reply('Restart bot, proses membutuhkan waktu kurang dari 1 menit, silahkan tunggu')
-try {
-  process.send('reset')
-} catch (e) {
-  m.reply('hmmmm')
-}
+    try {
+      process.send('reset')
+    } catch (e) {
+      m.reply('hmmmm')
+    }
   break
  
   case 'ping':
@@ -1691,10 +1691,10 @@ fungsi = `
       exec(qur, (err, stdout) => {
         if (err) return m.reply(`‣  ${err}`);
         if (stdout) {
-          m.reply(stdout);
-          }
-          });
-          }
+          m.reply(stdout)
+        }
+      });
+    }
           
     if (budy.startsWith('>')){
       if (!mek.key.fromMe && !isOwner) return;
@@ -1703,9 +1703,9 @@ fungsi = `
         } catch(err) {
           e = String(err);
           m.reply("‣ "+e);
-          }
-          }
-          }
+        }
+    }
+}
 
     let isLink = 'https://chat.whatsapp.com/'
     if(budy.match(isLink) && isAntilink === true ) {
