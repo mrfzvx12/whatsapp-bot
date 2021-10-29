@@ -93,7 +93,7 @@ exports.kick = (value) => {
 exports.On = (value) => {
  return `Hidupkeun ${value} dina grup ieu`;
 };
-exports.Pareum = (value) => {
+exports.Off = (value) => {
   return value + 'ditumpurkeun pikeun grup ieu';
 };
 exports.Thison = (value) => {
