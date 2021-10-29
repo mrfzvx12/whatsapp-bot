@@ -410,7 +410,7 @@ try {
 `
     capt += readMore
     capt += menu(prefix)
-    client.send2ButtonLoc(from, thumb, capt, 'Total hit : '+isTotalcmd+'\n'+isWm, 'INFORMASI', '.informasi', 'OWNER', '.owner')
+    client.send2ButtonLoc(from, thumb, capt, 'Total hit : ' + isTotalcmd + '\nTotal User : ' + User.length + '\n' + isWm, 'INFORMASI', '.informasi', 'OWNER', '.owner')
     break
   
   case 'bahasa':
