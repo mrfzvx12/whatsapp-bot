@@ -331,7 +331,7 @@ for ( var L of lexa){
     lari = fs.readFileSync('./database/media/sticker/lari.webp')
    //return client.sendMessage(from, lari, sticker, {quoted: mek})
    capt = 'Hai @'+sender.split('@')[0]+' Lexa disini'
-   return client.send2ButtonLoc(from, thumb, capt, 'Klik button untuk menampilkan menu dan informasi', 'Menu', '.menu', 'Informasi', '.informasi', false, {
+   return client.send2ButtonLoc(from, thumb, capt, 'Klik button untuk menampilkan menu dan informasi', 'Menu', prefix + 'menu', 'Informasi', prefix + 'informasi', false, {
           contextInfo: {
             mentionedJid: client.parseMention(capt),
           },
@@ -410,7 +410,7 @@ try {
 `
     capt += readMore
     capt += menu(prefix)
-    client.send2ButtonLoc(from, thumb, capt, 'Total hit : ' + isTotalcmd + '\nTotal User : ' + User.length + '\n' + isWm, 'INFORMASI', '.informasi', 'OWNER', '.owner')
+    client.send2ButtonLoc(from, thumb, capt, 'Total hit : ' + isTotalcmd + '\nTotal User : ' + User.length + '\n' + isWm, 'INFORMASI', prefix + 'informasi', 'OWNER', prefix + 'owner')
     break
   
   case 'bahasa':
@@ -545,7 +545,7 @@ try {
       hasil = lxa.hacker()
     }
     capt = "‣ *"+command.toUpperCase()+"*\n"+hasil
-    client.sendButton(from, capt, msg.next(command), 'Next', prefix+command)
+    client.sendButton(from, capt, msg.next(command), 'Next', prefix + command)
     break
     
   case 'fitnah':
@@ -747,7 +747,7 @@ try {
     go = await lxa.pinterest(push)
     pin = pickRandom(go)
     if(!pin) return m.reply('Error')
-    client.sendButtonImg(from, await getBuffer(pin), 'Result from : *PINTEREST*\n'+pin, msg.next(command), 'Next', '.cogan', mek)
+    client.sendButtonImg(from, await getBuffer(pin), 'Result from : *PINTEREST*\n'+pin, msg.next(command), 'Next', prefix + 'cogan', mek)
  break
 
   case 'cecan':
@@ -757,7 +757,7 @@ try {
     go = await lxa.pinterest(push)
     pin = pickRandom(go)
     if(!pin) return m.reply('Error')
-    client.sendButtonImg(from, await getBuffer(pin), 'Result from : *PINTEREST*\n'+pin, msg.next(command), 'Next', '.cecan', mek)
+    client.sendButtonImg(from, await getBuffer(pin), 'Result from : *PINTEREST*\n'+pin, msg.next(command), 'Next', prefix + 'cecan', mek)
  break
 
   case 'cyberpunk':
@@ -767,7 +767,7 @@ try {
     go = await lxa.pinterest(push)
     pin = pickRandom(go)
     if(!pin) return m.reply('Error')
-    client.sendButtonImg(from, await getBuffer(pin), 'Result from : *PINTEREST*\n'+pin, msg.next(command), 'Next', '.cyberpunk', mek)
+    client.sendButtonImg(from, await getBuffer(pin), 'Result from : *PINTEREST*\n'+pin, msg.next(command), 'Next', prefix + 'cyberpunk', mek)
  break
 
   case 'wallpaper':
@@ -777,7 +777,7 @@ try {
     go = await lxa.pinterest(push)
     pin = pickRandom(go)
     if(!pin) return m.reply('Error')
-    client.sendButtonImg(from, await getBuffer(pin), 'Result from : *PINTEREST*\n'+pin, msg.next(command), 'Next', '.wallpaper', mek)
+    client.sendButtonImg(from, await getBuffer(pin), 'Result from : *PINTEREST*\n'+pin, msg.next(command), 'Next', prefix + 'wallpaper', mek)
  break
 
   case 'upsw':
