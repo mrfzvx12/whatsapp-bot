@@ -57,14 +57,16 @@ Bahasa yang dapat digunakan
 - Indonesia
 - English
 - Jawa
-- Sunda`;
+- Sunda
+- Arab`;
 exports.nobahasa = `Bahasa tidak tersedia
 
 Bahasa yang dapat digunakan
 - Indonesia
 - English
 - Jawa
-- Sunda`;
+- Sunda
+- Arab`;
 exports.online = 'Berhasil menyalakan bot di group ini'
 exports.offline = 'Berhasil mematikan bot di group ini'
 
