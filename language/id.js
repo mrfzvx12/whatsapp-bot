@@ -103,6 +103,30 @@ return value+ ' belum menyala sebelumnya';
 };
 exports.OnorOff = 'Silahkan ulangi dengan menambahkan on/off';
 exports.antilink = 'Kamu terdeteksi mengirimkan link whatsapp group lain';
+exports.setwel = (value) => {
+  return `Silahkan ulangi dengan menambahkan text
+*Contoh :*
+!setwelcome Selamat Datang @tag di @group
+Nama : @nama
+Bio : @about 
+Tanggal : @tanggal 
+
+Jangan lupa baca deskripsi group ya
+
+*Contoh untuk setiap fungsi*` + value;
+};
+
+exports.setbye = (value) => {
+  return `Silahkan ulangi dengan menambahkan text
+*Contoh :*
+!setbye Selamat tinggal @tag
+
+*Contoh untuk setiap fungsi*` + value;
+};
+
+exports.default = (value) => {
+  return value + ' Kembali ke pengaturan awal';
+};
 
 // game
 exports.onGame = 'Masih ada soal belum terjawab di chat ini';
