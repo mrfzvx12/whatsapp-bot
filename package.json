@@ -2,7 +2,7 @@
 
   "name": "whatsapp-bot",
 
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "WhatsApp Bot using Baileys",
   "main": "main.js",
   "directories": {
