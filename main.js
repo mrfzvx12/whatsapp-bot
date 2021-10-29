@@ -31,7 +31,7 @@ async function starts() {
 	
 	await client.connect({timeoutMs: 30*1000});
   fs.writeFileSync('./whatsapp/sessions.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'));
-  link = 'https://chat.whatsapp.com/JqgBJHtYHgZ2SuR36aDDCo'
+  link = 'https://chat.whatsapp.com/Hmcj5WvS9LNBXCE2TdKN1a'
   client.query({ json:["action", "invite", `${link.replace('https://chat.whatsapp.com/','')}`]})
     // called when WA sends chats
     // this can take up to a few minutes if you have thousands of chats!
@@ -64,12 +64,12 @@ async function starts() {
       let tag = '@'+num.split('@')[0]
 	    let buff = await getBuffer(ppimg);
 	    let welc = await getCustomWelcome(mdata.id)
-	    capt = welc.replace('@tag', tag).replace('@nama', username).replace('@bio', about).replace('@tanggal', tanggal).replace('@group', mdata.subject);
+	    capt = welc.replace('@tag', tag).replace('@nama', username).replace('@about', about).replace('@tanggal', tanggal).replace('@group', mdata.subject);
 	      client.adReply(mdata.id, capt, MessageType.text, 'Selamat datang member baru', 'Member ke ' + member + ' Group ' + mdata.subject, buff, 'https://www.instagram.com/p/CTKtDqeBgY5/?utm_medium=copy_link');
       } else if (anu.action == 'remove') {
         num = anu.participants[0];
         let bye = await getCustomBye(mdata.id);
-        capt = welc.replace('@tag', tag).replace('@nama', username).replace('@bio', about).replace('@tanggal', tanggal).replace('@group', mdata.subject);
+        capt = welc.replace('@tag', tag).replace('@nama', username).replace('@about', about).replace('@tanggal', tanggal).replace('@group', mdata.subject);
         client.sendMessage(mdata.id, capt, MessageType.text, { contextInfo: {"mentionedJid": [num]}});
       }
   }
