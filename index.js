@@ -133,6 +133,18 @@ const {
   addPoingame,
   addCmd
 } = require('./functions/setting-bot'); // mengubah data dalam ./database/setting-bot
+
+const {
+  Wel,
+  addCustomWelcome,
+  getCustomWelcome,
+  setCustomWelcome,
+  delCustomWelcome,
+  getCustomBye,
+  setCustomBye,
+  delCustomBye
+} = require('./functions/welcome');
+
 const { msgFilter } = require('./functions/antispam')
 const { menu } = require('./functions/menu'); // tampilan menu dalam functions/menu
 const { ind, eng, jv, snd, ar } = require('./language/index');
@@ -343,6 +355,7 @@ if (budy) addUser(sender); // menambah informasi user kedalam database
 if (isGroup && budy) addGroup(from); // menambah informasi group kedalam database
 if (isCmd) addCmd() // menambah jumlah total command ketika user menggunakan command
 if (isCmd) addPoin(sender); // menambah poin user ketika menggunakan command
+if (isGroup && budy) addCustomWelcome(from)
 
 // menambahkan poin ke level dan di akumulasikan untuk menaikkan level
 const Amount = isPoinawal * (Math.pow(2, isLevel) - 1)
@@ -1557,6 +1570,67 @@ case 'joox':
         }, isGamewaktu)
     ]
  break
+  case 'delwelcome':
+  case 'delbye':
+    if(!isGroup) return m.reply(msg.group)
+    if(!isAdmins && !isOwner) return m.reply(msg.owner)
+    if(command.includes('welcome')){
+      await delCustomWelcome(from)
+      m.reply(msg.default('WELCOME'))
+    } else if(command.includes('bye'){
+      await delCustomBye(from)
+      m.reply(msg.default('BYE'))
+    }
+  break
+
+  case 'setwelcome':
+    if(!isGroup) return m.reply(msg.group)
+    if(!isAdmins && !isOwner) return m.reply(msg.admin)
+    about = (await client.getStatus(sender).catch(console.error) || {}).status || ''
+    fungsi = `
+@tag = @${sender.split('@')[0]}
+@nama = ${pushname}
+@about = ${about}
+@tanggal = ${tanggal}
+@group = ${groupName}`
+    if(!value) return m.reply(msg.setwel(fungsi))
+     await setCustomWelcome(from, value)
+     m.reply(msg.done)
+     break
+
+  case 'setbye':
+    if(!isGroup) return m.reply(msg.group)
+    if(!isAdmins && !isOwner) return m.reply(msg.admin)
+    about = (await client.getStatus(sender).catch(console.error) || {}).status || ''
+fungsi = `
+@tag = @${sender.split('@')[0]}
+@nama = ${pushname}
+@about = ${about}
+@tanggal = ${tanggal}
+@group = ${groupName}`
+    if(!value) return m.reply(msg.setbye(fungsi))
+    await setCustomBye(from, value)
+    m.reply(msg.done)
+    break
+
+ case 'simulasi' :
+   if(!isGroup) return m.reply(msg.group)
+   if(!isAdmins && !isOwner) return m.reply(msg.admin)
+   if(!value) return m.reply('List Simulasi\n\n- Welcome\n-Bye')
+   welc = getCustomWelcome(from)
+   bye = getCustomBye(from)
+   tag = '@'+sender.split('@')[0]
+   about = (await client.getStatus(sender).catch(console.error) || {}).status || ''
+   if(value.toLowerCase() === 'welcome') {
+     capt = welc.replace('@tag', tag).replace('@nama', pushname).replace('@about', about).replace('@tanggal', tanggal).replace('@group', groupName)
+     client.adReply(from, capt, text, 'Selamat datang member baru', 'Member ke ' + groupMembers.length + ' Group ' + groupName, thumb, 'https://www.instagram.com/p/CTKtDqeBgY5/?utm_medium=copy_link');
+     } else if(value.toLowerCase() === 'bye') {
+       capt = bye.replace('@tag', tag).replace('@nama', pushname).replace('@about', about).replace('@tanggal', tanggal).replace('@group', groupName)
+       m.reply(capt)
+     } else {
+       m.reply('List Simulasi\n\n- Welcome\n- Bye')
+     }
+  break
 
   default:
   
