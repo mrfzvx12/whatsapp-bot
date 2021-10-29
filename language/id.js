@@ -126,6 +126,16 @@ exports.setbye = (value) => {
 *Contoh untuk setiap fungsi*` + value;
 };
 
+exports.setweldone = (value, fungsi) => {
+  return `Berhasil mengganti welcome\n\n`
++ value + `\n\n*Contoh untuk setiap fungsi*` + fungsi;
+};
+
+exports.setbyedone = (value, fungsi) => {
+  return `Berhasil mengganti bye\n\n`
++ value + `\n\n*Contoh untuk setiap fungsi*` + fungsi;
+};
+
 exports.default = (value) => {
   return value + ' Kembali ke pengaturan awal';
 };
