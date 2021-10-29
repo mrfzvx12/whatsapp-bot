@@ -140,10 +140,10 @@ For more detailed information, please contact me via social media below:
 
 
 ### Admin & Moderator
-[![mrfzvx12](https://github.com/mrfzvx12.png?size=100)](https://github.com/mrfzvx12) | [![moo-d](https://github.com/moo-d.png?size=100)](https://github.com/moo-d) | [![Hans](https://github.com/HansUan010101.png?size=100)](https://github.com/HansUan010101) 
-----|----|----
-[MrfZvx12](https://github.com/mrfzvx12) | [Moo-d](https://github.com/moo-d) | [Hans](https://github.com/HansUan010101)
-Moderator & Author | Author | Contributors
+[![mrfzvx12](https://github.com/mrfzvx12.png?size=100)](https://github.com/mrfzvx12) | [![moo-d](https://github.com/moo-d.png?size=100)](https://github.com/moo-d) 
+----|----
+[MrfZvx12](https://github.com/mrfzvx12) | [Moo-d](https://github.com/moo-d)
+Moderator & Author | Author
 
 
 ### Some WhatsApp bots are recommended
