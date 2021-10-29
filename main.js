@@ -57,32 +57,16 @@ async function starts() {
 	    let username = client.getName(num)
       let about = (await client.getStatus(num).catch(console.error) || {}).status || ''
       let member = mdata.participants.length
-	    if(num.startsWith('62')){
-	      capt = '*Selamat Datang* @' + num.split('@')[0];
-	      capt += '\n\n*Nama* : ' + username
-	      capt += '\n*Bio* : ' + about 
-	      capt += '\n*Tanggal* : ' + tanggal 
-	      capt += '\n\nJangan lupa baca deskripsi group ya'
-	      client.adReply(mdata.id, capt, MessageType.text, 'Selamat datang member baru', 'Member ke ' + member + ' Group ' + mdata.subject, buff, 'https://www.instagram.com/p/CTKtDqeBgY5/?utm_medium=copy_link');
-	    } else {
-	      capt = '*Welcome* @' + num.split('@')[0];
-	      capt += '\n\n*Username* : ' + username
-	      capt += '\n*Bio* : ' + about 
-	      capt += '\n*Date* : ' + tanggal 
-	      capt += '\n\nDon\'t forget to read the group description'
-	      client.adReply(mdata.id, capt, MessageType.text, 'Welcome New Member', 'Member ke ' + member + ' Group ' + mdata.subject, buff, 'https://www.instagram.com/p/CTKtDqeBgY5/?utm_medium=copy_link');
-	    };
+      let tag = '@'+num.split('@')[0]
 	    let buff = await getBuffer(ppimg);
-	   /* client.sendButtonLoc(mdata.id, buff, capt, 'Follow me on Instagram\nhttps://www.instagram.com/mrf.zvx', 'Menu', '.menu', false, {
-	      contextInfo: {
-            mentionedJid: client.parseMention(capt)
-	      }
-	    });*/
-	    client.adReply(mdata.id, capt, MessageType.text, 'Welcome New Member', 'Member ke ' + member + ' Group ' + mdata.subject, buff, 'https://www.instagram.com/p/CTKtDqeBgY5/?utm_medium=copy_link');
+	    let welc = await getCustomWelcome(mdata.id)
+	    capt = welc.replace('@tag', tag).replace('@nama', username).replace('@bio', about).replace('@tanggal', tanggal).replace('@group', mdata.subject);
+	      client.adReply(mdata.id, capt, MessageType.text, 'Selamat datang member baru', 'Member ke ' + member + ' Group ' + mdata.subject, buff, 'https://www.instagram.com/p/CTKtDqeBgY5/?utm_medium=copy_link');
       } else if (anu.action == 'remove') {
         num = anu.participants[0];
-	    capt = `Selamat tinggal 👋🏻 @${num.split('@')[0]}`;
-	    client.sendMessage(mdata.id, capt, MessageType.text, { contextInfo: {"mentionedJid": [num]}});
+        let bye = await getCustomBye(mdata.id);
+        capt = welc.replace('@tag', tag).replace('@nama', username).replace('@bio', about).replace('@tanggal', tanggal).replace('@group', mdata.subject);
+        client.sendMessage(mdata.id, capt, MessageType.text, { contextInfo: {"mentionedJid": [num]}});
       }
   }
 });
