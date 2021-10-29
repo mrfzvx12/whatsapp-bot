@@ -88,7 +88,6 @@ exports.promote = (value) => {
 exports.demote = (value) => {
   return 'Kasil diturunake ' + value;
 };
-
 exports.kick = (value) => {
   return 'Order ditampa, ditanggepi '+value;
 };
@@ -126,20 +125,24 @@ exports.setbye = (value) => {
 
 *Conto kanggo saben fungsi*` + value;
 };
-
 exports.setweldone = (value, fungsi) => {
   return `Kasil diganti sambutan\n\n`
 + value + `\n\n*Conto kanggo saben fungsi*` + fungsi;
 };
-
 exports.setbyedone = (value, fungsi) => {
   return `Berhasil diganti bye\n\n`
 + value + `\n\n*Conto kanggo saben fungsi*` + fungsi;
 };
-
 exports.default = (value) => {
   return value + ' Bali menyang setelan wiwitan';
 };
+
+exports.absen = 'Isih ana absen sing isih ana!'
+exports.noabsen = 'Ora ana absen ing proses!'
+exports.inabsen = 'Sampeyan wis rampung rawuh!'
+exports.hapus = (value) =>{
+  return 'Kasil dibusak ' + value + ' ing grup iki'
+}
 
 // game
 exports.onGame = 'Isih ana pitakonan sing durung dijawab ing obrolan iki';

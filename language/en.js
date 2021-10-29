@@ -87,7 +87,6 @@ exports.promote = (value) => {
 exports.demote = (value) => {
   return 'Successfully demoted ' + value;
 };
-
 exports.kick = (value) => {
   return 'Order received, issued '+value;
 };
@@ -124,22 +123,24 @@ exports.setbye = (value) => {
 
 *Examples for each function*` + value;
 };
-
 exports.setweldone = (value, fungsi) => {
   return `Successfully changed welcome\n\n`
 + value + `\n\n*Examples for each function*` + fungsi;
 };
-
 exports.setbyedone = (value, fungsi) => {
   return `Successfully replaced bye\n\n`
 + value + `\n\n*Examples for each function*` + fungsi;
 };
-
 exports.default = (value) => {
   return value + ' Return to initial settings';
 };
 
-
+exports.absen = 'There is still an ongoing absence!'
+exports.noabsen = 'No absences in progress!'
+exports.inabsen = 'You\'ve done attendance!'
+exports.hapus = (value) =>{
+  return 'Successfully deleted ' + value + ' in this group'
+}
 
 // game
 exports.onGame = 'There are still unanswered questions in this chat';

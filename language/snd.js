@@ -86,7 +86,6 @@ exports.promote = (value) => {
 exports.demote = (value) => {
   return 'Hasil diturunkeun' + value;
 };
-
 exports.kick = (value) => {
   return 'Pesenan ditarima, kaluaran' + value;
 };
@@ -116,7 +115,6 @@ Tong hilap baca pedaran grup, nya?
 
 *Conto pikeun tiap fungsi*` + value;
 };
-
 exports.setbye = (value) => {
   return `Mangga malikan deui ku nambahkeun téks
 *Conto :*
@@ -124,21 +122,24 @@ exports.setbye = (value) => {
 
 *Conto pikeun tiap fungsi*` + value;
 };
-
 exports.setweldone = (value, fungsi) => {
   return `Suksés robah wilujeng sumping\n\n`
 + value + `\n\n*Conto pikeun tiap fungsi*` + fungsi;
 };
-
 exports.setbyedone = (value, fungsi) => {
   return `Berhasil diganti aduh\n\n`
 + value + `\n\n*Conto pikeun tiap fungsi*` + fungsi;
 };
-
 exports.default = (value) => {
   return value + ' Balik deui ka setélan awal';
 };
 
+exports.absen = 'Aya kénéh henteuna lumangsung!'
+exports.noabsen = 'Taya absen dina kamajuan!'
+exports.inabsen = 'Anjeun parantos hadir!'
+exports.hapus = (value) =>{
+  return 'Berhasil dihapus ' + value + ' dina grup ieu'
+}
 
 // game
 exports.onGame = 'Aya kénéh patarosan anu teu acan kajawab dina obrolan ieu';

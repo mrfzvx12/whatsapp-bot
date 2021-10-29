@@ -115,7 +115,6 @@ exports.setwel = (value) => {
 
 *أمثلة لكل وظيفة*` + value;
 };
-
 exports.setbye = (value) => {
   return `من فضلك كرر بإضافة نص
 *مثال :*
@@ -123,22 +122,24 @@ exports.setbye = (value) => {
 
 *أمثلة لكل وظيفة*` + value;
 };
-
 exports.setweldone = (value, fungsi) => {
   return `تم تغيير الترحيب بنجاح\n\n`
 + value + `\n\n*أمثلة لكل وظيفة*` + fungsi;
 };
-
 exports.setbyedone = (value, fungsi) => {
   return `تم استبداله بنجاح وداعا\n\n`
 + value + `\n\n*أمثلة لكل وظيفة*` + fungsi;
 };
-
 exports.default = (value) => {
   return value + ' العودة إلى الإعدادات الأولية';
 };
 
-
+exports.absen = 'لا يزال هناك غياب مستمر!'
+exports.noabsen = 'لا غيابات في التقدم!'
+exports.inabsen = 'لقد انتهيت من الحضور!'
+exports.hapus = (value) =>{
+  return 'تم الحذف بنجاح ' + value + 'في هذه المجموعة'
+}
 
 // game
 exports.onGame = 'لا تزال هناك أسئلة بدون إجابة في هذه الدردشة';

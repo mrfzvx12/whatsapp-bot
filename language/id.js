@@ -140,6 +140,12 @@ exports.default = (value) => {
   return value + ' Kembali ke pengaturan awal';
 };
 
+exports.absen = 'Masih ada absen berlangsung!'
+exports.noabsen = 'Tidak ada absen berlangsung!'
+exports.inabsen = 'Kamu sudah melakukan absensi!'
+exports.hapus = (value) =>{
+  return 'Berhasil menghapus ' + value + ' di group ini'
+}
 // game
 exports.onGame = 'Masih ada soal belum terjawab di chat ini';
 exports.soal = (text1, text2, text3) => {
