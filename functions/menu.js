@@ -25,6 +25,7 @@ exports.menu = (v) => {
 ├ ${v}dare
 ├ ${v}asahotak
 ├ ${v}siapakahaku
+├ ${v}susunkata
 ├ ${v}tebakkalimat
 ├ ${v}tebakkata
 ├ ${v}tebaklirik
@@ -101,6 +102,8 @@ exports.menu = (v) => {
 ├ ${v}setppgc
 ├ ${v}setname <text>
 ├ ${v}setdesk <text>
+├ ${v}profile @tag
+├ ${v}infogroup
 ├ ${v}add <nomor>
 ├ ${v}kick @user
 ├ ${v}promote @user
