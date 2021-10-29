@@ -135,6 +135,9 @@ exports.menu = (v) => {
 ├ ${v}setppbot
 ├ ${v}setthumb
 ├ ${v}setfakethumb
+├ ${v}onepref
+├ ${v}nopref
+├ ${v}multi
 ├ $
 ├ >
 ╰────────`;
