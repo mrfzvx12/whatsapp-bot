@@ -55,14 +55,16 @@ exports.Pbahasa = `حدد اللغة التي تريد استخدامها
 - Indonesia
 - English
 - Jawa
-- Sunda`;
+- Sunda
+- Arab`;
 exports.nobahasa = `اللغة غير متوفرة
 
 لغة قابلة للاستخدام
 - Indonesia
 - English
 - Jawa
-- Sunda`;
+- Sunda
+- Arab`;
 exports.online = 'نجح تشغيل الروبوت في هذه المجموعة'
 exports.offline = 'تم إيقاف تشغيل الروبوتات في هذه المجموعة بنجاح'
 
