@@ -27,7 +27,8 @@ const addCustomWelcome = (chatId) => {
   if (position === false) {
     const obj = { 
       from: chatId, 
-      textwelcome: welAwal
+      textwelcome: welAwal,
+      textbye: byeAwal
     };
     Wel.push(obj);
     fs.writeFileSync('./database/welcome.json', JSON.stringify(Wel, null, "\t"));
@@ -52,6 +53,23 @@ const getCustomWelcome = (chatId) => {
     return Wel[position].textwelcome;
   }
 };
+/**
+ * Get Custom bye Text
+ * @param {string} chatId
+ * @param {object} Wel
+ * @returns {Number}
+ */
+const getCustomBye = (chatId) => {
+  let position = false;
+  Object.keys(Wel).forEach((i) => {
+    if (Wel[i].from === chatId) {
+      position = i;
+    }
+  });
+  if (position !== false) {
+    return Wel[position].textbye;
+  }
+};
 
 /**
  * Set Custom Welcome
@@ -72,6 +90,24 @@ const setCustomWelcome = (chatId, value) => {
 };
 
 /**
+ * Set Custom Welcome
+ * @param {string} chatId
+ * @param {string} text
+ * @param {object} Wel
+ */
+const setCustomBye = (chatId, value) => {
+  let position = false;
+  Object.keys(Wel).forEach((i) => {
+    if (Wel[i].from === chatId) {
+      position = i;
+    }
+  });
+  if (position !== false) {
+    Wel[position].textbye = value;
+  }
+};
+
+/**
  * Reset Custom Welcome
  * @param {string} chatId
  * @param {object} Wel
@@ -88,10 +124,30 @@ const delCustomWelcome = (chatId) => {
   }
 };
 
+/**
+ * Reset Custom Welcome
+ * @param {string} chatId
+ * @param {object} Wel
+ */
+const delCustomBye = (chatId) => {
+  let position = false;
+  Object.keys(Wel).forEach((i) => {
+    if (Wel[i].from === chatId) {
+      position = i;
+    }
+  });
+  if (position !== false) {
+    Wel[position].textbye = byeAwal;
+  }
+};
+
 module.exports = {
   Wel,
   addCustomWelcome,
   getCustomWelcome,
   setCustomWelcome,
-  delCustomWelcome
+  delCustomWelcome,
+  getCustomBye,
+  setCustomBye,
+  delCustomBye
 };
