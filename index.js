@@ -1577,7 +1577,7 @@ case 'joox':
     if(command.includes('welcome')){
       await delCustomWelcome(from)
       m.reply(msg.default('WELCOME'))
-    } else if(command.includes('bye'){
+    } else if(command.includes('bye')){
       await delCustomBye(from)
       m.reply(msg.default('BYE'))
     }
