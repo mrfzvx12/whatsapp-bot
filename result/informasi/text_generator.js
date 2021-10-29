@@ -136,7 +136,7 @@ hasil = teks.replace(/[a-zA-Z]/g, v => {
   return hasil;
 }
 
-const sans = (teks) =>{
+async function sans(teks){
 hasil = teks.replace(/[a-zA-Z0-9]/g, v => {
         switch (v) {
             case 'a': return '𝗮';
@@ -206,7 +206,7 @@ hasil = teks.replace(/[a-zA-Z0-9]/g, v => {
   return hasil;
 }
 
-const castle = (teks) =>{
+async function castle(teks){
 hasil = teks.replace(/[a-zA-Z0-9]/g, v => {
         switch (v) {
             case 'a': return '𝖆';
