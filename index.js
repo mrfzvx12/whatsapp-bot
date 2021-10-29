@@ -1595,7 +1595,7 @@ case 'joox':
 @group = ${groupName}`
     if(!value) return m.reply(msg.setwel(fungsi))
      await setCustomWelcome(from, value)
-     m.reply(msg.done)
+     m.reply(msg.setweldone(value, fungsi))
      break
 
   case 'setbye':
@@ -1610,7 +1610,7 @@ fungsi = `
 @group = ${groupName}`
     if(!value) return m.reply(msg.setbye(fungsi))
     await setCustomBye(from, value)
-    m.reply(msg.done)
+    m.reply(msg.setbyedone(value, fungsi))
     break
 
  case 'simulasi' :
