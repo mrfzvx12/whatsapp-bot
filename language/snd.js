@@ -102,6 +102,31 @@ return value + 'teu seuneu sateuacanna';
 };
 exports.OnorOff = 'Mangga cobian deui nambahkeun on/off';
 exports.antilink = 'Anjeun geus kacatet ngirim link grup whatsapp sejen';
+exports.setwel = (value) => {
+  return `Mangga malikan deui ku nambahkeun téks
+*Conto :*
+!setwelcome Wilujeng sumping @tag di @group
+Ngaran : @nama
+Bio : @about 
+Kaping : @tanggal 
+
+Tong hilap baca pedaran grup, nya?
+
+*Conto pikeun tiap fungsi*` + value;
+};
+
+exports.setbye = (value) => {
+  return `Mangga malikan deui ku nambahkeun téks
+*Conto :*
+!setbye Dadah @tag
+
+*Conto pikeun tiap fungsi*` + value;
+};
+
+exports.default = (value) => {
+  return value + ' Balik deui ka setélan awal';
+};
+
 
 // game
 exports.onGame = 'Aya kénéh patarosan anu teu acan kajawab dina obrolan ieu';
