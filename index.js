@@ -230,6 +230,7 @@ module.exports = client = async (client, mek) => {
      const sender = isGroup ? mek.participant : mek.key.remoteJid;
      const groupMetadata = isGroup ? await client.groupMetadata(from) : '';
      const groupName = isGroup ? groupMetadata.subject : '';
+     const groupDesc = isGroup ? groupMetadata.desc : ''
      const groupId = isGroup ? groupMetadata.jid : '';
      const groupMembers = isGroup ? groupMetadata.participants : '';
      const groupAdmins = isGroup ? getGroupAdmins(groupMembers) : '';
@@ -239,6 +240,8 @@ module.exports = client = async (client, mek) => {
      let siapa = mek.quoted ? mek.quoted.sender : mek.mentionedJid && mek.mentionedJid[0] ? mek.mentionedJid[0] : mek.fromMe ? client.user.jid : mek.sender;
      let dia = mek.quoted ? mek.quoted.sender : mek.mentionedJid && mek.mentionedJid[0] ? mek.mentionedJid[0] : false;
      const pushname = client.getName(siapa);
+     const about = (await client.getStatus(sender).catch(console.error) || {}).status || ''
+    
 
 // cek Informasi user
      let isPoin = cekPoin(sender);
@@ -1245,7 +1248,56 @@ case 'joox':
     link = 'https://chat.whatsapp.com/'+code 
     m.reply(link)
     break
-  
+ 
+  case 'profile':
+   //if(!siapa) return m.reply(msg.notag)
+   try {
+	      ppimg = await client.getProfilePicture(siapa);
+	    } catch {
+	      ppimg = 'https://telegra.ph/file/7c0b1068736040b515d81.jpg';
+	    }
+	 Prema = cekPremium(siapa) ? 'Yes' : 'No'
+   capt = '*PROFILE*\n\n'
+   capt += '*Nomor* : ' + siapa.split('@')[0]
+   capt += '\n*Nama* : ' + pushname
+   capt += '\n*Bio* : ' + about
+   capt += '\n*Premium* : ' + Prema
+   capt += '\n*Bahasa* : ' + cekBahasa(siapa)
+   capt += '\n*Level* : ' + cekLevel(siapa)
+   capt += '\n*Poin* : ' + cekPoin(siapa)
+   capt += '\n*Warning* : ' + cekWarn(siapa)
+   client.adReply(from, capt, text, 'Profile from database', tanggal, thumb, 'https://www.instagram.com/p/CTKtDqeBgY5/?utm_medium=copy_link', mek)
+   break
+ 
+ case 'infogroup':
+ case 'infogc':
+   try {
+	      ppimg = await client.getProfilePicture(from);
+	    } catch {
+	      ppimg = 'https://telegra.ph/file/7c0b1068736040b515d81.jpg';
+	    }
+   isAntilink = isAntilink ? 'Yes' : 'No' 
+   isAntidelete = isAntidelete ? 'Yes' : 'No' 
+   isDetect = isDetect ? 'Yes' : 'No' 
+   isWelcome = isWelcome ? 'Yes' : 'No' 
+   creation = moment(groupMetadata.creation * 1000).tz('Asia/Jakarta').format(`DD-MM-YYYY`)
+   ownergc = groupMetadata.owner.split('@')[0]
+   capt = 'GROUP INFORMATIONS\n\n'
+   capt += '*Nama* : ' + groupName
+   capt += '\n*Di buat pada* : ' + creation
+   capt += '\n*Owner* : @' + ownergc
+   capt += '\n*Total Admin* : ' + groupAdmins.length
+   capt += '\n*Total Member* : ' + groupMembers.length
+   capt += '\n\nGROUP SETTING'
+   capt += '\n*Antilink* : ' + isAntilink
+   capt += '\n*Antidelete* : ' + isAntidelete
+   capt += '\n*Detected* : ' + isDetect
+   capt += '\n*Welcome* : ' + isWelcome
+   capt += '\n\n*Deskripsi* : ' + groupDesc 
+   client.adReply(from, capt, text, groupName, tanggal, thumb, 'https://www.instagram.com/p/CTKtDqeBgY5/?utm_medium=copy_link')
+break
+ 
+ 
   case 'revoke':
     if(!isGroup) return m.reply(msg.group)
     if(!isAdmins && !isOwner) return m.reply(msg.admin)
