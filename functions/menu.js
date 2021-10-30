@@ -6,6 +6,7 @@ exports.menu = (v) => {
 ├ ${v}info
 ├ ${v}bahasa
 ├ ${v}ping
+├ ${v}report <text>
 ╰────────
 ╭─⊷❲ *FUN* ❳
 ├ ${v}dilan
@@ -156,6 +157,7 @@ exports.menu = (v) => {
 ├ ${v}nopref
 ├ ${v}multi
 ├ ${v}view <link>
+├ ${v}listreport <link>
 ├ $
 ├ >
 ╰────────`;
