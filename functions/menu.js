@@ -98,6 +98,13 @@ exports.menu = (v) => {
 ├ ${v}absen
 ├ ${v}izin
 ╰────────
+╭─⊷❲ *ABSENSI* ❳
+├ ${v}voting <text>
+├ ${v}delvote
+├ ${v}cekvote
+├ ${v}vote
+├ ${v}devote
+╰────────
 ╭─⊷❲ *ADMIN* ❳
 ├ ${v}open
 ├ ${v}close
