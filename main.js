@@ -69,7 +69,7 @@ async function starts() {
       } else if (anu.action == 'remove') {
         num = anu.participants[0];
         let bye = await getCustomBye(mdata.id);
-        capt = welc.replace('@tag', tag).replace('@nama', username).replace('@about', about).replace('@tanggal', tanggal).replace('@group', mdata.subject);
+        capt = bye.replace('@tag', tag).replace('@nama', username).replace('@about', about).replace('@tanggal', tanggal).replace('@group', mdata.subject);
         client.sendMessage(mdata.id, capt, MessageType.text, { contextInfo: {"mentionedJid": [num]}});
       }
   }
