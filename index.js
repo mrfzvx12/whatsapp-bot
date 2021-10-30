@@ -1735,7 +1735,7 @@ break
         list = JSON.parse(data);
         random = Math.floor(Math.random() * list.length);
         json = list[random]
-        let caption = msg.soal(json.soal, (isGamewaktu / 1000).toFixed(2), isPoingame).trim()
+        caption = msg.soal(json.soal, (isGamewaktu / 1000).toFixed(2), isPoingame).trim()
     client.game[from] = [
         await client.reply(from, caption, m),
         json, isPoingame,
