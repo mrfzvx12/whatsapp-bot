@@ -67,7 +67,8 @@ const {
   addImage,
   addVideo,
   addStiker,
-  addAudio
+  addAudio,
+  addReport
 } = require('./functions/directory');
 
 
@@ -880,6 +881,25 @@ switch (command) {
       m.reply('Reply bot message')
     }
     break
+
+ case 'report':
+ case 'bug':
+   if (!value) return m.reply(msg.notext)
+   await addReport(sender, value)
+   capt = 'Report from @' + sender.split('@')[0]
+   capt += '\n' + value
+   m.reply(msg.done + '\n' + capt)
+   break
+
+ case 'listreport':
+   if (!isOwner) return m.reply(msg.owner)
+   report = '*LIST REPORT*'
+   for (var R of direc.report){
+     report += `\n\nId : @` + R.id.split('@')[0]
+     report += `\nReport : ` + R.report
+   }
+   m.reply(report)
+   break
 
   case 'listmedia':
    listimg = direc.image
