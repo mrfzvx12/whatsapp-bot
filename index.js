@@ -1542,16 +1542,134 @@ break
         });
     break
 
-  case 'absenstart':
+ case 'voting':
+   if(!isGroup) return m.reply(msg.group)
+   if(!isAdmins) return m.reply(msg.admin)
+   if(!value) return m.reply(msg.notext)
+   client.vote = client.vote ? client.vote : {}
+    if (from in client.vote) {
+        await m.reply(msg.main('Voting'))
+        return false
+    }
+    caption = `*VOTING*
+
+Reason : ${value}
+
+${prefix}vote untuk vote
+${prefix}devote untuk devote`
+    client.vote[from] = [
+        await client.send2Button(from, caption, isWm, 'Vote', prefix + 'vote', 'Devote', prefix + 'Devote', false, { contextInfo:{
+          mentionedJid: client.parseMention(caption)
+        }}),
+        [],
+        [],
+        value,
+    ]
+    break
+
+ case 'hapusvote':
+ case 'delvote':
+   if(!isGroup) return m.reply(msg.group)
+   if(!isAdmins) return m.reply(msg.admin)
+    if (!(from in client.vote)) {
+        await m.reply(msg.nomain('Voting'))
+        return false
+    }
+    delete client.vote[from]
+    m.reply(msg.hapus('Voting'))
+    break
+
+ case 'vote':
+   if(!isGroup) return m.reply(msg.group)
+   if (!(from in client.vote)) {
+       m.reply(msg.nomain('Voting'))
+       return false
+    }
+    vote = client.vote[from][1]
+    devote = client.vote[from][2]
+    inVote = vote.includes(sender)
+    inDevote = devote.includes(sender)
+    if (inVote) return m.reply(msg.inmain('Voting'))
+    if (inDevote) return m.reply(msg.inmain('Voting'))
+    vote.push(sender)
+    listVote = vote.map((v, i) => `${i + 1}.  @${v.split`@`[0]}`).join('\n')
+    listDevote = devote.map((v, i) => `${i + 1}.  @${v.split`@`[0]}`).join('\n')
+        caption = `*VOTING*
+
+REASON : ${client.vote[from][3]}
+
+VOTE : ${vote.length}
+${listVote}
+
+DEVOTE : ${devote.length}
+${listDevote}`.trim()
+    await client.send3Button(from, caption, isWm, 'Vote', prefix + 'vote', 'Devote', prefix + 'devote', 'Cek Voting', prefix + 'cekvote', false, { contextInfo: { mentionedJid: client.parseMention(caption) } })
+    break
+
+ case 'devote':
+   if(!isGroup) return m.reply(msg.group)
+   if (!(from in client.vote)) {
+       m.reply(msg.nomain('Voting'))
+       return false
+    }
+    vote = client.vote[from][1]
+    devote = client.vote[from][2]
+    inVote = vote.includes(sender)
+    inDevote = devote.includes(sender)
+    if (inVote) return m.reply(msg.inmain('Voting'))
+    if (inDevote) return m.reply(msg.inmain('Voting'))
+    devote.push(sender)
+    listVote = vote.map((v, i) => `${i + 1}.  @${v.split`@`[0]}`).join('\n')
+    listDevote = devote.map((v, i) => `${i + 1}.  @${v.split`@`[0]}`).join('\n')
+        caption = `*VOTING*
+
+REASON : ${client.vote[from][3]}
+
+VOTE : ${vote.length}
+${listVote}
+
+DEVOTE : ${devote.length}
+${listDevote}`.trim()
+    await client.send3Button(from, caption, isWm, 'Vote', prefix + 'vote', 'Devote', prefix + 'devote', 'Cek Voting', prefix + 'cekvote', false, { contextInfo: { mentionedJid: client.parseMention(caption) } })
+    break
+
+
+ case 'cekvote':
+   if(!isGroup) return m.reply(msg.group)
+   if(!isAdmins) return m.reply(msg.admin)
+   if (!(from in client.vote)) {
+        await m.reply(msg.nomain('Voting'))
+        throw false
+    }
+    vote = client.vote[from][1]
+    devote = client.vote[from][2]
+    listVote = vote.map((v, i) => `${i + 1}.  @${v.split`@`[0]}`).join('\n')
+    listDevote = devote.map((v, i) => `${i + 1}.  @${v.split`@`[0]}`).join('\n')
+    caption = `*RESULT VOTING*
+
+REASON : ${client.vote[from][3]}
+
+VOTE : ${vote.length}
+${listVote}
+
+Devote : ${devote.length}
+${listDevote}`.trim()
+    await client.send3Button(from, caption, isWm, 'Vote', prefix + 'vote', 'Devote', prefix + 'devote', 'Hapus Voting', prefix + 'delvote', false, { contextInfo: { mentionedJid: client.parseMention(caption) } })
+break
+
+ case 'absenstart':
    if(!isGroup) return m.reply(msg.group)
    if(!isAdmins) return m.reply(msg.admin)
    client.absen = client.absen ? client.absen : {}
     if (from in client.absen) {
-        await m.reply(msg.absen)
+        await m.reply(msg.main('Absen'))
         return false
     }
+    mention = groupMembers.map(u => u.jid) 
     client.absen[from] = [
-        await client.send2Button(from, `Absen dimulai`, isWm, 'Absen', prefix + 'absen', 'Izin', prefix + 'izin'),
+        await client.send2Button(from, `Absen dimulai`, isWm, 'Absen', prefix + 'absen', 'Izin', prefix + 'izin', false, { contextInfo:{
+          mentionedJid: mention
+        }}),
         [],
         [],
     ]
@@ -1562,7 +1680,7 @@ break
    if(!isGroup) return m.reply(msg.group)
    if(!isAdmins) return m.reply(msg.admin)
     if (!(from in client.absen)) {
-        await m.reply(msg.noabsen)
+        await m.reply(msg.nomain('Absensi'))
         throw false
     }
     delete client.absen[from]
@@ -1572,15 +1690,15 @@ break
  case 'izin':
    if(!isGroup) return m.reply(msg.group)
    if (!(from in client.absen)) {
-       m.reply(msg.noabsen)
+       m.reply(msg.nomain('Absensi'))
        return false
     }
     absen = client.absen[from][1]
     izin = client.absen[from][2]
     inAbsen = absen.includes(sender)
     inIzin = izin.includes(sender)
-    if (inAbsen) return m.reply(msg.inabsen)
-    if (inIzin) return m.reply(msg.inabsen)
+    if (inAbsen) return m.reply(msg.inmain('Absen'))
+    if (inIzin) return m.reply(msg.inmain('Absen'))
     izin.push(sender)
     listAbsen = absen.map((v, i) => `${i + 1}.  @${v.split`@`[0]}`).join('\n')
     listIzin = izin.map((v, i) => `${i + 1}.  @${v.split`@`[0]}`).join('\n')
@@ -1600,15 +1718,15 @@ ${listIzin}`.trim()
  case 'absen':
    if(!isGroup) return m.reply(msg.group)
    if (!(from in client.absen)) {
-       m.reply(msg.noabsen)
+       m.reply(msg.nomain('Absensi'))
        return false
     }
     absen = client.absen[from][1]
     izin = client.absen[from][2]
     inAbsen = absen.includes(sender)
     inIzin = izin.includes(sender)
-    if (inAbsen) return m.reply(msg.inabsen)
-    if (inIzin) return m.reply(msg.inabsen)
+    if (inAbsen) return m.reply(msg.inmain('Absen'))
+    if (inIzin) return m.reply(msg.inmain('Absen'))
     absen.push(sender)
     listAbsen = absen.map((v, i) => `${i + 1}.  @${v.split`@`[0]}`).join('\n')
     listIzin = izin.map((v, i) => `${i + 1}.  @${v.split`@`[0]}`).join('\n')
@@ -1629,7 +1747,7 @@ ${listIzin}`.trim()
    if(!isGroup) return m.reply(msg.group)
    if(!isAdmins) return m.reply(msg.admin)
    if (!(from in client.absen)) {
-        await m.reply(msg.noabsen)
+        await m.reply(msg.nomain('Absensi'))
         throw false
     }
     absen = client.absen[from][1]
