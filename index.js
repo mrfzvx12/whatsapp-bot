@@ -429,6 +429,13 @@ switch (command) {
     const latensi = speed() - timestamp 
     m.reply(`Speed : ${latensi.toFixed(3)} Second`)
   break 
+  case 'fetch':
+  case 'result':
+if(!isOwner) return m.reply(msg.owner)
+teks = args.join(` `)
+let res = await fetchText(teks)
+reply(res)
+break
   
 //-- Rapiin dikit:v -hns
   case 'menu': case 'help':
