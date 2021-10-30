@@ -41,10 +41,27 @@ const addStiker = (value) => {
   fs.writeFileSync('./database/directory.json', JSON.stringify(direc, null, '\t'));
 };
 
+/**
+ * add report kedalaman database
+ * @param { string } id 
+ * @param { Object } value 
+ */
+
+const addReport = (id, value) => {
+  text = value;
+  obj = {
+    id: id,
+    report: value
+  };
+  direc.report.push(obj);
+  fs.writeFileSync('./database/directory.json', JSON.stringify(direc, null, '\t'));
+};
+
 module.exports = {
   direc,
   addImage,
   addVideo,
   addStiker,
-  addAudio
+  addAudio,
+  addReport
 };
