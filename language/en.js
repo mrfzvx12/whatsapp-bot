@@ -135,12 +135,18 @@ exports.default = (value) => {
   return value + ' Return to initial settings';
 };
 
-exports.absen = 'There is still an ongoing absence!'
-exports.noabsen = 'No absences in progress!'
-exports.inabsen = 'You\'ve done attendance!'
+exports.main = (value) => {
+  return 'There still is ' + value + ' in progress!';
+};
+exports.nomain = (value) => {
+  return 'There is not any ' + value + ' in progress!';
+};
+exports.inmain = (value) => {
+  return 'You\'ve done ' + value
+};
 exports.hapus = (value) =>{
-  return 'Successfully deleted ' + value + ' in this group'
-}
+  return 'Successfully deleted ' + value + ' in this group';
+};
 
 // game
 exports.onGame = 'There are still unanswered questions in this chat';

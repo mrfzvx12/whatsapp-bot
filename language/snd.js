@@ -134,12 +134,18 @@ exports.default = (value) => {
   return value + ' Balik deui ka setélan awal';
 };
 
-exports.absen = 'Aya kénéh henteuna lumangsung!'
-exports.noabsen = 'Taya absen dina kamajuan!'
-exports.inabsen = 'Anjeun parantos hadir!'
+exports.main = (value) => {
+  return 'Aya kénéh ' + value + ' nuju prosés!';
+};
+exports.nomain = (value) => {
+  return 'Henteu aya ' + value + ' nuju prosés!';
+};
+exports.inmain = (value) => {
+  return 'Anjeun geus rengse ' + value
+};
 exports.hapus = (value) =>{
-  return 'Berhasil dihapus ' + value + ' dina grup ieu'
-}
+  return 'Berhasil dihapus ' + value + ' dina grup ieu';
+};
 
 // game
 exports.onGame = 'Aya kénéh patarosan anu teu acan kajawab dina obrolan ieu';

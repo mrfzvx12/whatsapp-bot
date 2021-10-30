@@ -134,12 +134,18 @@ exports.default = (value) => {
   return value + ' العودة إلى الإعدادات الأولية';
 };
 
-exports.absen = 'لا يزال هناك غياب مستمر!'
-exports.noabsen = 'لا غيابات في التقدم!'
-exports.inabsen = 'لقد انتهيت من الحضور!'
+exports.main = (value) => {
+  return 'لا يزال هناك ' + value + ' في تقدم!';
+};
+exports.nomain = (value) => {
+  return 'لم يكن هناك أي ' + value + ' في تقدم!';
+};
+exports.inmain = (value) => {
+  return 'لقد فعلت ' + value
+};
 exports.hapus = (value) =>{
-  return 'تم الحذف بنجاح ' + value + 'في هذه المجموعة'
-}
+  return 'تم الحذف بنجاح ' + value + ' في هذه المجموعة';
+};
 
 // game
 exports.onGame = 'لا تزال هناك أسئلة بدون إجابة في هذه الدردشة';

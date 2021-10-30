@@ -137,12 +137,18 @@ exports.default = (value) => {
   return value + ' Bali menyang setelan wiwitan';
 };
 
-exports.absen = 'Isih ana absen sing isih ana!'
-exports.noabsen = 'Ora ana absen ing proses!'
-exports.inabsen = 'Sampeyan wis rampung rawuh!'
+exports.main = (value) => {
+  return 'Isih ana ' + value + ' ing proses!';
+};
+exports.nomain = (value) => {
+  return 'Ora ana ' + value + ' ing proses!';
+};
+exports.inmain = (value) => {
+  return 'Sampeyan wis rampung ' + value
+};
 exports.hapus = (value) =>{
-  return 'Kasil dibusak ' + value + ' ing grup iki'
-}
+  return 'Kasil dibusak ' + value + ' ing grup iki';
+};
 
 // game
 exports.onGame = 'Isih ana pitakonan sing durung dijawab ing obrolan iki';

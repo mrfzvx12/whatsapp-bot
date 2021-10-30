@@ -14,10 +14,10 @@ exports.nolink = (value) => {
 };
 
 // -- Saying time
-exports.night = 'Selamat Malam'
-exports.evening = 'Selamat Sore'
-exports.day = 'Selamat Siang'
-exports.morning = 'Selamat Pagi'
+exports.night = 'Selamat Malam';
+exports.evening = 'Selamat Sore';
+exports.day = 'Selamat Siang';
+exports.morning = 'Selamat Pagi';
 
 // -- message only
 exports.admin = 'Maaf, perintah ini hanya dapat dijalankan oleh admin group';
@@ -67,8 +67,8 @@ Bahasa yang dapat digunakan
 - Jawa
 - Sunda
 - Arab`;
-exports.online = 'Berhasil menyalakan bot di group ini'
-exports.offline = 'Berhasil mematikan bot di group ini'
+exports.online = 'Berhasil menyalakan bot di group ini';
+exports.offline = 'Berhasil mematikan bot di group ini';
 
 // -- group
 exports.onwa = 'User sudah dalam group';
@@ -140,12 +140,18 @@ exports.default = (value) => {
   return value + ' Kembali ke pengaturan awal';
 };
 
-exports.absen = 'Masih ada absen berlangsung!'
-exports.noabsen = 'Tidak ada absen berlangsung!'
-exports.inabsen = 'Kamu sudah melakukan absensi!'
+exports.main = (value) => {
+  return 'Masih ada ' + value + ' berlangsung!';
+};
+exports.nomain = (value) => {
+  return 'Tidak ada ' + value + ' berlangsung!';
+};
+exports.inmain = (value) => {
+  return 'Kamu sudah melakukan ' + value
+};
 exports.hapus = (value) =>{
-  return 'Berhasil menghapus ' + value + ' di group ini'
-}
+  return 'Berhasil menghapus ' + value + ' di group ini';
+};
 // game
 exports.onGame = 'Masih ada soal belum terjawab di chat ini';
 exports.soal = (text1, text2, text3) => {
