@@ -68,6 +68,10 @@ async function starts() {
 	      client.adReply(mdata.id, capt, MessageType.text, 'Selamat datang member baru', 'Member ke ' + member + ' Group ' + mdata.subject, buff, 'https://www.instagram.com/p/CTKtDqeBgY5/?utm_medium=copy_link');
       } else if (anu.action == 'remove') {
         num = anu.participants[0];
+        let username = client.getName(num)
+        let about = (await client.getStatus(num).catch(console.error) || {}).status || ''
+        let member = mdata.participants.length
+        let tag = '@'+num.split('@')[0]
         let bye = await getCustomBye(mdata.id);
         capt = bye.replace('@tag', tag).replace('@nama', username).replace('@about', about).replace('@tanggal', tanggal).replace('@group', mdata.subject);
         client.sendMessage(mdata.id, capt, MessageType.text, { contextInfo: {"mentionedJid": [num]}});
