@@ -21,7 +21,7 @@
 
 <h3 align="center">WHATSAPP BOT</h3>
 
-WhatsApp bot is a robot will reply your messages Automatically, WhatsApp bot connects with WhatsApp web using [@adiwajshing/baileys](https://github.com/adiwajshing/Baileys)
+WhatsApp bot is a robot will reply your messages Automatically, this bot is intended for **Public bots**, not for **~~Selfbots~~**, WhatsApp bot connects with WhatsApp web using [@adiwajshing/baileys](https://github.com/adiwajshing/Baileys)
 
 For now bots can run using the termux application, You can download it here [Download](https://play.google.com/store/apps/details?id=com.termux) 
 
