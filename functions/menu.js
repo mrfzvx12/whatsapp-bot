@@ -77,6 +77,7 @@ exports.menu = (v) => {
 ╰────────
 ╭─⊷❲ *TEXT GENERATOR* ❳
 ├ ${v}namaninja <text>
+├ ${v}purba <text>
 ├ ${v}typewriter <text>
 ├ ${v}blackpill <text>
 ├ ${v}castle <text>
