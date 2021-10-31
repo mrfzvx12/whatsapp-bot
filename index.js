@@ -366,7 +366,7 @@ client.on('CB:action,,battery', json => {
 */
 
 // auto respon
-lexa = ['lexa', 'Lexa', '@'+client.user.jid.split('@')[0]]
+lexa = ['@'+client.user.jid.split('@')[0]]
 for ( var L of lexa){
   if(!mek.isBaileys && budy.match(L)){
     lari = fs.readFileSync('./database/media/sticker/lari.webp')
