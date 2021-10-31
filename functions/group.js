@@ -398,7 +398,7 @@ module.exports = {
   cekAntidelete,
   addDetect,
   delDetect,
-  cekDetect
+  cekDetect,
   addViewonce,
   delViewonce,
   cekViewonce
