@@ -36,7 +36,15 @@ For perfect results you must have the original version of the WhatsApp applicati
 ### Example
 You can try the bot first here for example
 
-<a href="https://chat.whatsapp.com/JqgBJHtYHgZ2SuR36aDDCo" target="blank"><img src="https://img.shields.io/badge/Whatsapp Bot-30302f?style=social&logo=whatsapp" /></a>
+<a href="https://chat.whatsapp.com/Hmcj5WvS9LNBXCE2TdKN1a" target="blank"><img src="https://img.shields.io/badge/Whatsapp Bot-30302f?style=social&logo=whatsapp" /></a>
+
+Multi-language for each user, meaning that the user can choose the language he wants to use
+
+- [x] Indonesia
+- [x] English
+- [x] Jawa
+- [x] Sunda
+- [x] Arab
 
 ***
 
@@ -106,17 +114,14 @@ client.sendButton(from, text, desk, button, row)
 ### Feature
 
 - [x] Multilingual
-  - English
-  - Indonesian 
-  - Jawa 
-  - Sunda 
-  - Arab
 - [x] Group Setting
-- [x] Antidelete
-- [x] Antilink
+- [x] Antidelete, Antiviewonce, & Detect
+- [x] Custom Welcome each group
 - [x] On/Off Command in group
 - [x] Game
+- [x] Automatic Chatbot
 - [x] Make sticker with image/video/gif
+- [x] Absensi & Voting
 - [ ] And much more
 
 You can open menu [In here](https://github.com/mrfzvx12/whatsapp-bot/blob/main/functions/menu.js)
