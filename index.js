@@ -545,10 +545,12 @@ switch (command) {
    break
     
  case 'namaninja':
+ case 'purba':
  case 'blackpill':
  case 'typewriter':
  case 'sans':
  case 'castle':
+  if(!value) return m.reply(msg.notext)
   if(command === "namaninja" ) {
     has = await lxa.namaninja(value)
   } else if(command === "blackpill"){
@@ -559,6 +561,8 @@ switch (command) {
     has = await lxa.sans(value)
   } else if(command === "castle"){
     has = await lxa.castle(value)
+  } else if(command === "purba"){
+    has = await lxa.purba(value)
   }
    m.reply(has)
    break
