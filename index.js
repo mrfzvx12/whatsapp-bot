@@ -2059,6 +2059,18 @@ fungsi = `
       }
     }
 
+
+// chatbot
+if(!isCmd && isChatbot === true){
+ // if(!mek.isBaileys) return
+ // if(isGroup) return
+ // if(!isPremium) return
+  if(m.mtype == 'stickerMessage') return
+  result = await fetchJson(`https://api.simsimi.net/v2/?text=${budy}&lc=id`, {method: 'get'})
+  m.reply(result.success.replace('simsimi', 'Lexa').replace('Simsimi', 'lexa').replace('simi', 'Lexa').replace('Simi', 'Lexa').replace('sim', 'Lexa'))
+}
+
+
 // game answer
    if (!m.quoted || !m.quoted.fromMe || !m.quoted.isBaileys || !m.quoted.text) return 
    if (!client.game) return
