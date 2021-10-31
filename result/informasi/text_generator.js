@@ -32,6 +32,19 @@ hasil = teks.replace(/[a-zA-Z]/gi, v => {
   return hasil;
 }
 
+async function purba(value){
+  hasil = value.replace(/[aiueo]/gi, v=> {
+    switch(v.toLowerCase()){
+      case 'a': return 'ove';
+      case 'i': return 'ove';
+      case 'u': return 'ove';
+      case 'e': return 'ove';
+      case 'o': return 'ove';
+    }
+  });
+  return hasil;
+}
+
 async function blackpill(teks){
 hasil = teks.replace(/[a-zA-Z]/gi, v => {
         switch (v.toLowerCase()) {
@@ -280,6 +293,7 @@ hasil = teks.replace(/[a-zA-Z0-9]/g, v => {
 
 module.exports = {
   namaninja,
+  purba,
   blackpill,
   typewriter,
   sans,
