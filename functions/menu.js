@@ -7,6 +7,7 @@ exports.menu = (v) => {
 ├ ${v}bahasa
 ├ ${v}ping
 ├ ${v}report <text>
+├ ${v}chatbot on/off
 ╰────────
 ╭─⊷❲ *FUN* ❳
 ├ ${v}dilan
@@ -142,6 +143,8 @@ exports.menu = (v) => {
 ├ ${v}detect off
 ├ ${v}antilink on
 ├ ${v}antilink off
+├ ${v}antiviewonce on
+├ ${v}antiviewonce off
 ╰────────
 ╭─⊷❲ *OWNER* ❳
 ├ ${v}join <link>
