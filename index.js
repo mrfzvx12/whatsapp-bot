@@ -1323,6 +1323,7 @@ case 'joox':
    isAntidelete = isAntidelete ? 'Yes' : 'No' 
    isDetect = isDetect ? 'Yes' : 'No' 
    isWelcome = isWelcome ? 'Yes' : 'No' 
+   isViewonce = isViewonce ? 'Yes' : 'No'
    creation = moment(groupMetadata.creation * 1000).tz('Asia/Jakarta').format(`DD-MM-YYYY`)
    ownergc = groupMetadata.owner.split('@')[0]
    capt = 'GROUP INFORMATIONS\n\n'
@@ -1334,6 +1335,7 @@ case 'joox':
    capt += '\n\nGROUP SETTING'
    capt += '\n*Antilink* : ' + isAntilink
    capt += '\n*Antidelete* : ' + isAntidelete
+   capt += '\n*Antiviewonce* : ' + isViewonce
    capt += '\n*Detected* : ' + isDetect
    capt += '\n*Welcome* : ' + isWelcome
    capt += '\n\n*Deskripsi* : ' + groupDesc 
