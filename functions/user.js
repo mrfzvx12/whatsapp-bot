@@ -21,6 +21,7 @@ const addUser = (id) => {
           premium: false, 
           banned: false,
           afk: false,
+          chatbot: false,
           afkReason: '-',
           afkTime: '-',
           poin: 0,
@@ -162,6 +163,58 @@ const delPremium = (id) => {
   });
   if (position !== false) {
     User[position].premium = false;
+    fs.writeFileSync('./database/user.json', JSON.stringify(User, null, "\t"));
+  }
+};
+
+
+/**
+ * Cek data premium user dalam database
+ * @param { string } id 
+ */
+const cekChatbot = (id) => {
+  let position = false;
+  Object.keys(User).forEach((i) => {
+    if (User[i].id === id) {
+      position = i;
+    }
+  });
+  if (position !== false) {
+    return User[position].chatbot;
+    }
+};
+
+
+/**
+ * merubah status chatbot user kedalam database
+ * @param { string } id
+*/
+const addChatbot = (id) => {
+  let position = false;
+  Object.keys(User).forEach((i) => {
+    if (User[i].id === id) {
+      position = i;
+    }
+  });
+  if (position !== false) {
+    User[position].chatbot = true;
+    fs.writeFileSync('./database/user.json', JSON.stringify(User, null, "\t"));
+  }
+};
+
+/**
+ * merubah status chatbot user kedalam database
+ * @param { string } id
+*/
+const delChatbot = (id) => {
+  let position = false;
+  Object.keys(User).forEach((i) => {
+    if (User[i].id === id) {
+      position = i;
+    }
+  });
+  if (position !== false) {
+    User[position].chatbot = false;
     fs.writeFileSync('./database/user.json', JSON.stringify(User, null, "\t"));
   }
 };
@@ -457,6 +510,9 @@ module.exports = {
   cekPremium,
   addPremium,
   delPremium,
+  addChatbot,
+  delChatbot,
+  cekChatbot,
   addAfk,
   delAfk,
   cekAfk,
