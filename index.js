@@ -254,6 +254,7 @@ module.exports = client = async (client, mek) => {
      let isPoin = cekPoin(sender);
      let isLevel = cekLevel(sender);
      let isPremium = cekPremium(sender);
+     let isChatbot = cekChatbot(sender);
      let isBanned = cekBanned(sender);
      let isAfk = cekAfk(sender);
      let isAfkTime = cekAfkTime(sender);
@@ -264,6 +265,7 @@ module.exports = client = async (client, mek) => {
      let isAntilink = cekAntilink(from);
      let isDetect = cekDetect(from);
      let isRegister = cekRegis(sender);
+     let isViewonce = cekViewonce(from);
      let msg = cekBahasa(sender);
      
           // -- bahasa
