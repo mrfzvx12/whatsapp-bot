@@ -88,6 +88,9 @@ const {
   cekPremium,
   addPremium,
   delPremium,
+  addChatbot,
+  delChatbot,
+  cekChatbot,
   addAfk,
   delAfk,
   cekAfk,
@@ -120,7 +123,10 @@ const {
   cekAntidelete,
   addDetect,
   delDetect,
-  cekDetect
+  cekDetect,
+  addViewonce,
+  delViewonce,
+  cekViewonce
 } = require('./functions/group'); // mengubah dan mengambil data dalam ./database/group
 
 const {
@@ -1858,7 +1864,41 @@ break
       m.reply(msg.OnorOff)
     }
     break
-    
+
+  case 'antiviewonce':
+    if(!isGroup) return m.reply(msg.group)
+    if(!isAdmins && !isOwner) return m.reply(msg.admin)
+    if(!isBotAdmins) return m.reply(msg.botadmin)
+    if(!value) return m.reply(msg.OnorOff)
+    if (value.toLowerCase() === "on") {
+      if(isViewonce === true ) return m.reply(msg.Thison(command.toUpperCase()))
+      await addViewonce(from)
+      m.reply(msg.On(command.toUpperCase()))
+    } else if (value.toLowerCase() === "off") {
+      if(isViewonce === false ) return m.reply(msg.Thisoff(command.toUpperCase()))
+      await delViewonce(from)
+      m.reply(msg.Off(command.toUpperCase()))
+    } else {
+      m.reply(msg.OnorOff)
+    }
+    break
+
+  case 'chatbot': // atur sesukamu
+   // if(!isPremium) return m.reply(msg.premium)
+   // if(isGroup) return m.reply(msg.private)
+    if(!value) return m.reply(msg.OnorOff)
+    if (value.toLowerCase() === "on") {
+      if(isChatbot === true ) return m.reply('Chatbot On')
+      await addChatbot(sender)
+      m.reply(msg.done)
+    } else if (value.toLowerCase() === "off") {
+      if(isChatbot === false ) return m.reply('Chatbot off')
+      await delChatbot(sender)
+      m.reply(msg.done)
+    } else {
+      m.reply(msg.OnorOff)
+    }
+    break
 
   case 'q': 
     if (!m.quoted) return m.reply(msg.reply)
@@ -2060,7 +2100,7 @@ fungsi = `
     }
 
 
-// chatbot
+// chatbot // atur sesukamu
 if(!isCmd && isChatbot === true){
  // if(!mek.isBaileys) return
  // if(isGroup) return
@@ -2070,6 +2110,14 @@ if(!isCmd && isChatbot === true){
   m.reply(result.success.replace('simsimi', 'Lexa').replace('Simsimi', 'lexa').replace('simi', 'Lexa').replace('Simi', 'Lexa').replace('sim', 'Lexa'))
 }
 
+// antiview once
+if (m.mtype == 'viewOnceMessage' && isViewonce === true){
+  msg = {...mek}
+  msg.message = mek.message.viewOnceMessage.message
+  msg.message[Object.keys(msg.message)[0]].viewOnce = false
+  m.reply('ViewOnce detected!')
+  client.copyNForward(from, msg)
+}
 
 // game answer
    if (!m.quoted || !m.quoted.fromMe || !m.quoted.isBaileys || !m.quoted.text) return 
