@@ -215,14 +215,20 @@ module.exports = client = async (client, mek) => {
         prefix = Use.prefix;
         }
 
-    const body = 
-    type === 'conversation' && mek.message.conversation.startsWith(prefix) ? mek.message.conversation : 
-    type === 'imageMessage' && mek.message.imageMessage.caption.startsWith(prefix) ? mek.message.imageMessage.caption : 
-    type === 'videoMessage' && mek.message.videoMessage.caption.startsWith(prefix) ? mek.message.videoMessage.caption : 
-    type === 'extendedTextMessage' && mek.message.extendedTextMessage.text.startsWith(prefix) ? mek.message.extendedTextMessage.text : 
-    type === 'buttonsResponseMessage' && mek.message[type].selectedButtonId.startsWith(prefix) ? mek.message[type].selectedButtonId : ''
+     const body = 
+     type === 'conversation' && mek.message.conversation.startsWith(prefix) ? mek.message.conversation : 
+     type === 'imageMessage' && mek.message.imageMessage.caption.startsWith(prefix) ? mek.message.imageMessage.caption : 
+     type === 'videoMessage' && mek.message.videoMessage.caption.startsWith(prefix) ? mek.message.videoMessage.caption : 
+     type === 'extendedTextMessage' && mek.message.extendedTextMessage.text.startsWith(prefix) ? mek.message.extendedTextMessage.text : 
+     type === 'buttonsResponseMessage' && mek.message[type].selectedButtonId.startsWith(prefix) ? mek.message[type].selectedButtonId : '';
      
-     const budy = (type === 'conversation') ? mek.message.conversation : (type === 'extendedTextMessage') ? mek.message.extendedTextMessage.text : '';
+     const budy = 
+     type === 'conversation' ? mek.message.conversation : 
+     type === 'extendedTextMessage' ? mek.message.extendedTextMessage.text :
+     type === 'imageMessage' ? mek.message.imageMessage.caption : 
+     type === 'videoMessage' ? mek.message.videoMessage.caption : 
+     type === 'stickerMessage' ? 'Sticker' :
+     type === 'audioMessage' ? 'Audio' : '';
      const command = body.replace(prefix, '').trim().split(/ +/).shift().toLowerCase();
      const args = body.trim().split(/ +/).slice(1);
      const more = String.fromCharCode(8206);
