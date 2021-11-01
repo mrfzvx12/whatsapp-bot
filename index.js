@@ -1139,8 +1139,8 @@ case 'joox':
     if (!value) return m.reply(msg.notext)
     m.reply(msg.wait) 
     res = await lxa.joox(value)
-    let json = JSON.parse(JSON.stringify(res))
-    let hasil = json.data[0]
+    json = JSON.parse(JSON.stringify(res))
+    hasil = json.data[0]
     judul = hasil.lagu
     artis = hasil.penyanyi
     album = hasil.album
@@ -2131,7 +2131,7 @@ if (m.mtype == 'viewOnceMessage' && isViewonce === true){
    if (!m.quoted || !m.quoted.fromMe || !m.quoted.isBaileys || !m.quoted.text) return 
    if (!client.game) return
     if (m.quoted.from == client.game[from][0].from) {
-        let json = JSON.parse(JSON.stringify(client.game[from][1]))
+        json = JSON.parse(JSON.stringify(client.game[from][1]))
         if (m.text.toLowerCase() == json.jawaban.toLowerCase().trim()) {
             m.reply(msg.benar(json.jawaban.toUpperCase(), isPoingame))
             await addPoin(sender, isPoingame)
