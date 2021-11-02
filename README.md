@@ -45,7 +45,9 @@ Multi-language for each user, meaning that the user can choose the language he w
 - [x] Jawa
 - [x] Sunda
 - [x] Arab
+- [ ] The language that will come later
 
+You can open the language  [In here](https://github.com/mrfzvx12/whatsapp-bot/tree/main/language)
 ***
 
 ### Install
