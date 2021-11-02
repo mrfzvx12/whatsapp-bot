@@ -45,7 +45,7 @@ Multi-language for each user, meaning that the user can choose the language he w
 - [x] Jawa
 - [x] Sunda
 - [x] Arab
-- [ ] The language that will come later
+- [?] Languages ​​that will come later
 
 You can open the language  [In here](https://github.com/mrfzvx12/whatsapp-bot/tree/main/language)
 ***
@@ -124,7 +124,7 @@ client.sendButton(from, text, desk, button, row)
 - [x] Automatic Chatbot
 - [x] Make sticker with image/video/gif
 - [x] Absensi & Voting
-- [ ] And much more
+- [?] And much more
 
 You can open menu [In here](https://github.com/mrfzvx12/whatsapp-bot/blob/main/functions/menu.js)
 
