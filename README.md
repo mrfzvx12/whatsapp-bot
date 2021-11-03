@@ -45,12 +45,13 @@ Multi-language for each user, meaning that the user can choose the language he w
 - [x] Jawa
 - [x] Sunda
 - [x] Arab
-- [ ] Languages ​​that will come later
+- [ ] Languages that will come later
 
 You can open the language  [In here](https://github.com/mrfzvx12/whatsapp-bot/tree/main/language)
 ***
 
-### Install
+### installation
+#### Termux user
 Make sure everything is in good condition
 
 First, install
@@ -86,6 +87,12 @@ Save settings and proceed to the last stage
 ```
 When the QR appears, scan it using the WhatsApp application that will be used for bot
 and done
+
+***
+
+#### Ubuntu user
+
+//not now
 
 ***
 
