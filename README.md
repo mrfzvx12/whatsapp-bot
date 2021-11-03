@@ -51,7 +51,8 @@ You can open the language  [In here](https://github.com/mrfzvx12/whatsapp-bot/tr
 ***
 
 ### installation
-**Termux user**
+**TERMUX USER**
+
 ```bash
 • pkg install git
 • pkg install ffmpeg
@@ -65,9 +66,7 @@ When everything is done, set the owner number in ```database/setting-bot.json```
 Default :
 ```
 {
-	"ownerNumber": [
-	"123@s.whatsapp.net"
-	]
+	"ownerNumber": ["123@s.whatsapp.net"]
 }
 ```
 Save settings and proceed to the last stage
@@ -79,7 +78,7 @@ and done
 
 ***
 
-**Ubuntu user**
+**UBUNTU USER**
 
 //not now
 
