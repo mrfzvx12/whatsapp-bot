@@ -765,7 +765,8 @@ END:VCARD
      * @param {String} jid
      * @param {String|Object} message
      * @param {String} type
-     * @param {String} sender
+     * @param {String} sender 
+     * ©091020
      * @param {String|Object} message2
      * @param {String} type2
      * @param {Object} options
