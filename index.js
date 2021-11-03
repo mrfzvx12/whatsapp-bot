@@ -2071,7 +2071,6 @@ break
   case 'setwelcome':
     if(!isGroup) return m.reply(msg.group)
     if(!isAdmins && !isOwner) return m.reply(msg.admin)
-    about = (await client.getStatus(sender).catch(console.error) || {}).status || ''
     fungsi = `
 @tag = @${sender.split('@')[0]}
 @nama = ${pushname}
@@ -2086,7 +2085,6 @@ break
   case 'setbye':
     if(!isGroup) return m.reply(msg.group)
     if(!isAdmins && !isOwner) return m.reply(msg.admin)
-    about = (await client.getStatus(sender).catch(console.error) || {}).status || ''
 fungsi = `
 @tag = @${sender.split('@')[0]}
 @nama = ${pushname}
