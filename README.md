@@ -52,25 +52,14 @@ You can open the language  [In here](https://github.com/mrfzvx12/whatsapp-bot/tr
 
 ### installation
 #### Termux user
-Make sure everything is in good condition
-
-First, install
 ```bash
 • pkg install git
 • pkg install ffmpeg
 • pkg install nodejs
-```
-
-For all questions in installation just select y
-
-If everything has been confirmed to be safe and installed, continue with the clone repo
-```bash
 • git clone https://github.com/mrfzvx12/whatsapp-bot
 • cd whatsapp-bot
 • npm i
 ```
-For all questions in installation just select y
-
 When everything is done, set the owner number in ```database/setting-bot.json``` or click [in here](https://github.com/mrfzvx12/whatsapp-bot/blob/3c92f24ea3b01f9af3e736795c9ccea7d76279ea/database/setting-bot.json#L3)
 
 Default :
