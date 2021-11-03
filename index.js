@@ -80,6 +80,7 @@ const {
   cekUser,
   cekPoin, 
   addPoin, 
+  delPoin, 
   addLevel,
   cekLevel,
   cekBanned, 
@@ -1920,7 +1921,53 @@ break
     if (!qse.quoted) return m.reply(msg.noreply)
     await qse.quoted.copyNForward(from, true)
     break 
-    
+ 
+   case 'suit':
+    salah = `Pilihan yang tersedia Gunting, Kertas, Batu\n\n*Contoh* : ${prefix}suit gunting\n`
+    poin = 200
+    if (!value) return m.reply(salah)
+    var suit = Math.random()
+    if (suit < 0.34) {
+        suit = 'batu'
+    } else if (suit > 0.34 && suit < 0.67) {
+        suit = 'gunting'
+    } else {
+        suit = 'kertas'
+    }
+    //menentukan rules
+    if (value == suit) {
+      await addPoin(sender, 50)
+        m.reply(`*Kita Seri*\n\nkamu : ${value}\nBot : ${suit}\n\nPoin (±)100 XP`)
+    } else if (value == 'batu') {
+        if (suit == 'gunting') {
+          await addPoin(sender, poin)
+            m.reply(`*Kamu Menang*\n\nkamu : ${value}\nBot : ${suit}\n\nPoin (+)${poin} XP`)
+        } else {
+          await delPoin(sender, poin)
+            m.reply(`*Kamu Kalah*\n\nkamu : ${value}\nBot : ${suit}\n\nPoin (-)${poin} XP`)
+        }
+    } else if (value == 'gunting') {
+        if (suit == 'kertas') {
+          await addPoin(sender, poin)
+            m.reply(`*Kamu Menang*\n\nkamu : ${value}\nBot : ${suit}\n\nPoin (+)${poin} XP`)
+        } else {
+          await delPoin(sender, poin)
+            m.reply(`*Kamu Kalah*\n\nkamu : ${value}\nBot : ${suit}\n\nPoin (-)${poin} XP`)
+        }
+    } else if (value == 'kertas') {
+        if (suit == 'batu') {
+          await addPoin(sender, poin)
+            m.reply(`*Kamu Menang*\n\nkamu : ${value}\nBot : ${suit}\n\nPoin (+)${poin} XP`)
+        } else {
+          await delPoin(sender, poin)
+            m.reply(`*Kamu Kalah*\n\nkamu : ${value}\nBot : ${suit}\n\nPoin (-)${poin} XP`)
+        }
+    } else {
+       m.reply(salah)
+    }
+    break
+ 
+ 
   case 'asahotak':
   case 'siapakahaku':
   case 'tebakkalimat':
