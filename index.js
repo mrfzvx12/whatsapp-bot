@@ -1112,7 +1112,7 @@ break
  case 'result':
  case 'view':
    if(!isOwner) return m.reply(msg.owner)
-   let res = await fetchText(value)
+   res = await fetchText(value)
    m.reply(res)
    break
   
