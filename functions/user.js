@@ -259,7 +259,7 @@ const addPoin = (id, value) => {
  * mengurangi poin kedalam database user
  * @param { string } id
 */
-const addPoin = (id, value) => {
+const delPoin = (id, value) => {
   let position = false;
   if(!value) {
     value = 1;
