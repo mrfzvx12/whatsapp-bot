@@ -51,7 +51,7 @@ You can open the language  [In here](https://github.com/mrfzvx12/whatsapp-bot/tr
 ***
 
 ### installation
-#### Termux user
+**Termux user**
 ```bash
 • pkg install git
 • pkg install ffmpeg
@@ -79,7 +79,7 @@ and done
 
 ***
 
-#### Ubuntu user
+**Ubuntu user**
 
 //not now
 
