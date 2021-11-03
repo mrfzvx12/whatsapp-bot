@@ -32,6 +32,7 @@ exports.menu = (v) => {
 ├ ${v}tebakkata
 ├ ${v}tebaklirik
 ├ ${v}tekateki
+├ ${v}suit gunting/batu/kertas
 ╰────────
 ╭─⊷❲ *STICKER* ❳
 ├ ${v}sticker
