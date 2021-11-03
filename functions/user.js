@@ -255,6 +255,26 @@ const addPoin = (id, value) => {
   }
 };
 
+/**
+ * mengurangi poin kedalam database user
+ * @param { string } id
+*/
+const addPoin = (id, value) => {
+  let position = false;
+  if(!value) {
+    value = 1;
+  }
+  Object.keys(User).forEach((i) => {
+    if (User[i].id === id) {
+      position = i;
+    }
+  });
+  if (position !== false) {
+    User[position].poin -= value;
+    fs.writeFileSync('./database/user.json', JSON.stringify(User, null, "\t"));
+  }
+};
+
 
 /**
  * Cek data level user dalam database
@@ -502,6 +522,7 @@ module.exports = {
   cekUser,
   cekPoin, 
   addPoin, 
+  delPoin, 
   addLevel,
   cekLevel,
   cekBanned, 
