@@ -80,7 +80,32 @@ and done
 
 **UBUNTU USER**
 
-//not now
+For better experience
+
+!! Using Termux Emulator, you can download [In Here](https://drive.google.com/file/d/1-1JM3nP98qozw45uhxnLCC4UQ95c08q5/view?usp=drivesdk)
+
+`INSTALL UBUNTU`
+```bash
+• pkg update
+• pkg install proot-distro
+• proot-distro install ubuntu
+• proot-distro login ubuntu
+```
+`UBUNTU`
+```bash 
+• apt update && apt upgrade
+• apt install git
+• apt install nodejs
+• apt install ffmpeg
+• git clone https://github.com/mrfzvx12/whatsapp-bot
+• npm i
+```
+Setting owner number, and then
+```bash
+• npm start
+```
+When the QR appears, scan it using the WhatsApp application that will be used for bot
+and done
 
 ***
 
