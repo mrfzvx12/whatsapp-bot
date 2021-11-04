@@ -1,4 +1,4 @@
-```CARA MENERJEMAHKAN WEBSITE``` [Klik Disini](https://www.google.com/search?client=ms-android-xiaomi&sxsrf=AOaemvKOp-MCgOkm6_Ko1oY1lImYy06g-Q:1636011368957&q=cara+menerjemahkan+halaman+website+secara+otomatis&spell=1&sa=X&ved=2ahUKEwiJrPqjmf7zAhUXIbcAHb_VDHUQkeECKAB6BAgBEAI&biw=360&bih=511&dpr=2)
+```CARA MENERJEMAHKAN WEBSITE``` [KLIK DISINI](https://www.google.com/search?client=ms-android-xiaomi&sxsrf=AOaemvKOp-MCgOkm6_Ko1oY1lImYy06g-Q:1636011368957&q=cara+menerjemahkan+halaman+website+secara+otomatis&spell=1&sa=X&ved=2ahUKEwiJrPqjmf7zAhUXIbcAHb_VDHUQkeECKAB6BAgBEAI&biw=360&bih=511&dpr=2)
 
 <p align="center">
 <a href="https://github.com/mrfzvx12"><img title="mrfzvx12" src="https://img.shields.io/badge/github-Mrfzvx12-orange.svg?style=social&logo=github"></a>
@@ -87,7 +87,7 @@ and done
 
 * Install Git [`Klik Disini`](https://git-scm.com/downloads)
 * Install NodeJS [`Klik Disini`](https://nodejs.org/en/download)
-* Install FFmpeg [`Klik Disini`](https://ffmpeg.org/download.html) (**Jangan Lupa Tambahkan FFmpeg ke variabel lingkungan PATH**)
+* Install FFmpeg [`Klik Disini`](https://ffmpeg.org/download.html) (**Don't Forget to Add FFmpeg to the PATH environment variable**)
 * Install Notepad C++ [`Klik Disini`](https://notepad-plus-plus.org/downloads/v8.1.9)
 ```
 Announcement: 
