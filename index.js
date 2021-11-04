@@ -1225,7 +1225,7 @@ Judul : ${link[2].title}`
    if (!buff) return m.reply('Error')
    m.reply(msg.wait)
    img = await getBuffer(res.thumb)
-   client.adReplyAudio(from, buff, document, 'MUSIC PLAYER', tanggal, img, value)
+   client.adReplyAudio(from, buff, document, res.title, tanggal, img, value)
 	break
 
  case 'igvid':
