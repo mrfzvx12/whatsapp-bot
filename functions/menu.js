@@ -75,6 +75,8 @@ exports.menu = (v) => {
 ├ ${v}tiktoknowm <link>
 ├ ${v}tiktokaudio <link>
 ├ ${v}joox <query>
+├ ${v}play <query>
+├ ${v}ytmp3 <link>
 ╰────────
 ╭─⊷❲ *TEXT GENERATOR* ❳
 ├ ${v}namaninja <text>
