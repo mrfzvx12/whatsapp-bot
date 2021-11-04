@@ -80,35 +80,26 @@ and done
 
 ***
 
-***
-
 ### installation
 - [x] **RDP/VPS USER**
 
-* Install Git [`Klik Disini`](https://git-scm.com/downloads)
-* Install NodeJS [`Klik Disini`](https://nodejs.org/en/download)
-* Install FFmpeg [`Klik Disini`](https://ffmpeg.org/download.html) (**Don't Forget to Add FFmpeg to the PATH environment variable**)
-* Install Notepad C++ [`Klik Disini`](https://notepad-plus-plus.org/downloads/v8.1.9)
-```
-Announcement: 
-Have a complaint or problem while installing the application? 
-```
-[chat here](https://linktr.ee/HansAl1)
+**First download tools**, Click icon to download !
+
+<a href="https://git-scm.com/downloads"><img src="http://img.shields.io/badge/-Git-F1502F?style=flat&logo=git&logoColor=FFFFFF"></a>
+<a href="https://nodejs.org/en/download"><img
+src="https://img.shields.io/badge/-Node.js-3C873A?style=flat&logo=Node.js&logoColor=white"></a>
+<a href="https://ffmpeg.org/download.html"><img src="http://img.shields.io/badge/-Ffmpeg-000000?style=flat&logo=ffmpeg&logoColor=green"></a>
+<a href="https://notepad-plus-plus.org/downloads/v8.1.9"><img src="http://img.shields.io/badge/-Notepad++-white?style=flat&logo=Notepad++&logoColor=FFFFFF"></a>
+
+**Announcement:**
+Have a complaint or problem while installing the application? [Chat here](https://linktr.ee/HansAl1)
 
 ```bash
 • git clone https://github.com/mrfzvx12/whatsapp-bot.git
 • cd whatsapp-bot
 • npm i
 ```
-When everything is done, set the owner number in ```database/setting-bot.json``` or click [in here](https://github.com/mrfzvx12/whatsapp-bot/blob/3c92f24ea3b01f9af3e736795c9ccea7d76279ea/database/setting-bot.json#L3)
-
-Default :
-```
-{
-	"ownerNumber": ["123@s.whatsapp.net"]
-}
-```
-Save settings and proceed to the last stage
+Setting owner number, and then
 ```bash
 • npm start
 ```
@@ -227,7 +218,6 @@ Moderator & Author | Author
 </details>
 
 ### Github Stats
-
 <img height="180em" src="https://github-readme-stats.vercel.app/api?username=mrfzvx12&show_icons=true&hide_border=true&&count_private=true&include_all_commits=true" />
 
 
@@ -237,7 +227,7 @@ Moderator & Author | Author
 src="https://img.shields.io/badge/-Node.js-3C873A?style=flat&logo=Node.js&logoColor=white"></a>
 <a href="https://github.com/mrfzvx12"><img src="http://img.shields.io/badge/-Git-F1502F?style=flat&logo=git&logoColor=FFFFFF"></a>
 <a href="https://github.com/mrfzvx12"><img src="http://img.shields.io/badge/-Github-000000?style=flat&logo=github&logoColor=FFFFFF"></a>
-
+<a href="https://github.com/mrfzvx12"><img src="http://img.shields.io/badge/-Ffmpeg-000000?style=flat&logo=ffmpeg&logoColor=FFFFFF"></a>
 
 ## License
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmrfzvx12%2Fwhatsapp-bot.svg?type=small)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmrfzvx12%2Fwhatsapp-bot?ref=badge_small)
