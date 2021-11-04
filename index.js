@@ -1196,6 +1196,38 @@ case 'joox':
      m.reply(store);
    break;
 
+  case 'play': 
+   if (!value) return m.reply(msg.notext)
+   url = await yts(value);
+   link = url.all 
+   if(!link) return ('Error')
+   m.reply(msg.wait)
+  // img = await getBuffer(link[0].thumb)
+   musik = `*MUSIK PLAYER*
+
+3 Lagu di temukan..
+*Download 1*
+Judul : ${link[0].title}
+
+*Download 2*
+Judul : ${link[1].title}
+
+*Download 3*
+Judul : ${link[2].title}` 
+ client.send3ButtonLoc(from, thumb, musik, 'Pilih lagu yang akan di download', 'Download 1', prefix + 'ytmp3 ' + link[0].url, 'Download 2', prefix + 'ytmp3 ' + link[1].url, 'Download 3', prefix + 'ytmp3 ' + link[2].url)
+ break
+
+ case 'ytmp3':
+   if(!isUrl(value) && !value) return m.reply(msg.nolink('youtube'));
+   if(isUrl(value) && !value.match("youtube.com/watch")) return m.reply('Link invalid');
+   res = await lxa.yta(value)
+   buff = await getBuffer(res.dl_link)
+   if (!buff) return m.reply('Error')
+   m.reply(msg.wait)
+   img = await getBuffer(res.thumb)
+   client.adReplyAudio(from, buff, document, 'MUSIC PLAYER', tanggal, img, value)
+	break
+
  case 'igvid':
  case 'igimg':
  case 'igdl':
