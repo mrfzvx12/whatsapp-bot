@@ -91,9 +91,10 @@ and done
 * Install Notepad C++ [`Klik Disini`](https://notepad-plus-plus.org/downloads/v8.1.9)
 ```
 Announcement: 
-If you still don't understand or fail during installation? 
-report to the number below
+Have a complaint or problem while installing the application? 
+[chat here](https://linktr.ee/HansAl1)
 ```
+
 ```bash
 • git clone https://github.com/mrfzvx12/whatsapp-bot.git
 • cd whatsapp-bot
