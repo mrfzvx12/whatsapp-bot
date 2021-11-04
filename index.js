@@ -35,6 +35,7 @@ const similarity = require('similarity');
 const threshold = 0.72;
 const lxa = require('./result/index');
 const package = require('./package.json');
+const yts = require('yt-search');
 // functions dalam library
 const simple = require('./whatsapp/connecting');
 const { fetchJson, fakeText, getBuffer } = require('./library/fetcher');
