@@ -91,10 +91,11 @@ Install the application below!
 4. NodeJs [In Here](https://nodejs.org/en/download)
 5. Ffmpeg [In Here](https://ffmpeg.org/download.html)
 6. Notepad C++ [In Here](https://notepad-plus-plus.org/downloads/v8.1.9)
+```
 Announcement: 
 If you still don't understand or fail during installation? 
 report to the number below
-
+```
 ```bash
 • git clone https://github.com/mrfzvx12/whatsapp-bot.git
 • cd whatsapp-bot
