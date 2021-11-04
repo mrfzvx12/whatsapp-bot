@@ -81,7 +81,7 @@ and done
 ***
 
 ### installation
-- [x] **RDP/VPS USER**
+- [x] **RDP USER**
 
 Install the application below!
 
