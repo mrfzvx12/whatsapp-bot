@@ -51,7 +51,7 @@ You can open the language  [In here](https://github.com/mrfzvx12/whatsapp-bot/tr
 ***
 
 ### installation
-**TERMUX USER**
+- [x] **TERMUX USER**
 
 ```bash
 • pkg install git
@@ -78,7 +78,7 @@ and done
 
 ***
 
-**UBUNTU USER**
+- [x] **UBUNTU USER**
 
 For better experience
 
