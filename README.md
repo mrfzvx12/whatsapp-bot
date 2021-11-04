@@ -78,6 +78,45 @@ and done
 
 ***
 
+***
+
+### installation
+- [x] **RDP/VPS USER**
+
+Install the application below!
+
+1. Brain :D
+2. Intention😌
+3. Coffee🗿
+4. NodeJs [In Here](https://nodejs.org/en/download)
+5. Ffmpeg [In Here](https://ffmpeg.org/download.html)
+6. Notepad C++ [In Here](https://notepad-plus-plus.org/downloads/v8.1.9)
+Announcement: 
+If you still don't understand or fail during installation? 
+report to the number below
+
+```bash
+• git clone https://github.com/mrfzvx12/whatsapp-bot.git
+• cd whatsapp-bot
+• npm i
+```
+When everything is done, set the owner number in ```database/setting-bot.json``` or click [in here](https://github.com/mrfzvx12/whatsapp-bot/blob/3c92f24ea3b01f9af3e736795c9ccea7d76279ea/database/setting-bot.json#L3)
+
+Default :
+```
+{
+	"ownerNumber": ["123@s.whatsapp.net"]
+}
+```
+Save settings and proceed to the last stage
+```bash
+• npm start
+```
+When the QR appears, scan it using the WhatsApp application that will be used for bot
+and done
+
+***
+
 - [x] **UBUNTU USER**
 
 For better experience
