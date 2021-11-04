@@ -1,5 +1,3 @@
-```CARA MENERJEMAHKAN WEBSITE``` [KLIK DISINI](https://www.google.com/search?client=ms-android-xiaomi&sxsrf=AOaemvKOp-MCgOkm6_Ko1oY1lImYy06g-Q:1636011368957&q=cara+menerjemahkan+halaman+website+secara+otomatis&spell=1&sa=X&ved=2ahUKEwiJrPqjmf7zAhUXIbcAHb_VDHUQkeECKAB6BAgBEAI&biw=360&bih=511&dpr=2)
-
 <p align="center">
 <a href="https://github.com/mrfzvx12"><img title="mrfzvx12" src="https://img.shields.io/badge/github-Mrfzvx12-orange.svg?style=social&logo=github"></a>
 </p>
@@ -80,7 +78,6 @@ and done
 
 ***
 
-### installation
 - [x] **RDP/VPS USER**
 
 **First download tools**, Click icon to download !
