@@ -92,8 +92,8 @@ and done
 ```
 Announcement: 
 Have a complaint or problem while installing the application? 
-[chat here](https://linktr.ee/HansAl1)
 ```
+[chat here](https://linktr.ee/HansAl1)
 
 ```bash
 • git clone https://github.com/mrfzvx12/whatsapp-bot.git
