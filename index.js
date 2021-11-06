@@ -1390,6 +1390,12 @@ Judul : ${link[2].title}`
    client.adReply(from, capt, text, 'Profile from database', tanggal, thumb, 'https://www.instagram.com/p/CTKtDqeBgY5/?utm_medium=copy_link', mek)
    break
  
+ case 'grouplist':
+   if(!isOwner) return m.reply(msg.owner)
+   capt = totalchat.filter(z => z.jid.endsWith('g.us')).map((z, i) =>`*${i + 1}.* ${client.getName(z.jid)}\nId : ${z.jid}\nStatus : ${z.read_only ? 'Left' : 'Joined'}`).join`\n\n`
+  m.reply(capt)
+  break
+ 
  case 'infogroup':
  case 'infogc':
    if(!isGroup) return m.reply(group)
