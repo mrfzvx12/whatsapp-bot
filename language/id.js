@@ -178,3 +178,13 @@ exports.hampir = '*Dikit lagi* !\nCoba lagi';
 exports.benar = (value, value2) => {
   return `*Benar*\nJawabannya adalah ${value}\nKamu mendapatkan ${value2}`;
 };
+
+// afk
+exports.with = 'dengan alasan ';
+exports.onAfk = (value) => {
+  return 'Kamu sekarang afk ' + value
+};
+exports.offAfk = 'Kamu kembali dari AFK'
+exports.inAfk = (value, time) => {
+  return 'User sedang dalan mode Afk ' + value + '\n Pada : ' + time
+}
