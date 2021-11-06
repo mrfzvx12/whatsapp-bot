@@ -17,6 +17,14 @@ const isUrl = (url) => {
       );
     };
 
+const isLinkyt = (url) => {
+       return url.match(
+        new RegExp(
+          /(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/,
+          "gi"
+        )
+      );
+    };
 
 function pickRandom(list) {
   return list[Math.floor(Math.random() * list.length)];
@@ -156,6 +164,7 @@ module.exports = {
   modStick,
   h2k,
   isUrl,
+  isLinkyt,
   pickRandom,
   generateMessageID, 
   getGroupAdmins, 
