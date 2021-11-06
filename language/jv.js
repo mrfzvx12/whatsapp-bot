@@ -172,3 +172,14 @@ exports.hampir = '*Sithik maneh* !\nCoba maneh';
 exports.benar = (value, value2) => {
   return `*Bener*\nWangsulane yaiku ${value}\nsampeyan entuk ${value2}`;
 };
+
+
+// afk
+exports.with = 'kanthi alesan ';
+exports.onAfk = (value) => {
+  return 'sampeyan saiki afk ' + value
+};
+exports.offAfk = 'Sampeyan bali saka AFK'
+exports.inAfk = (value, time) => {
+  return 'Pangguna ana ing mode Apk ' + value + '\n On : ' + time
+}
