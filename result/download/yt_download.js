@@ -29,7 +29,7 @@ let judul = $('div').find('.thumbnail.cover > div > b').text()
 let quality = $('div').find('#mp4 > table > tbody > tr:nth-child(4) > td:nth-child(3) > a').attr('data-fquality')
 let tipe = $('div').find('#mp4 > table > tbody > tr:nth-child(3) > td:nth-child(3) > a').attr('data-ftype')
 let output = `${judul}.` + tipe
-let size = $('div').find('#mp4 > table > tbody > tr:nth-child(4) > td:nth-child(2)').text()
+let size = $('div').find('#mp4 > table > tbody > tr:nth-child(2) > td:nth-child(2)').text()
 let id = /var k__id = "(.*?)"/.exec(mela.result)[1]
 let res2 = await post(`https://www.y2mate.com/mates/en68/convert`, {
     type: 'youtube',
