@@ -1230,8 +1230,29 @@ Judul : ${link[2].title}`
      return m.reply(msg.oversize + G.data)
      })
    } else {
-   img = await getBuffer(res.thumb)
-   client.adReplyAudio(from, buff, document, res.judul+'.mp3', tanggal, img, value)
+     img = await getBuffer(res.thumb)
+     capt = 'Kualitas : ' + res.quality
+     capt += '\nSize : ' + res.size
+     client.adReplyAudio(from, buff, document, res.judul, capt, img, value)
+   }
+	break
+
+ case 'ytmp4':
+   if(!isUrl(value) && !value) return m.reply(msg.nolink('youtube'));
+   if(isUrl(value) && !value.match("youtube.com/watch")) return m.reply('Link invalid');
+   res = await lxa.ytv(value)
+   buff = await getBuffer(res.link)
+   if (!buff) return m.reply('Error')
+   m.reply(msg.wait)
+   if(Number(res.size.split(' MB')[0]) >= 20.00) {
+     axios.get(`https://tinyurl.com/api-create.php?url=${res.link}`).then((G) => {
+     return m.reply(msg.oversize + G.data)
+     })
+   } else {
+     img = await getBuffer(res.thumb)
+     capt = 'Kualitas : ' + res.quality
+     capt += '\nSize : ' + res.size
+     await client.adReplyVideo(from, buff, document, res.judul, capt, img, value, mek)
    }
 	break
 
