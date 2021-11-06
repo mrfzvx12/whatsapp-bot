@@ -1410,7 +1410,7 @@ Judul : ${link[2].title}`
  
  case 'infogroup':
  case 'infogc':
-   if(!isGroup) return m.reply(group)
+   if(!isGroup) return m.reply(msg.group)
    try {
 	      ppimg = await client.getProfilePicture(from);
 	    } catch {
