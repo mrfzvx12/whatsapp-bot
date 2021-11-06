@@ -5,8 +5,8 @@ exports.done = `Selesai...`;
 exports.next = (value) => {
   return 'Klik next untuk '+value+' selanjutnya';
 };
-exports.packon = 'Maaf kak perintah yang kaka minta tidak bisa diproses,karna nama pack yang kaka minta sudah terdaftar didalam database bot';
-exports.packoff = 'Maaf kak perintah yang kaka minta tidak bisa diproses,karna nama pack media yang kaka minta tidak terdaftar didalam database bot';
+exports.packon = 'Nama pack sudah terdaftar didalam database bot';
+exports.packoff = 'Nama pack media tidak terdaftar didalam database bot';
 exports.liston = 'List media yang tersimpan dalam database bot';
 exports.getlist = 'Silahkan gunakan perintah #getimg/ #getvid/ #getvn/ #getstik untuk mengambil setiap pack media\n*Contoh* : #getimg lexa';
 exports.nolink = (value) => {
@@ -20,20 +20,21 @@ exports.day = 'Selamat Siang';
 exports.morning = 'Selamat Pagi';
 
 // -- message only
-exports.admin = `Yahh maaf, perintah ini hanya dapat dijalankan oleh admin group! \nsilahkan chat admin untuk menjalankan perintah tersebut`;
-exports.group = `Yahh maaf, perintah ini hanya dapat dijalankan didalam group`;
-exports.premium = `Yahh maaf, perintah ini hanya dapat digunakan oleh user premium`;
-exports.premdl = `Yahh maaf kamu bukan user premium, download sendiri menggunakan link\n*LINK* : `;
+exports.admin = `Perintah ini hanya dapat dijalankan oleh admin group! \nsilahkan chat admin untuk menjalankan perintah tersebut`;
+exports.group = `Perintah ini hanya dapat dijalankan didalam group`;
+exports.premium = `Perintah ini hanya dapat digunakan oleh user premium`;
+exports.premdl = `Kamu bukan user premium, download sendiri menggunakan link\n*LINK* : `;
+exports.oversize = 'Ukuran file melebihi ukuran yang di tentukan, download sendiri melalui link dibawah\n*Link* : ';
 exports.botadmin = `Perintah ini bisa digunakan ketika bot menjadi admin`;
-exports.owner = `Waduh maaf kak perintah ini hanya bisa digunakan oleh owner bot`;
-exports.isprem = `Yahh maaf User ini sudah dijadikan user premium sebelumnya`;
-exports.noprem = `Maaf kak Hanya User Premium yang bisa menggunakan fitur ini,silahkan chat owner untuk membeli fitur premium`;
-exports.ban = 'User yang kaka masukan sudah dibanned sebelumnya,silahkan masukan perintah ini jika user ini belum terbanned oleh bot';
+exports.owner = `Perintah ini hanya bisa digunakan oleh owner bot`;
+exports.isprem = `User sudah dijadikan user premium sebelumnya`;
+exports.noprem = `Hanya User Premium yang bisa menggunakan fitur ini,silahkan chat owner untuk membeli fitur premium`;
+exports.ban = 'User sudah dibanned sebelumnya';
 exports.noban = 'User ini tidak memiliki status banned didalam database bot';
 exports.isadmin = 'Maaf bot tidak bisa mengeluarkan admin';
 
 // -- text
-exports.notag = 'Coba tag salah satu anggota group';
+exports.notag = 'Tag salah satu anggota group';
 exports.nonum = 'Silahkan ulangi peringah ini dengan menambahkan nomor target atau reply chat';
 exports.notext = 'Silahkan ulangi perintah ini dengan menambahkan text';
 exports.reply = 'Reply pesan target...';

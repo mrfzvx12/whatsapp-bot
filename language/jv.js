@@ -25,6 +25,7 @@ exports.admin = 'Nuwun sewu, printah iki mung bisa ditindakake dening admin grup
 exports.group = 'Nuwun sewu, printah iki mung bisa mbukak ing grup';
 exports.premium = 'Nuwun sewu, printah iki mung bisa digunakake dening pangguna premium';
 exports.premdl = 'Nuwun sewu, sampeyan dudu pangguna premium, download dhewe nggunakake tautan\n*LINK* : ';
+exports.oversize = 'Ukuran file ngluwihi ukuran sing ditemtokake, download dhewe liwat link ing ngisor iki\n*Link* : ';
 exports.botadmin = 'Printah iki bisa digunakake nalika bot dadi admin';
 exports.owner = 'Printah iki bisa digunakake dening bot pemilik';
 exports.isprem = 'Pangguna minangka pangguna premium sadurunge';

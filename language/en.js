@@ -25,6 +25,7 @@ exports.admin = 'Sorry, this command can only be run by group admins';
 exports.group = 'Sorry, this command can only be run in groups';
 exports.premium = 'Sorry, this command can only be used by premium users';
 exports.premdl = 'Sorry you are not a premium user, download it yourself using the link\n*LINK* : ';
+exports.oversize = 'The file size exceeds the specified size, download it yourself via the link below\n*Link* : ';
 exports.botadmin = 'This command can be used when the bot becomes admin';
 exports.owner = 'This command can be used by owner bots';
 exports.isprem = 'User is the previous premium user';

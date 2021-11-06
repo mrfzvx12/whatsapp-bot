@@ -25,6 +25,7 @@ exports.admin = 'Hampura, paréntah ieu ngan bisa dilaksanakeun ku admin grup';
 exports.group = 'Hampura, paréntah ieu ngan bisa dijalankeun dina grup'; 
 exports.premium = 'Hampura, paréntah ieu ngan bisa dipaké ku pamaké premium'; 
 exports.premdl = 'Hapunten anjeun sanés pangguna premium, unduh nyalira nganggo tautan\n*LINK* : ';
+exports.oversize = 'Ukuran file ngaleuwihan ukuran anu ditangtukeun, unduh nyalira ngalangkungan tautan di handap ieu\n*Link* : ';
 exports.botadmin = 'Paréntah ieu tiasa dianggo nalika bot janten admin'; 
 exports.owner = 'Paréntah ieu bisa dipaké ku nu boga bot'; 
 exports.isprem = 'Pamaké nyaéta pamaké premium saméméhna'; 
