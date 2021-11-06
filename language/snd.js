@@ -169,3 +169,14 @@ exports.hampir = '*Saeutik deui* !\nCoba deui';
 exports.benar = (value, value2) => {
   return `*Leres*\nJawabanna ${value}\nAnjeun meunang ${value2}`;
 };
+
+
+// afk
+exports.with = 'kalawan alesan ';
+exports.onAfk = (value) => {
+  return 'anjeun ayeuna afk ' + value
+};
+exports.offAfk = 'Anjeun balik ti AFK'
+exports.inAfk = (value, time) => {
+  return 'Pamaké dina modeu Apk ' + value + '\n Dina : ' + time
+}
