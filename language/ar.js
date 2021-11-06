@@ -169,3 +169,13 @@ exports.hampir = '*أكثر قليلا* !\n حاول مرة أخرى';
 exports.benar = (value, value2) => {
   return `*حق*\n الجواب ${value}\nلقد حصلت ${value2}`;
 };
+
+// afk
+exports.with = 'مع سبب ';
+exports.onAfk = (value) => {
+  return 'أنت الآن غير متصل ' + value
+};
+exports.offAfk = 'لقد عدت من وضع عدم الاتصال'
+exports.inAfk = (value, time) => {
+  return 'المستخدم في وضع غير متصل بالشبكة ' + value + '\nتشغيل : ' + time
+}
