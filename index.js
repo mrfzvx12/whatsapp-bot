@@ -1166,17 +1166,16 @@ case 'joox':
    try {
      url = await yts(value);
    link = url.all
-   //capt = ''
+   capt = ''
    m.reply(msg.wait)
    link.map((video) => {
-    // capt += "\n________________________\n\n"
-     capt = '*Title* : ' + video.title
+     capt += "________________________\n\n"
+     capt += '*Title* : ' + video.title
      capt += '\n*Link* : ' + video.url
      capt += '\n*Durasi* : ' + video.timestamp
      capt += '\n*Upload* : ' + video.ago
-    // capt += "\n________________________\n\n"
    })
-   //capt += ''
+   capt += ''
    await client.adReply(from, capt, text, 'YT Search : ' + value, tanggal, thumb, link[0].url)
    } catch {
      return m.reply('Musik tidak ditemukan')
