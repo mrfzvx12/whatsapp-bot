@@ -669,6 +669,7 @@ break
   break
 
  case 'afk':
+   if(!isGroup) return m.reply(msg.group)
    tgl = week + ", " + time
    reason = value ? msg.with + value : ''
    if(args.length > 10) return m.reply('No')
