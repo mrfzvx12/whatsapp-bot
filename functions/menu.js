@@ -77,6 +77,7 @@ exports.menu = (v) => {
 ├ ${v}joox <query>
 ├ ${v}play <query>
 ├ ${v}ytmp3 <link>
+├ ${v}ytmp4 <link>
 ╰────────
 ╭─⊷❲ *TEXT GENERATOR* ❳
 ├ ${v}namaninja <text>
