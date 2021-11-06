@@ -49,6 +49,7 @@ exports.menu = (v) => {
 ├ ${v}wallpaper
 ╰────────
 ╭─⊷❲ *TOOLS* ❳
+├ ${v}afk <reason>
 ├ ${v}fakethumb
 ├ ${v}say <text>
 ├ ${v}tomp3
