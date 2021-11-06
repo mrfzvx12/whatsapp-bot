@@ -452,7 +452,7 @@ switch (command) {
   case 'sc':
   case 'script':
     capt = `*Original*  : 
-https://www.github.com/mrfzvx12/whatsapp-bot
+${package.homepage}
 
 *Recode* : 
 `
