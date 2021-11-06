@@ -449,6 +449,17 @@ switch (command) {
     m.reply(`Speed : ${latensi.toFixed(3)} Second`)
   break 
   
+  case 'sc':
+  case 'script':
+    capt = `*Original*  : 
+https://www.github.com/mrfzvx12/whatsapp-bot
+
+*Recode* : 
+`
+client.sendMessage(from, capt, text, {quoted: mek})
+break
+  
+  
 //-- Rapiin dikit:v -hns
   case 'menu': case 'help':
     m.reply(msg.wait)
@@ -463,7 +474,7 @@ switch (command) {
 `
     capt += readMore
     capt += menu(prefix)
-    client.send2ButtonLoc(from, thumb, capt, 'Total hit : ' + isTotalcmd + '\nTotal User : ' + User.length + '\n' + isWm, 'INFORMASI', prefix + 'informasi', 'OWNER', prefix + 'owner')
+    client.send3ButtonLoc(from, thumb, capt, 'Total hit : ' + isTotalcmd + '\nTotal User : ' + User.length + '\n' + isWm, 'INFORMASI', prefix + 'informasi', 'OWNER', prefix + 'owner', 'SCRIPT', prefix + 'script')
     break
   
   case 'bahasa':
