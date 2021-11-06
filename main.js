@@ -82,6 +82,8 @@ async function starts() {
 client.on('message-delete', async (m) => {
     if (m.key.fromMe) return;
     let isAntidelete = cekAntidelete(m.key.remoteJid);
+    let isGroup = m.key.remoteJid.endsWith('@g.us');
+    if(!isGroup) return;
     if (isAntidelete === false) return;
     m.message = (Object.keys(m.message)[0] === 'ephemeralMessage') ? m.message.ephemeralMessage.message : m.message;
     const Type = Object.keys(m.message)[0];
