@@ -394,7 +394,11 @@ if (budy) addUser(sender); // menambah informasi user kedalam database
 if (isGroup && budy) addGroup(from); // menambah informasi group kedalam database
 if (isCmd) addCmd() // menambah jumlah total command ketika user menggunakan command
 if (isCmd) addPoin(sender); // menambah poin user ketika menggunakan command
-if (isGroup && budy) addCustomWelcome(from)
+if (isGroup && budy) addCustomWelcome(from) // push costume welcome
+if(isGroup && budy && isAfk){ //cek Players afk
+  await delAfk(sender)
+ return m.reply(msg.offAfk)
+}
 
 // menambahkan poin ke level dan di akumulasikan untuk menaikkan level
 const Amount = isPoinawal * (Math.pow(2, isLevel) - 1)
@@ -663,6 +667,14 @@ break
     capt += '\nJawaban : ' + No + ' ' + jawaban
     m.reply(capt)
   break
+
+ case 'afk':
+   tgl = week + ", " + time
+   reason = value ? msg.with + value : ''
+   if(args.length > 10) return m.reply('No')
+   await addAfk(sender, tgl, reason)
+   m.reply(msg.onAfk(reason))
+ break
 
   case "s":
   case "stiker":
@@ -2235,6 +2247,17 @@ fungsi = `
       }
     }
 
+
+// user afl
+let jids = [...new Set([...(m.mentionedJid || []), ...(m.quoted ? [m.quoted.sender] : [])])]
+  for (let jid of jids) {
+    let isOnAfk = cekAfk(jid);
+    let isOnAfkTime = cekAfkTime(jid);
+    let isOnAfkReason = cekAfkReason(jid);
+    if(!isGroup) return
+      if(!isOnAfk) return 
+      m.reply(msg.inAfk(isOnAfkReason, isOnAfkTime))
+  }
 
 // chatbot // atur sesukamu
 if(!isCmd && isChatbot === true){
