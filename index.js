@@ -36,6 +36,7 @@ const threshold = 0.72;
 const lxa = require('./result/index');
 const package = require('./package.json');
 const yts = require('yt-search');
+const axios = require("axios");
 // functions dalam library
 const simple = require('./whatsapp/connecting');
 const { fetchJson, fakeText, getBuffer } = require('./library/fetcher');
@@ -1221,11 +1222,17 @@ Judul : ${link[2].title}`
    if(!isUrl(value) && !value) return m.reply(msg.nolink('youtube'));
    if(isUrl(value) && !value.match("youtube.com/watch")) return m.reply('Link invalid');
    res = await lxa.yta(value)
-   buff = await getBuffer(res.dl_link)
+   buff = await getBuffer(res.link)
    if (!buff) return m.reply('Error')
    m.reply(msg.wait)
+   if(Number(res.size.split(' MB')[0]) >= 5.00) {
+     axios.get(`https://tinyurl.com/api-create.php?url=${res.link}`).then((G) => {
+     return m.reply(msg.oversize + G.data)
+     })
+   } else {
    img = await getBuffer(res.thumb)
-   client.adReplyAudio(from, buff, document, res.title, tanggal, img, value)
+   client.adReplyAudio(from, buff, document, res.judul+'.mp3', tanggal, img, value)
+   }
 	break
 
  case 'igvid':
