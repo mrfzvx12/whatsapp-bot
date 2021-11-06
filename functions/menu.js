@@ -4,6 +4,7 @@ exports.menu = (v) => {
 ├ ${v}menu
 ├ ${v}help
 ├ ${v}info
+├ ${v}script
 ├ ${v}bahasa
 ├ ${v}ping
 ├ ${v}report <text>
