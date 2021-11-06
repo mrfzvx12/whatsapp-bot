@@ -46,6 +46,7 @@ const {
   modStick,
   h2k, 
   isUrl,
+  isLinkyt,
   pickRandom,
   generateMessageID, 
   getGroupAdmins,
@@ -1218,8 +1219,8 @@ Judul : ${link[2].title}`
  break
 
  case 'ytmp3':
-   if(!isUrl(value) && !value) return m.reply(msg.nolink('youtube'));
-   if(isUrl(value) && !value.match("youtube.com/watch")) return m.reply('Link invalid');
+   if(!value) return m.reply(msg.nolink('youtube'));
+   if(!isLinkyt(value)) return m.reply('Link invalid');
    res = await lxa.yta(value)
    buff = await getBuffer(res.link)
    if (!buff) return m.reply('Error')
@@ -1237,8 +1238,8 @@ Judul : ${link[2].title}`
 	break
 
  case 'ytmp4':
-   if(!isUrl(value) && !value) return m.reply(msg.nolink('youtube'));
-   if(isUrl(value) && !value.match("youtube.com/watch")) return m.reply('Link invalid');
+   if(!value) return m.reply(msg.nolink('youtube'));
+   if(!isLinkyt(value)) return m.reply('Link invalid');
    res = await lxa.ytv(value)
    buff = await getBuffer(res.link)
    if (!buff) return m.reply('Error')
