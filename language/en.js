@@ -170,3 +170,13 @@ exports.hampir = '*A little more* !\nTry again';
 exports.benar = (value, value2) => {
   return `*Right*\nThe answer is ${value}\nyou get ${value2}`;
 };
+
+// afk
+exports.with = 'with reason ';
+exports.onAfk = (value) => {
+  return 'you are now afk ' + value
+};
+exports.offAfk = 'You\'re back from AFK'
+exports.inAfk = (value, time) => {
+  return 'User is in Apk mode ' + value + '\n On : ' + time
+}
