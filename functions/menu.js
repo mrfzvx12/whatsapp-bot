@@ -154,6 +154,7 @@ exports.menu = (v) => {
 ╰────────
 ╭─⊷❲ *OWNER* ❳
 ├ ${v}join <link>
+├ ${v}grouplist
 ├ ${v}addpremium @user
 ├ ${v}delpremium @user
 ├ ${v}banned @user
