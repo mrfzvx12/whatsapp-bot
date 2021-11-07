@@ -2255,9 +2255,9 @@ let jids = [...new Set([...(m.mentionedJid || []), ...(m.quoted ? [m.quoted.send
     let isOnAfk = cekAfk(jid);
     let isOnAfkTime = cekAfkTime(jid);
     let isOnAfkReason = cekAfkReason(jid);
-    if(!isGroup) return
-      if(!isOnAfk) return 
-      m.reply(msg.inAfk(isOnAfkReason, isOnAfkTime))
+      if(isOnAfk && !isGroup) {
+        return m.reply(msg.inAfk(isOnAfkReason, isOnAfkTime))
+      }
   }
 
 
