@@ -2260,7 +2260,13 @@ let jids = [...new Set([...(m.mentionedJid || []), ...(m.quoted ? [m.quoted.send
       m.reply(msg.inAfk(isOnAfkReason, isOnAfkTime))
   }
 
-// chatbot // atur sesukamu
+
+/**
+ * url 1 = https://api.simsimi.net/v2/?text=${budy}&lc=id&cf=false
+ * url 2 = https://api-sv2.simsimi.net/v2/?text=${budy}&lc=id&cf=false 
+ * chatbot // atur sesukamu su pilih salah satu kalo eror
+*/
+
 if(!isCmd && isChatbot === true){
  // if(!mek.isBaileys) return
  // if(isGroup) return
