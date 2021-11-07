@@ -2065,7 +2065,7 @@ break
   case 'tebakkata':
   case 'tekateki':
   case 'tebaklirik':
-    client.game = client.game ? client.game : {}
+      client.game = client.game ? client.game : {}
     if (from in client.game) {
         client.reply(from, msg.onGame, client.game[from][0])
         return false
@@ -2077,20 +2077,20 @@ break
         caption = msg.soal(json.soal, (isGamewaktu / 1000).toFixed(2), isPoingame).trim()
     client.game[from] = [
         await client.reply(from, caption, m),
-        json, isPoingame,
+        json.jawaban,
         setTimeout(() => {
-          capt = json.jawaban.replace(/[aiueoAIUEO]/gi, '▢')
+          capt = client.game[from][1].replace(/[aiueoAIUEO]/gi, '▢')
           m.reply("*Clue*\n"+capt.toUpperCase())
         }, isGamewaktu - 10000),
         setTimeout(() => {
-            if (client.game[from]) client.reply(from, msg.timeout+json.jawaban.toUpperCase(), client.game[from][0])
+           client.reply(from, msg.timeout + client.game[from][1].toUpperCase(), client.game[from][0])
             delete client.game[from]
         }, isGamewaktu)
     ]
  break
 
-   case 'susunkata':
-    client.game = client.game ? client.game : {}
+  case 'susunkata':
+      client.game = client.game ? client.game : {}
     if (from in client.game) {
         client.reply(from, msg.onGame, client.game[from][0])
         return false
@@ -2102,13 +2102,13 @@ break
         caption = msg.soal(json.soal + '\n\n*Tipe* : ' + json.tipe, (isGamewaktu / 1000).toFixed(2), isPoingame).trim()
     client.game[from] = [
         await client.reply(from, caption, m),
-        json, isPoingame,
+        json.jawaban,
         setTimeout(() => {
-          capt = json.jawaban.replace(/[aiueoAIUEO]/gi, '▢')
+          capt = client.game[from][1].replace(/[aiueoAIUEO]/gi, '▢')
           m.reply("*Clue*\n"+capt.toUpperCase())
         }, isGamewaktu - 10000),
         setTimeout(() => {
-            if (client.game[from]) client.reply(from, msg.timeout+json.jawaban.toUpperCase(), client.game[from][0])
+           client.reply(from, msg.timeout + client.game[from][1].toUpperCase(), client.game[from][0])
             delete client.game[from]
         }, isGamewaktu)
     ]
@@ -2286,19 +2286,17 @@ if (m.mtype == 'viewOnceMessage' && isViewonce === true){
 }
 
 // game answer
-   if (!m.quoted || !m.quoted.fromMe || !m.quoted.isBaileys || !m.quoted.text) return 
-   if (!client.game) return
-    if (m.quoted.from == client.game[from][0].from) {
-        json = JSON.parse(JSON.stringify(client.game[from][1]))
-        if (m.text.toLowerCase() == json.jawaban.toLowerCase().trim()) {
-            m.reply(msg.benar(json.jawaban.toUpperCase(), isPoingame))
+   if (!client.game || !m.quoted || !m.quoted.fromMe || !m.quoted.isBaileys || !m.quoted.text) return !0
+    if (client.game[from] && m.quoted.from == client.game[from][0].from) {
+        if (m.text.toLowerCase() == client.game[from][1].toLowerCase().trim()) {
+            m.reply(msg.benar(client.game[from][1].toUpperCase(), isPoingame))
             await addPoin(sender, isPoingame)
+            clearTimeout(client.game[from][2])
             clearTimeout(client.game[from][3])
-            clearTimeout(client.game[from][4])
             delete client.game[from]
-        } else if (similarity(m.text.toLowerCase(), json.jawaban.toLowerCase().trim()) >= threshold) m.reply(msg.hampir)
+        } else if (similarity(m.text.toLowerCase(), client.game[from][1].toLowerCase().trim()) >= threshold) m.reply(msg.hampir)
         else m.reply(msg.salah)
-    } return !0
+    }
     
 
 } catch (e) {
