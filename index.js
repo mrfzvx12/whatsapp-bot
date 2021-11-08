@@ -635,7 +635,7 @@ break
   
   case 'apakah':
     if(!value) return m.reply(msg.notext)
-    apa = ['Tidak', 'Iya', 'Tidak']
+    apa = ['Tidak', 'Iya', 'Mungkin']
     jawaban = pickRandom(apa)
     capt = 'Pertanyaan : Apakah ' + value 
     capt += '\nJawaban : ' + jawaban 
@@ -2255,7 +2255,7 @@ let jids = [...new Set([...(m.mentionedJid || []), ...(m.quoted ? [m.quoted.send
     let isOnAfk = cekAfk(jid);
     let isOnAfkTime = cekAfkTime(jid);
     let isOnAfkReason = cekAfkReason(jid);
-      if(isOnAfk && !isGroup) {
+      if(isOnAfk && isGroup) {
         return m.reply(msg.inAfk(isOnAfkReason, isOnAfkTime))
       }
   }
