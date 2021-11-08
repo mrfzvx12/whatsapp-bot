@@ -1245,10 +1245,10 @@ Judul : ${link[2].title}`
  case 'ytmp3':
    if(!value) return m.reply(msg.nolink('youtube'));
    if(!isLinkyt(value)) return m.reply('Link invalid');
+   m.reply(msg.wait)
    res = await lxa.yta(value)
    buff = await getBuffer(res.link)
    if (!buff) return m.reply('Error')
-   m.reply(msg.wait)
    if(Number(res.size.split(' MB')[0]) >= 5.00) {
      axios.get(`https://tinyurl.com/api-create.php?url=${res.link}`).then((G) => {
      return m.reply(msg.oversize + G.data)
@@ -1264,10 +1264,10 @@ Judul : ${link[2].title}`
  case 'ytmp4':
    if(!value) return m.reply(msg.nolink('youtube'));
    if(!isLinkyt(value)) return m.reply('Link invalid');
+   m.reply(msg.wait)
    res = await lxa.ytv(value)
    buff = await getBuffer(res.link)
    if (!buff) return m.reply('Error')
-   m.reply(msg.wait)
    if(Number(res.size.split(' MB')[0]) >= 20.00) {
      axios.get(`https://tinyurl.com/api-create.php?url=${res.link}`).then((G) => {
      return m.reply(msg.oversize + G.data)
