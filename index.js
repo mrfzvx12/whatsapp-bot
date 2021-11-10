@@ -1073,6 +1073,149 @@ break
      }
      break
 
+case "fast":
+  if (isMedia || isQuotedVideo) {
+    m.reply(msg.wait);
+    encmedia = JSON.parse(JSON.stringify(mek).replace("quotedM", "m")).message.extendedTextMessage.contextInfo;
+    media = await client.downloadAndSaveMediaMessage(encmedia);
+    ran = getRandom(".mp4");
+    exec(`ffmpeg -i ${media} -filter_complex "[0:v]setpts=0.5*PTS[v];[0:a]atempo=2[a]" -map "[v]" -map "[a]" ${ran}`, (err) => {
+      fs.unlinkSync(media);
+      if (err) return m.reply(`Err: ${err}`);
+      buff = fs.readFileSync(ran);
+      client.sendMessage(from, buff, video, {
+        mimetype: "video/mp4",
+        quoted: mek,
+      });
+      fs.unlinkSync(ran);
+    });
+  } else if (isMedia || isQuotedAudio) {
+    m.reply(msg.wait)
+    encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+    media = await client.downloadAndSaveMediaMessage(encmedia)
+    ran = getRandom('.mp3')
+    exec(`ffmpeg -i ${media} -filter:a "atempo=2,asetrate=44100" ${ran}`, (err, stderr, stdout) => {
+      fs.unlinkSync(media)
+      if (err) return m.reply('Error!')
+      buff = fs.readFileSync(ran)
+						client.sendMessage(from, buff, audio, {mimetype: 'audio/mp4', ptt:true, quoted: mek})
+						fs.unlinkSync(ran)
+    })
+  } else {
+    m.reply(msg.replyVid + '/' + msg.replyVn)
+  }
+  break;
+
+case "slow":
+  if (isMedia || isQuotedVideo) {
+    m.reply(msg.wait);
+    encmedia = JSON.parse(JSON.stringify(mek).replace("quotedM", "m")).message.extendedTextMessage.contextInfo;
+    media = await client.downloadAndSaveMediaMessage(encmedia);
+    ran = getRandom(".mp4");
+    exec(`ffmpeg -i ${media} -filter_complex "[0:v]setpts=2*PTS[v];[0:a]atempo=0.5[a]" -map "[v]" -map "[a]" ${ran}`, (err) => {
+      fs.unlinkSync(media);
+      if (err) return m.reply(`Err: ${err}`);
+      buff = fs.readFileSync(ran);
+      client.sendMessage(from, buff, video, {
+        mimetype: "video/mp4",
+        quoted: mek,
+      });
+      fs.unlinkSync(ran);
+    });
+    } else if (isMedia || isQuotedAudio) {
+      m.reply(msg.wait)
+      encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+      media = await client.downloadAndSaveMediaMessage(encmedia)
+      ran = getRandom('.mp3')
+      exec(`ffmpeg -i ${media} -filter:a "atempo=0.7,asetrate=44100" ${ran}`, (err, stderr, stdout) => {
+        fs.unlinkSync(media)
+        if (err) return m.reply('Error!')
+        buff = fs.readFileSync(ran)
+        client.sendMessage(from, buff, audio, {mimetype: 'audio/mp4', ptt:true, quoted: mek})
+        fs.unlinkSync(ran)
+      })
+    } else {
+      m.reply(msg.replyVid + '/' + msg.replyVn)
+    }
+    break
+
+case "reverse":
+  if (!isQuotedVideo) return reply(msg.replyVid);
+  encmedia = JSON.parse(JSON.stringify(mek).replace("quotedM", "m")).message.extendedTextMessage.contextInfo;
+  media = await client.downloadAndSaveMediaMessage(encmedia);
+  m.reply(msg.wait)
+  ran = getRandom(".mp4");
+  exec(`ffmpeg -i ${media} -vf reverse -af areverse ${ran}`, (err) => {
+    fs.unlinkSync(media);
+    if (err) return m.reply(`Err: ${err}`);
+    buffer453 = fs.readFileSync(ran);
+    client.sendMessage(from, buffer453, video, {
+      mimetype: "video/mp4",
+      quoted: mek,
+    });
+    fs.unlinkSync(ran);
+  });
+  break
+
+case 'gemuk':
+  if(!isQuotedAudio) return m.reply(msg.replyVn)
+  encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+  media = await client.downloadAndSaveMediaMessage(encmedia)
+  ran = getRandom('.mp3')
+  exec(`ffmpeg -i ${media} -filter:a "atempo=1.6,asetrate=22100" ${ran}`, (err, stderr, stdout) => {
+    fs.unlinkSync(media)
+    if (err) return m.reply('Error!')
+    buff = fs.readFileSync(ran)
+    client.sendMessage(from, buff, audio, {mimetype: 'audio/mp4', ptt:true, quoted: mek})
+						fs.unlinkSync(ran)
+					})
+				break
+
+case 'tupai':
+  if(!isQuotedAudio) return m.reply(msg.replyVn)
+  tupay = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+  tupai = await client.downloadAndSaveMediaMessage(tupay)
+  m.reply()
+  ran = getRandom('.mp3')
+  exec(`ffmpeg -i ${tupai} -filter:a "atempo=0.5,asetrate=65100" ${ran}`, (err, stderr, stdout) => {
+    fs.unlinkSync(tupai)
+    if (err) return m.reply('Error!')
+    buff = fs.readFileSync(ran)
+    client.sendMessage(from, buff, audio, {mimetype: 'audio/mp4', ptt:true, quoted: mek})
+    fs.unlinkSync(ran)
+  })
+  break
+
+case 'bass': 
+  	if(!isQuotedAudio) return m.reply(msg.replyVn)
+  	bas = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+  	bass = await client.downloadAndSaveMediaMessage(bas)
+  	ran = getRandom('.mp3')
+  	m.reply(msg.wait)
+  	exec(`ffmpeg -i ${bass} -af equalizer=f=${text}:width_type=o:width=2:g=30 ${ran}`, (err, stderr, stdout) => {
+  	  fs.unlinkSync(bass)
+  	  if (err) return m.reply('Error!')
+  	  buff = fs.readFileSync(ran)
+  	  client.sendMessage(from, buff, audio, {mimetype: 'audio/mp4', ptt:true, quoted: mek})
+						fs.unlinkSync(ran)
+					})
+				break
+
+case 'nightcore':
+	if(!isQuotedAudio) return m.reply(msg.replyVn) 
+	night = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+	core = await client.downloadAndSaveMediaMessage(night)
+  ran = getRandom('.mp3')
+  m.reply(msg.wait)
+  exec(`ffmpeg -i ${core} -filter:a atempo=1.06,asetrate=44100*1.25 ${ran}`, (err, stderr, stdout) => {
+    fs.unlinkSync(core)
+    if (err) return m.reply('Error!')
+    buff = fs.readFileSync(ran)
+    client.sendMessage(from, buff, audio, {mimetype: 'audio/mp4', quoted: mek, ptt: true})
+    fs.unlinkSync(ran)
+  })
+  break
+
   case 'setfakethumb':
    if(!isOwner) return m.reply(msg.owner)
    if(isMedia || isQuotedImage) {
