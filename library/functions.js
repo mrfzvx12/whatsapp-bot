@@ -66,6 +66,19 @@ const kyun = (s) =>{
     });
      let tanggal = week + " " + weton + ", " + date;
 
+    function formatDate(n, locale = 'id') {
+      let d = new Date(n)
+      return d.toLocaleDateString(locale, {
+      weekday: 'long',
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric' 
+      })
+    }
+
 /**
  * Timezone 3 wilayah di Indonesia
  */
@@ -178,5 +191,6 @@ module.exports = {
   week,
   date,
   waktu,
-  tanggal
+  tanggal,
+  formatDate
 }
