@@ -60,7 +60,8 @@ const {
   time,
   WIB,
   WITA,
-  WIT
+  WIT,
+  formatDate
 } = require('./library/functions');
 
 // functions
@@ -1408,6 +1409,42 @@ Judul : ${link[2].title}`
    capt = totalchat.filter(z => z.jid.endsWith('g.us')).map((z, i) =>`*${i + 1}.* ${client.getName(z.jid)}\nId : ${z.jid}\nStatus : ${z.read_only ? 'Left' : 'Joined'}`).join`\n\n`
   m.reply(capt)
   break
+
+ case "inspect":
+   try {
+     if (!value) return m.reply(msg.nolink('Whatsapp'));
+     url = value.split("https://chat.whatsapp.com/")[1];
+     if(!url) return m.reply('Link invalid')
+     mem = [];
+     let { id, owner, subject, subjectOwner, desc, descId, parti
+     fotoProf = await client.getProfilePicture(id);
+     buff = await getBuffer(fotoProf)
+     capt = '*Id* : ' + id.
+     capt += owner ? '\n*Owner* : @' + owner.split('@')[0] : '\n
+     capt += '\n*Nama* : ' + subject.
+     capt += '\n*Dibuat* : ' + formatDate(creation * 1000)
+     capt += '\n*Jumlah Member* : ' + size.
+     capt += desc ? '\n*Deskripsi* : ' + desc : '*Deskripsi* : -
+     capt += '\n*Id Deskripsi* : ' + descId.
+     capt += descOwner ? '\n*Deskripsi diubah oleh* : @' +  desc
+     capt += descTime ? '\n*Tanggal* : ' + formatDate(descTime * 1
+     capt += '\n\n*Kontak tersimpan* : \n'
+          for (let y of participants) {
+            capt += '- @' +  y.id.split("@")[0]
+            capt += '\n'
+            mem.push(y.id.replace(/@c.us/g, "@s.whatsapp.net"));
+          }
+          mem.push( owner ? owner.replace(/@c.us/g, "@s.whatsapp
+          mem.push( descOwner ? descOwner.replace(/@c.us/g, "@s.
+          client.sendMessage(from, buff, image, {
+            caption: capt,
+            quoted: mek,
+            contextInfo: { mentionedJid: mem },
+          });
+        } catch {
+          m.reply("Link invalid");
+        }
+break
  
  case 'infogroup':
  case 'infogc':
