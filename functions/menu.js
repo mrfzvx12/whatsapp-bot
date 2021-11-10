@@ -48,6 +48,15 @@ exports.menu = (v) => {
 ├ ${v}cyberpunk
 ├ ${v}wallpaper
 ╰────────
+╭─⊷❲ *MEDIA* ❳
+├ ${v}fast
+├ ${v}slow
+├ ${v}reverse
+├ ${v}gemuk
+├ ${v}tupai
+├ ${v}bass
+├ ${v} nightcore
+╰────────
 ╭─⊷❲ *TOOLS* ❳
 ├ ${v}afk <reason>
 ├ ${v}fakethumb
