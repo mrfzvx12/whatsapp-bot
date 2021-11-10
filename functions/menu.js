@@ -168,7 +168,8 @@ exports.menu = (v) => {
 ├ ${v}nopref
 ├ ${v}multi
 ├ ${v}view <link>
-├ ${v}listreport <link>
+├ ${v}inspect <link>
+├ ${v}listreport
 ├ $
 ├ >
 ╰────────`;
