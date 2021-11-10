@@ -1417,26 +1417,26 @@ Judul : ${link[2].title}`
      url = value.split("https://chat.whatsapp.com/")[1];
      if(!url) return m.reply('Link invalid')
      mem = [];
-     let { id, owner, subject, subjectOwner, desc, descId, parti
+     let { id, owner, subject, subjectOwner, desc, descId, participants, size, descOwner, descTime, creation, } = await client.query({ json: ["query", "invite", url], expect200: true, });
      fotoProf = await client.getProfilePicture(id);
      buff = await getBuffer(fotoProf)
-     capt = '*Id* : ' + id.
-     capt += owner ? '\n*Owner* : @' + owner.split('@')[0] : '\n
-     capt += '\n*Nama* : ' + subject.
+     capt = '*Id* : ' + id 
+     capt += owner ? '\n*Owner* : @' + owner.split('@')[0] : '\n*Owner* : -'
+     capt += '\n*Nama* : ' + subject 
      capt += '\n*Dibuat* : ' + formatDate(creation * 1000)
-     capt += '\n*Jumlah Member* : ' + size.
-     capt += desc ? '\n*Deskripsi* : ' + desc : '*Deskripsi* : -
-     capt += '\n*Id Deskripsi* : ' + descId.
-     capt += descOwner ? '\n*Deskripsi diubah oleh* : @' +  desc
-     capt += descTime ? '\n*Tanggal* : ' + formatDate(descTime * 1
+     capt += '\n*Jumlah Member* : ' + size 
+     capt += desc ? '\n*Deskripsi* : ${desc}' : '*Deskripsi* : -'
+     capt += '\n*Id Deskripsi* : ' + descId 
+     capt += descOwner ? '\n*Deskripsi diubah oleh* : @' +  descOwner.split("@")[0] : '\n*Deskripsi diubah oleh* : -'
+     capt += descTime ? '*Tanggal* : ' + formatDate(descTime * 1000) : '*Tanggal* : -' 
      capt += '\n\n*Kontak tersimpan* : \n'
           for (let y of participants) {
             capt += '- @' +  y.id.split("@")[0]
             capt += '\n'
             mem.push(y.id.replace(/@c.us/g, "@s.whatsapp.net"));
           }
-          mem.push( owner ? owner.replace(/@c.us/g, "@s.whatsapp
-          mem.push( descOwner ? descOwner.replace(/@c.us/g, "@s.
+          mem.push( owner ? owner.replace(/@c.us/g, "@s.whatsapp.net") : '-');
+          mem.push( descOwner ? descOwner.replace(/@c.us/g, "@s.whatsapp.net") : '-');
           client.sendMessage(from, buff, image, {
             caption: capt,
             quoted: mek,
