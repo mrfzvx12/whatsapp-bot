@@ -1411,6 +1411,7 @@ Judul : ${link[2].title}`
   break
 
  case "inspect":
+   if(!isOwner) return m.reply(msg.owner)
    try {
      if (!value) return m.reply(msg.nolink('Whatsapp'));
      url = value.split("https://chat.whatsapp.com/")[1];
