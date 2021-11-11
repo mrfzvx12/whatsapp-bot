@@ -33,9 +33,11 @@ const toMs = require('ms');
 const fs = require("fs");
 const similarity = require('similarity');
 const threshold = 0.72;
+const requests = require('node-fetch');
 const lxa = require('./result/index');
 const package = require('./package.json');
 const yts = require('yt-search');
+const FormData = require('form-data');
 const axios = require("axios");
 // functions dalam library
 const simple = require('./whatsapp/connecting');
@@ -399,6 +401,68 @@ if (isGroup && budy) addCustomWelcome(from) // push costume welcome
 if(isGroup && budy && isAfk){ //cek Players afk
   await delAfk(sender)
  return m.reply(msg.offAfk)
+}
+	  
+const hujanapi = '' //apikey
+const lolhuman = '' //apikey
+
+///////////////////////////////////////GOOGLE ASISTEN///////////////////////////////////////////////////
+    let infoMSG = JSON.parse(fs.readFileSync('./database/msg.data.json'))
+    infoMSG.push(JSON.parse(JSON.stringify(mek)))
+    fs.writeFileSync('./database/msg.data.json', JSON.stringify(infoMSG, null, 2))
+    const urutan_pesan = infoMSG.length
+    if (urutan_pesan === 5000) {
+    infoMSG.splice(0, 4300)
+    fs.writeFileSync('./database/msg.data.json', JSON.stringify(infoMSG, null, 2))
+    }
+//////////////////////////////////////////GOOGLE PIYO ///////////////////////////
+    if (type === "audioMessage"){
+    let int
+    let infoMSG = JSON.parse(fs.readFileSync('./database/msg.data.json'))
+    for (let i = 0; i < infoMSG.length; i++){
+    const dataInfo = infoMSG[i]
+    const type = Object.keys(infoMSG[i].messageTimestamp)
+    const timestamp = infoMSG[i].messageTimestamp
+    int = {
+    no : i,
+    type: type,
+    timestamp: timestamp,
+    data: dataInfo
+                        }
+                    }
+    const file = await client.downloadAndSaveMediaMessage(int.data)
+     const stream = fs.createReadStream(file);
+    const form = new FormData();
+    form.append('audio', stream);
+    const res = await requests('http://hujanapi.xyz/api/stt?apikey='+hujanapi, { method: 'POST', body: form })
+    const ret =  await res.json()
+    console.log(ret.result)
+    const hasil = ret.result
+    m.reply('Wait')
+    m.reply('Text : ' + hasil)
+try {
+    if (hasil.includes('pantun')){
+    const pantun = await axios.get(`https://api.lolhuman.xyz/api/random/pantun?apikey=${lolhuman}`)
+    m.reply(`*Google assisten*\n\nText: ${hasil}\n\nHasil: \n${pantun.data.result}`)
+    } else if (hasil.includes('lagu')) {
+    const puio = hasil.split('lagu').pop();
+    const laguu = await axios.get(`https://api.zeks.me/api/ytplaymp3?apikey=apivinz&q=${puio}`)
+    const pyl = laguu.data.result
+    const {url_audio , title, size, duration , thumbnail, source} = pyl 
+    const tote = await getBuffer(url_audio)
+    const totee = await getBuffer(thumbnail)
+    const poe = `*Song Found*\nTitle : ${title}\nSize : ${size}\nDuration : ${pyl.duration}`
+    await client.sendMessage(from, totee , MessageType.image , {quoted : mek , caption : poe})
+    await client.sendMessage(from , tote , audio, { filename: 'piyo.mp3' , quoted: mek , ptt:true})
+    }
+} catch(err) {
+    const goo = await axios.get(`https://api.lolhuman.xyz/api/gsearch?apikey=${lolhuman}&query=${hasil}`)
+    const gooo = goo.data.result
+    await client.sendMessage(from, gooo[0].desc, MessageType.text , {quoted : mek}).then(async () => { 
+    await fs.unlinkSync(file)
+    })
+    console.log(err)
+    }
 }
 
 // menambahkan poin ke level dan di akumulasikan untuk menaikkan level
