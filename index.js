@@ -1595,10 +1595,10 @@ Judul : ${link[2].title}`
      capt += '\n*Nama* : ' + subject 
      capt += '\n*Dibuat* : ' + formatDate(creation * 1000)
      capt += '\n*Jumlah Member* : ' + size 
-     capt += desc ? '\n*Deskripsi* : ${desc}' : '*Deskripsi* : -'
+     capt += desc ? '\n*Deskripsi* : ' + desc : '\n*Deskripsi* : -'
      capt += '\n*Id Deskripsi* : ' + descId 
      capt += descOwner ? '\n*Deskripsi diubah oleh* : @' +  descOwner.split("@")[0] : '\n*Deskripsi diubah oleh* : -'
-     capt += descTime ? '*Tanggal* : ' + formatDate(descTime * 1000) : '*Tanggal* : -' 
+     capt += descTime ? '\n*Tanggal* : ' + formatDate(descTime * 1000) : '\n*Tanggal* : -' 
      capt += '\n\n*Kontak tersimpan* : \n'
           for (let y of participants) {
             capt += '- @' +  y.id.split("@")[0]
