@@ -211,7 +211,7 @@ For more detailed information, please contact me via social media below:
 **Baileys**
 [![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=moo-d&repo=termux-whatsapp-bot&theme=buefy)](https://github.com/moo-d/termux-whatsapp-bot)
 
-**Bileys** (MAINTENANCE)
+**Baileys** (MAINTENANCE)
 [![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=cxd9-teams&repo=cxd9-bot&theme=buefy)](https://github.com/moo-d/termux-whatsapp-bot)
 
 **pen-wa/wa-automate**
