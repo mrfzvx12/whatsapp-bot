@@ -197,22 +197,19 @@ For more detailed information, please contact me via social media below:
 [![mrfzvx12](https://github.com/mrfzvx12.png?size=100)](https://github.com/mrfzvx12) | [![moo-d](https://github.com/moo-d.png?size=100)](https://github.com/moo-d) 
 ----|----
 [MrfZvx12](https://github.com/mrfzvx12) | [Moo-d](https://github.com/moo-d)
-Moderator & Author | Author
+Moderator & Author Author
 
 
-### Some WhatsApp bots are recommended
-<details>
-<summary>Click Here</summary>
+### OTHER PROJECTS
 
-![Moo-d](https://github.com/Moo-d.png?size=70)[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=moo-d&repo=termux-whatsapp-bot&theme=buefy)](https://github.com/moo-d/termux-whatsapp-bot)
+**Baileys**
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=moo-d&repo=termux-whatsapp-bot&theme=buefy)](https://github.com/moo-d/termux-whatsapp-bot)
 
-![Nurutomo](https://github.com/Nurutomo.png?size=70)[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=Nurutomo&repo=wabot-aq&theme=buefy)](https://github.com/Nurutomo/wabot-aq)
+**Bileys** (MAINTENANCE)
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=cxd9-teams&repo=cxd9-bot&theme=buefy)](https://github.com/moo-d/termux-whatsapp-bot)
 
-![Mhankbarbar](https://github.com/MhankBarBar.png?size=70)[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=MhankBarBar&repo=weabot&theme=buefy)](https://github.com/MhankBarBar/weabot)
-
-![Dcode-denpa](https://github.com/dcode-denpa.png?size=70)[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=dcode-denpa&repo=bitch-boot&theme=buefy)](https://github.com/dcode-denpa/bitch-boot)
-
-</details>
+**Open-wa/wa-automate**
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=moo-d&repo=senkobot&theme=buefy)](https://github.com/moo-d/termux-whatsapp-bot)
 
 ### Github Stats
 <img height="180em" src="https://github-readme-stats.vercel.app/api?username=mrfzvx12&show_icons=true&hide_border=true&&count_private=true&include_all_commits=true" />
