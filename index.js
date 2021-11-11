@@ -1351,7 +1351,7 @@ case 'joox':
    capt = ''
    m.reply(msg.wait)
    link.map((video) => {
-     capt += "________________________\n\n"
+     capt += "\n________________________\n\n"
      capt += '*Title* : ' + video.title
      capt += '\n*Link* : ' + video.url
      capt += '\n*Durasi* : ' + video.timestamp
