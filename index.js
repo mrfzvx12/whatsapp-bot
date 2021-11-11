@@ -2506,7 +2506,6 @@ if (isVoiceCommand && type === "audioMessage"){
     form.append('audio', stream);
     const res = await requests('http://hujanapi.xyz/api/stt?apikey='+hujanapi, { method: 'POST', body: form })
     const ret =  await res.json()
-    console.log(ret.result)
     const voiceMsg = ret.result
     m.reply('Reading Voicee : ' + voiceMsg)
     const VoiceCommand = voiceMsg.trim().split(/ +/).shift().toLowerCase();
