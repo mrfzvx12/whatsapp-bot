@@ -9,6 +9,13 @@ exports.menu = (v) => {
 ├ ${v}ping
 ├ ${v}report <text>
 ├ ${v}chatbot on/off
+├ ${v}voicecommand on/off
+╰────────
+╭─⊷❲ *VOICE COMMAND* ❳
+├ dilan
+├ fakta
+├ ilham
+├ gombal
 ╰────────
 ╭─⊷❲ *FUN* ❳
 ├ ${v}dilan
