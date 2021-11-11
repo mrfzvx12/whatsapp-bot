@@ -2504,8 +2504,8 @@ if (isVoiceCommand && type === "audioMessage"){
     const stream = fs.createReadStream(file);
     const form = new FormData();
     form.append('audio', stream);
-    const res = await requests('http://hujanapi.xyz/api/stt?apikey='+hujanapi, { method: 'POST', body: form })
-    const ret =  await res.json()
+    const UrL = await requests('http://hujanapi.xyz/api/stt?apikey='+hujanapi, { method: 'POST', body: form })
+    const ret =  await UrL.json()
     const voiceMsg = ret.result
     m.reply('Reading Voicee : ' + voiceMsg)
     const VoiceCommand = voiceMsg.trim().split(/ +/).shift().toLowerCase();
