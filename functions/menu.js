@@ -55,7 +55,7 @@ exports.menu = (v) => {
 ├ ${v}gemuk
 ├ ${v}tupai
 ├ ${v}bass
-├ ${v} nightcore
+├ ${v}nightcore
 ╰────────
 ╭─⊷❲ *TOOLS* ❳
 ├ ${v}afk <reason>
