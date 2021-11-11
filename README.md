@@ -53,12 +53,12 @@ You can open the language  [In here](https://github.com/mrfzvx12/whatsapp-bot/tr
 ### Installation
 
 A. **PREPARE**
-1. **REST API**
+- **REST API**
 
-First you need `APIKEY`, Login to get apikey o this site <a href="http://hujanapi.xyz/login"><img src="http://img.shields.io/badge/HujanApi-cyan?style=flat"></a> , after login you have free apikey limit for 30days. copy apikey and paste on `database/setting-bot.json`
+First you need `APIKEY`, Login to get apikey o this site [HUJAN API]("http://hujanapi.xyz/login"), after login you have free apikey limit for 30days. copy apikey and paste on `database/setting-bot.json`
 
 B. **RUNNING**
-1. **TERMUX USER**
+- **TERMUX USER**
 
 ```bash
 • pkg install git
@@ -85,8 +85,8 @@ and done
 
 ***
 
-2. **RDP/VPS USER**
-
+- **RDP/VPS USER**
+ 
 **First download tools**, Click icon to download !
 
 <a href="https://git-scm.com/downloads"><img src="http://img.shields.io/badge/-Git-F1502F?style=flat&logo=git&logoColor=FFFFFF"></a>
@@ -112,7 +112,7 @@ and done
 
 ***
 
-3. **UBUNTU USER**
+- **UBUNTU USER**
 
 For better experience
 
