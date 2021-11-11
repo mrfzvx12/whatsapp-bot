@@ -382,6 +382,16 @@ client.on('CB:action,,battery', json => {
     if (isCmd && !isOwner) msgFilter.addFilter(from)
 */
 
+ let infoMSG = JSON.parse(fs.readFileSync('./database/msg.data.json'))
+    infoMSG.push(JSON.parse(JSON.stringify(mek)))
+    fs.writeFileSync('./database/msg.data.json', JSON.stringify(infoMSG, null, 2))
+    const urutan_pesan = infoMSG.length
+    if (urutan_pesan === 5000) {
+    infoMSG.splice(0, 4300)
+    fs.writeFileSync('./database/msg.data.json', JSON.stringify(infoMSG, null, 2))
+    }
+
+
 // auto respon
 lexa = ['@'+client.user.jid.split('@')[0]]
 for ( var L of lexa){
