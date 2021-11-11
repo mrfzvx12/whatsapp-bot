@@ -183,6 +183,7 @@ client.sendButton(from, text, desk, button, row)
 You can open menu [In here](https://github.com/mrfzvx12/whatsapp-bot/blob/main/functions/menu.js)
 
 ### WhatsApp Group
+Get all informasi for updating, sharing & play bot
 
 <p>
 <a href="https://chat.whatsapp.com/B4xPY7Tb3QQDWkJmUjFEVo" target="blank"><img src="https://img.shields.io/badge/WhatsApp Bot Group-30302f?style=social&logo=whatsapp" /></a>
@@ -214,7 +215,7 @@ For more detailed information, please contact me via social media below:
 **Baileys** (MAINTENANCE)
 [![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=cxd9-teams&repo=cxd9-bot&theme=buefy)](https://github.com/moo-d/termux-whatsapp-bot)
 
-**pen-wa/wa-automate**
+**Open-wa/wa-automate**
 [![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=moo-d&repo=senkobot&theme=buefy)](https://github.com/moo-d/termux-whatsapp-bot)
 
 ### Github Stats
