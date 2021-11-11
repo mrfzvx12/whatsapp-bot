@@ -166,16 +166,16 @@ const { menu } = require('./functions/menu'); // tampilan menu dalam functions/m
 const { ind, eng, jv, snd, ar } = require('./language/index');
 
 // functions dalam ./functions/setting-bot
-let ownerNumber = st.ownerNumber; // nomor owner
-let isPoingame = st.poinGame; // menampilkan poin hadiah keberhasilan dalam game
-let isGamewaktu = st.gameWaktu; // waktu yang dibutuhkan untuk game
-let isPoinawal = st.poinAwal; // poin awal adalah poin yang harus di capai untuk menaikkan level
-let isNama = st.nama; // nama bot
-let isAuthor = st.author; // author digunakan dalam fitur sticker
-let isPackname = st.packname; // packname digunakan dalam fitur sticker
-let isWm = st.wm; // wm ini di gunakan untuk deskripsi dalam button message
-let isTotalcmd = st.totalcommand; // informasi jumlah command yang di gunakan user 
-
+let ownerNumber = st.ownerNumber;
+let isPoingame = st.poinGame; 
+let isGamewaktu = st.gameWaktu;
+let isPoinawal = st.poinAwal;
+let isNama = st.nama; 
+let isAuthor = st.author; 
+let isPackname = st.packname;
+let isWm = st.wm;
+let isTotalcmd = st.totalcommand;
+let hujanapi = st.hujanApi
 // -- thumbnail
 let thumb = fs.readFileSync('./temp/thumb.jpeg'); // !! jangan ganti, mau ganti ada casenya
 
