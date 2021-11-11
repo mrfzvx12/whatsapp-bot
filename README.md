@@ -50,7 +50,12 @@ Multi-language for each user, meaning that the user can choose the language he w
 You can open the language  [In here](https://github.com/mrfzvx12/whatsapp-bot/tree/main/language)
 ***
 
-### installation
+### Installation
+
+**REST API**
+
+First you need `APIKEY`, Login to get apikey o this site <a href="http://hujanapi.xyz/login"><img src="http://img.shields.io/badge/HujanApi-cyan?style=flat"></a> , after login you have free apikey limit for 30days. copy apikey and paste on `database/setting-bot.json`
+
 - [x] **TERMUX USER**
 
 ```bash
@@ -197,10 +202,9 @@ For more detailed information, please contact me via social media below:
 [![mrfzvx12](https://github.com/mrfzvx12.png?size=100)](https://github.com/mrfzvx12) | [![moo-d](https://github.com/moo-d.png?size=100)](https://github.com/moo-d) 
 ----|----
 [MrfZvx12](https://github.com/mrfzvx12) | [Moo-d](https://github.com/moo-d)
-Moderator & Author Author
 
 
-### OTHER PROJECTS
+### Other Projects
 
 **Baileys**
 [![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=moo-d&repo=termux-whatsapp-bot&theme=buefy)](https://github.com/moo-d/termux-whatsapp-bot)
@@ -208,7 +212,7 @@ Moderator & Author Author
 **Bileys** (MAINTENANCE)
 [![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=cxd9-teams&repo=cxd9-bot&theme=buefy)](https://github.com/moo-d/termux-whatsapp-bot)
 
-**Open-wa/wa-automate**
+**pen-wa/wa-automate**
 [![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=moo-d&repo=senkobot&theme=buefy)](https://github.com/moo-d/termux-whatsapp-bot)
 
 ### Github Stats
