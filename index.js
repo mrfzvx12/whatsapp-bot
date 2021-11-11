@@ -98,6 +98,9 @@ const {
   addChatbot,
   delChatbot,
   cekChatbot,
+  cekVoiceCommand,
+  addVoiceCommand,
+  delVoiceCommand,
   addAfk,
   delAfk,
   cekAfk,
@@ -268,6 +271,7 @@ module.exports = client = async (client, mek) => {
      let isLevel = cekLevel(sender);
      let isPremium = cekPremium(sender);
      let isChatbot = cekChatbot(sender);
+     let isVoiceCommand = cekVoiceCommand(sender);
      let isBanned = cekBanned(sender);
      let isAfk = cekAfk(sender);
      let isAfkTime = cekAfkTime(sender);
@@ -2200,6 +2204,23 @@ break
     }
     break
 
+   case 'voicecommand': // atur sesukamu
+    if(!isPremium) return m.reply(msg.premium)
+   // if(isGroup) return m.reply(msg.private)
+    if(!value) return m.reply(msg.OnorOff)
+    if (value.toLowerCase() === "on") {
+      if(isVoiceCommand === true ) return m.reply('Voice command On')
+      await addVoiceCommand(sender)
+      m.reply(msg.done)
+    } else if (value.toLowerCase() === "off") {
+      if(isVoiceCommand === false ) return m.reply('Voice Command Off')
+      await delVoiceCommand(sender)
+      m.reply(msg.done)
+    } else {
+      m.reply(msg.OnorOff)
+    }
+    break
+ 
   case 'q': 
     if (!m.quoted) return m.reply(msg.reply)
     let qse = client.serializeM(await m.getQuotedObj())
@@ -2453,6 +2474,56 @@ let jids = [...new Set([...(m.mentionedJid || []), ...(m.quoted ? [m.quoted.send
         return m.reply(msg.inAfk(isOnAfkReason, isOnAfkTime))
       }
   }
+
+
+if (isVoiceCommand && type === "audioMessage"){
+   let int
+    let infoMSG = JSON.parse(fs.readFileSync('./database/msg.data.json'))
+    for (let i = 0; i < infoMSG.length; i++){
+    const dataInfo = infoMSG[i]
+    const type = Object.keys(infoMSG[i].messageTimestamp)
+    const timestamp = infoMSG[i].messageTimestamp
+    int = {
+    no : i,
+    type: type,
+    timestamp: timestamp,
+    data: dataInfo 
+    }
+    }
+    const file = await client.downloadAndSaveMediaMessage(int.data)
+    const stream = fs.createReadStream(file);
+    const form = new FormData();
+    form.append('audio', stream);
+    const res = await requests('http://hujanapi.xyz/api/stt?apikey='+hujanapi, { method: 'POST', body: form })
+    const ret =  await res.json()
+    console.log(ret.result)
+    const voiceMsg = ret.result
+    m.reply('Reading Voicee : ' + voiceMsg)
+    const VoiceCommand = voiceMsg.trim().split(/ +/).shift().toLowerCase();
+    const argsVn = voiceMsg.trim().split(/ +/).slice(1);
+    const valueVn = argsVn.join(' ');
+    
+/**
+ * main command VoiceCommand 
+ * credits by @https://github.com/AlvioAdjiJanuar 
+ * fix @mrfzvx12
+*/
+switch(VoiceCommand) {
+  case 'dilan':
+    return m.reply(lxa.dilan())
+    break  
+  case 'fakta':
+    return m.reply(lxa.fakta())
+    break
+  case 'gombal':
+    return m.reply(lxa.gombal())
+    break
+  case 'ilham': 
+    return m.reply(lxa.ilham())
+    break
+    default:
+}
+}
 
 
 /**
