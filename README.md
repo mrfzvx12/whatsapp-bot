@@ -55,7 +55,7 @@ You can open the language  [In here](https://github.com/mrfzvx12/whatsapp-bot/tr
 A. **PREPARE**
 - **REST API**
 
-First you need `APIKEY`, Login to get apikey o this site [HUJAN API]("http://hujanapi.xyz/login"), after login you have free apikey limit for 30days. copy apikey and paste on `database/setting-bot.json`
+First you need `APIKEY`, Login to get apikey on this site [HUJAN API](http://hujanapi.xyz/login), after login you have free apikey limit for 30days. copy apikey and paste on `database/setting-bot.json`
 
 B. **RUNNING**
 - **TERMUX USER**
