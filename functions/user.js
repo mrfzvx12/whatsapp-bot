@@ -22,6 +22,7 @@ const addUser = (id) => {
           banned: false,
           afk: false,
           chatbot: false,
+          voiceCommand: false,
           afkReason: '-',
           afkTime: '-',
           poin: 0,
@@ -169,7 +170,57 @@ const delPremium = (id) => {
 
 
 /**
- * Cek data premium user dalam database
+ * Cek data voice command user dalam database
+ * @param { string } id 
+ */
+const cekVoiceCommand = (id) => {
+  let position = false;
+  Object.keys(User).forEach((i) => {
+    if (User[i].id === id) {
+      position = i;
+    }
+  });
+  if (position !== false) {
+    return User[position].voiceCommand;
+    }
+};
+
+
+/**
+ * merubah status voice command user kedalam database
+ * @param { string } id
+*/
+const addVoiceCommand = (id) => {
+  let position = false;
+  Object.keys(User).forEach((i) => {
+    if (User[i].id === id) {
+      position = i;
+    }
+  });
+  if (position !== false) {
+    User[position].voiceCommand = true;
+    fs.writeFileSync('./database/user.json', JSON.stringify(User, null, "\t"));
+  }
+};
+
+/**
+ * merubah status voice command user kedalam database
+ * @param { string } id
+*/
+const delVoiceCommand = (id) => {
+  let position = false;
+  Object.keys(User).forEach((i) => {
+    if (User[i].id === id) {
+      position = i;
+    }
+  });
+  if (position !== false) {
+    User[position].voiceCommand = false;
+    fs.writeFileSync('./database/user.json', JSON.stringify(User, null, "\t"));
+  }
+};
+/**
+ * Cek data chatbot user dalam database
  * @param { string } id 
  */
 const cekChatbot = (id) => {
@@ -533,6 +584,9 @@ module.exports = {
   delPremium,
   addChatbot,
   delChatbot,
+  cekVoiceCommand,
+  addVoiceCommand,
+  delVoiceCommand,
   cekChatbot,
   addAfk,
   delAfk,
