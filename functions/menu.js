@@ -11,12 +11,6 @@ exports.menu = (v) => {
 ├ ${v}chatbot on/off
 ├ ${v}voicecommand on/off
 ╰────────
-╭─⊷❲ *VOICE COMMAND* ❳
-├ dilan
-├ fakta
-├ ilham
-├ gombal
-╰────────
 ╭─⊷❲ *FUN* ❳
 ├ ${v}dilan
 ├ ${v}ilham
@@ -190,3 +184,17 @@ exports.menu = (v) => {
 ├ >
 ╰────────`;
 };
+
+exports.menuVN = `
+╭⊷『 *MAIN* 』
+├ menu
+╰────────
+╭⊷『 *RANDOM* 』
+├ dilan
+├ fakta
+├ ilham
+├ gombal
+╰────────
+╭⊷『 *DOWNLOAD* 』
+├ play <query>
+╰────────`;
