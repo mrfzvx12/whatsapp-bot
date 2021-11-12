@@ -162,7 +162,7 @@ const {
 } = require('./functions/welcome');
 
 const { msgFilter } = require('./functions/antispam')
-const { menu } = require('./functions/menu'); // tampilan menu dalam functions/menu
+const { menu, menuVn } = require('./functions/menu'); // tampilan menu dalam functions/menu
 const { ind, eng, jv, snd, ar } = require('./language/index');
 
 // functions dalam ./functions/setting-bot
@@ -506,6 +506,23 @@ break
 `
     capt += readMore
     capt += menu(prefix)
+    client.send3ButtonLoc(from, thumb, capt, 'Total hit : ' + isTotalcmd + '\nTotal User : ' + User.length + '\n' + isWm, 'INFORMASI', prefix + 'informasi', 'OWNER', prefix + 'owner', 'VOICE COMMAND', prefix + 'menuvn')
+    break
+    
+  case 'menuvn': case 'helpvn':
+    m.reply(msg.wait)
+    capt = `Hi ${pushname} ${ucapanWaktu}
+    
+*Level akun* : ${isLevel}
+*Total Poin* : ${isPoin}
+*Premium* : ${prem}
+*Tanggal* : ${tanggal}
+*Mode* : ${modepref}
+*Runtime* : ${kyun(process.uptime())}
+`
+    capt += readMore
+    capt += '\n*VOICE COMMAND*\n' + msg.vnCmd(prefix)
+    capt += menuVN
     client.send3ButtonLoc(from, thumb, capt, 'Total hit : ' + isTotalcmd + '\nTotal User : ' + User.length + '\n' + isWm, 'INFORMASI', prefix + 'informasi', 'OWNER', prefix + 'owner', 'SCRIPT', prefix + 'script')
     break
   
@@ -2518,6 +2535,23 @@ if (isVoiceCommand && type === "audioMessage"){
  * fix @mrfzvx12
 */
 switch(VoiceCommand) {
+  
+      case 'menu': case 'help':
+    m.reply(msg.wait)
+    capt = `Hi ${pushname} ${ucapanWaktu}
+    
+*Level akun* : ${isLevel}
+*Total Poin* : ${isPoin}
+*Premium* : ${prem}
+*Tanggal* : ${tanggal}
+*Mode* : ${modepref}
+*Runtime* : ${kyun(process.uptime())}
+`
+    capt += readMore
+    capt += menu(prefix)
+    client.send3ButtonLoc(from, thumb, capt, 'Total hit : ' + isTotalcmd + '\nTotal User : ' + User.length + '\n' + isWm, 'INFORMASI', prefix + 'informasi', 'OWNER', prefix + 'owner', 'VOICE COMMAND', prefix + 'menuvn')
+    break
+  
   case 'dilan':
     return m.reply(lxa.dilan())
     break  
@@ -2530,6 +2564,27 @@ switch(VoiceCommand) {
   case 'ilham': 
     return m.reply(lxa.ilham())
     break
+
+  case 'play': 
+   if (!valueVn) return
+   url = await yts(valueVn);
+   link = url.all 
+   if(!link) return ('Error')
+   m.reply(msg.wait)
+   goo = await lxa.yta(link[0].url)
+   buff = await getBuffer(goo.link)
+   if (!buff) return m.reply('Error')
+   if(Number(goo.size.split(' MB')[0]) >= 5.00) {
+     axios.get(`https://tinyurl.com/api-create.php?url=${goo.link}`).then((G) => {
+     return m.reply(msg.oversize + G.data)
+     })
+   } else {
+     img = await getBuffer(goo.thumb)
+     capt = 'Kualitas : ' + goo.quality
+     capt += '\nSize : ' + goo.size
+     await client.adReplyVideo(from, buff, document, goo.judul, capt, img, link[0].url, mek)
+   }
+	break
     default:
 }
 }
