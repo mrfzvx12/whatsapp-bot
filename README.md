@@ -216,7 +216,7 @@ For more detailed information, please contact me via social media below:
 [![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=cxd9-teams&repo=cxd9-bot&theme=buefy)](https://github.com/cxd9-teams/cxd9-bot)
 
 **Open-wa/wa-automate**
-[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=moo-d&repo=senkobot&theme=buefy)](https://github.com/moo-d/termux-whatsapp-bot)
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=moo-d&repo=senkobot&theme=buefy)](https://github.com/moo-d/senkobot)
 
 ### Github Stats
 <img height="180em" src="https://github-readme-stats.vercel.app/api?username=mrfzvx12&show_icons=true&hide_border=true&&count_private=true&include_all_commits=true" />
