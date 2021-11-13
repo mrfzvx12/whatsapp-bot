@@ -20,7 +20,7 @@ const { week, time, tanggal} = require("./library/functions");
 const { color } = require("./library/color");
 async function starts() {
 	client.autoReconnect = ReconnectMode.onConnectionLost;
-	client.version = [2, 2140, 6];
+	client.version = [3, 3234, 9];
 	client.logger.level = 'warn';
 	client.on('qr', () => {
 	console.log(color('[QR]','white'), color('Scan to establish connection'));
