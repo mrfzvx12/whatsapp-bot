@@ -77,6 +77,7 @@ exports.menu = (v) => {
 ├ ${v}yts <query>
 ├ ${v}ytsearch <query>
 ├ ${v}cerpen
+├ ${v}google <query>
 ╰────────
 ╭─⊷❲ *DOWNLOAD* ❳
 ├ ${v}igdl <link>
@@ -194,6 +195,9 @@ exports.menuVN = `
 ├ fakta
 ├ ilham
 ├ gombal
+╰────────
+╭⊷『 *INTERNET* 』
+├ google <query>
 ╰────────
 ╭⊷『 *DOWNLOAD* 』
 ├ play <query>
