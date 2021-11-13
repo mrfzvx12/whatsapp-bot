@@ -37,6 +37,7 @@ const requests = require('node-fetch');
 const lxa = require('./result/index');
 const package = require('./package.json');
 const yts = require('yt-search');
+const gls = require('google-it')
 const FormData = require('form-data');
 const axios = require("axios");
 // functions dalam library
@@ -1395,6 +1396,16 @@ case 'joox':
    }
   break
 
+ case 'google':
+   if (!value) return m.reply(msg.notext)
+   m.reply(msg.wait)
+   res = await gls({'query' : value})
+   msg = res.map(({ title, link, snippet}) => {
+    return `*${title}*\n${link}\n${snippet}`
+  }).join`\n\n`
+   await client.adReply(from, msg, text, 'GOOGLE SEARCH : ' + value, tanggal, thumb, 'https://www.instagram.com/p/CTKtDqeBgY5/?utm_medium=copy_link')
+   break
+
  case "playstore":
      if(!value) return m.reply(msg.notext)
      m.reply(msg.wait)
@@ -2564,6 +2575,16 @@ switch(VoiceCommand) {
   case 'ilham': 
     return m.reply(lxa.ilham())
     break
+
+  case 'google':
+   if (!valueVn) return
+   m.reply(msg.wait)
+   res = await gls({'query' : valueVn})
+   msg = res.map(({ title, link, snippet}) => {
+    return `*${title}*\n${link}\n${snippet}`
+  }).join`\n\n`
+   await client.adReply(from, msg, text, 'GOOGLE SEARCH : ' + value, tanggal, thumb, 'https://www.instagram.com/p/CTKtDqeBgY5/?utm_medium=copy_link')
+   break
 
   case 'play': 
    if (!valueVn) return
