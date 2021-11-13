@@ -2,7 +2,6 @@ const { WAConnection: _WAConnection, ReconnectMode, MessageType, MessageOptions 
 const simple = require("./whatsapp/connecting.js");
 const WAConnection = simple.WAConnection(_WAConnection);
 const client = new WAConnection();
-const qrcode = require("qrcode-terminal");
 const {
   cekWelcome,
   cekAntilink,
