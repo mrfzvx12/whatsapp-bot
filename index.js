@@ -4,22 +4,10 @@
 
 // connecting WhatsApp web menggunakan Baileys https://www.github.com/adiwajshing/baileys
 const {
-  WAConnection: _WAConnection,
   MessageType,
-  Presence,
-  MessageOptions,
   Mimetype,
-  MimetypeMap,
-  WALocationMessage,
-  ChatModification,
-  WA_MESSAGE_STUB_TYPES,
-  WA_DEFAULT_EPHEMERAL,
-  ReconnectMode,
-  ProxyAgent,
   GroupSettingChange,
-  waChatKey,
-  mentionedJid,
-  processTime
+  mentionedJid
 } = require("@adiwajshing/baileys");
 
 // functions node modules
@@ -37,7 +25,7 @@ const requests = require('node-fetch');
 const lxa = require('./result/index');
 const package = require('./package.json');
 const yts = require('yt-search');
-const gls = require('google-it')
+const gls = require('google-it');
 const FormData = require('form-data');
 const axios = require("axios");
 // functions dalam library
@@ -2579,8 +2567,8 @@ switch(VoiceCommand) {
   case 'google':
    if (!valueVn) return
    m.reply(msg.wait)
-   res = await gls({'query' : valueVn})
-   msg = res.map(({ title, link, snippet}) => {
+   way = await gls({'query' : valueVn})
+   msg = way.map(({ title, link, snippet}) => {
     return `*${title}*\n${link}\n${snippet}`
   }).join`\n\n`
    await client.adReply(from, msg, text, 'GOOGLE SEARCH : ' + value, tanggal, thumb, 'https://www.instagram.com/p/CTKtDqeBgY5/?utm_medium=copy_link')
