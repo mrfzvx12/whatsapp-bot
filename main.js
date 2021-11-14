@@ -98,6 +98,26 @@ Terdeteksi @${m.participant.split`@`[0]} telah menghapus pesan
   });
 
 
+client.on('group-participants-update', async (anu) => {
+  metdata = await client.groupMetadata(anu.jid);
+  isDetect = cekDetect(metdata.id);
+  if(isDetect === false) return ;
+  if (anu.action == 'promote') {
+    num = anu.participants[0];
+    capt = 'PROMOTE DETECTED';
+    capt += '\nUser : @' + num.split('@')[0];
+    capt += '\nTime : ' + time ;
+    return client.sendMessage(metdata.id, capt, MessageType.text, { contextInfo: {"mentionedJid": [num]}});
+  } else if (anu.action == 'demote'){
+    num = anu.participants[0];
+    capt = 'DEMOTE DETECTED';
+    capt += '\nUser : @' + num.split('@')[0];
+    capt += '\nTime : ' + time;
+    return client.sendMessage(metdata.id, capt, MessageType.text, { contextInfo: {"mentionedJid": [num]}});
+  }
+})
+
+
 client.on('group-update', async (m) => {
   metdata = await client.groupMetadata(m.jid);
   isDetect = cekDetect(metdata.id);
@@ -133,7 +153,7 @@ client.on("CB:Call", json => {
   let call;
   calling = JSON.parse(JSON.stringify(json));
   call = calling[1].from;
-  client.sendMessage(call, `*${client.user.name}!!!* Dilarang melakukan panggilan telefon kepada bot, Nomor kamu otomatis akan di block`, MessageType.text).then(() => client.blockUser(call, "add"));
+  return client.sendMessage(call, `*${client.user.name}!!!* Dilarang melakukan panggilan telefon kepada bot, Nomor kamu otomatis akan di block`, MessageType.text).then(() => client.blockUser(call, "add"));
 }); 
 
 
