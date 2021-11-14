@@ -58,7 +58,6 @@ A. **PREPARE**
 First you need `APIKEY`, Login to get apikey on this site [HUJAN API](http://hujanapi.xyz/login), after login you have free apikey limit for 30days. copy apikey and paste on `database/setting-bot.json`
 
 B. **RUNNING**
-
 - **TERMUX USER**
 
 ```bash
@@ -85,9 +84,7 @@ When the QR appears, scan it using the WhatsApp application that will be used fo
 and done
 
 ***
-- **HEROKU APP**
-   
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mrfzvx12/whatsapp-bot)
+
 - **RDP/VPS USER**
  
 **First download tools**, Click icon to download !
