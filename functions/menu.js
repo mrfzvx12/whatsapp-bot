@@ -196,6 +196,11 @@ exports.menuVN = `
 ├ ilham
 ├ gombal
 ╰────────
+╭─⊷❲ *KERANG AJAIB* ❳
+├ apakah
+├ kapankah
+├ siapakah
+╰────────
 ╭⊷『 *INTERNET* 』
 ├ google <query>
 ╰────────
