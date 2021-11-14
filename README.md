@@ -14,8 +14,6 @@
 <a href="https://github.com/mrfzvx12/whatsapp-bot/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/mrfzvx12/whatsapp-bot?label=Watching&style=social"></a>
 <a href="https://github.com/mrfzvx12/whatsapp-bot/watchers"><img title="Contributor" src="https://img.shields.io/github/contributors/mrfzvx12/whatsapp-bot?logo=github&style=social"></a>
 </p>
- 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mrfzvx12/whatsapp-bot)
 <p align="center">
 <a href="https://github.com/mrfzvx12/whatsapp-bot"><img src="https://img.shields.io/github/repo-size/mrfzvx12/whatsapp-bot?label=Repo%20size&style=flat"></a>
 </p>
@@ -60,6 +58,7 @@ A. **PREPARE**
 First you need `APIKEY`, Login to get apikey on this site [HUJAN API](http://hujanapi.xyz/login), after login you have free apikey limit for 30days. copy apikey and paste on `database/setting-bot.json`
 
 B. **RUNNING**
+
 - **TERMUX USER**
 
 ```bash
@@ -86,7 +85,9 @@ When the QR appears, scan it using the WhatsApp application that will be used fo
 and done
 
 ***
-
+- **HEROKU APP**
+   
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mrfzvx12/whatsapp-bot)
 - **RDP/VPS USER**
  
 **First download tools**, Click icon to download !
