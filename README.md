@@ -170,6 +170,7 @@ client.sendButton(from, text, desk, button, row)
 ### Feature
 
 - [x] Multilingual
+- [x] Voice Command
 - [x] Group Setting
 - [x] Antidelete, Antiviewonce, & Detect
 - [x] Custom Welcome each group
