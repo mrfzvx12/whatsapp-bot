@@ -1748,6 +1748,31 @@ break
     m.reply(msg.done)
     break
 
+ case 'listpremium':
+ case 'listprem':
+   if(!isOwner) return m.reply(msg.owner)
+   m.reply(msg.wait)
+   capt = '*List Premium*'
+   for (var u of User) {
+    if (u.premium === true) {
+      capt += '\nId : @' + u.id.split('@')[0]
+    }
+  }
+  m.reply(capt)
+  break
+
+ case 'listban':
+ case 'listbanned':
+   if(!isOwner) return m.reply(msg.owner)
+   m.reply(msg.wait)
+   capt = '*List Banned*'
+   for (var b of User) {
+    if (b.banned === true) {
+      capt += '\nId : @' + b.id.split('@')[0]
+    }
+  }
+  m.reply(capt)
+  break
   case 'open':
     if(!isGroup) return m.reply(msg.group)
     if(!isBotAdmins) return m.reply(msg.botadmin)
