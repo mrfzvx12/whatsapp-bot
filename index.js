@@ -2521,7 +2521,7 @@ let jids = [...new Set([...(m.mentionedJid || []), ...(m.quoted ? [m.quoted.send
     let isOnAfk = cekAfk(jid);
     let isOnAfkTime = cekAfkTime(jid);
     let isOnAfkReason = cekAfkReason(jid);
-      if(isOnAfk && isGroup) {
+      if(isOnAfk && isGroup && !mek.isBaileys) {
         return m.reply(msg.inAfk(isOnAfkReason, isOnAfkTime))
       }
   }
@@ -2576,7 +2576,7 @@ switch(VoiceCommand) {
     client.send3ButtonLoc(from, thumb, capt, 'Total hit : ' + isTotalcmd + '\nTotal User : ' + User.length + '\n' + isWm, 'INFORMASI', prefix + 'informasi', 'OWNER', prefix + 'owner', 'VOICE COMMAND', prefix + 'menuvn')
     break
   
-      case 'apakah':
+  case 'apakah':
     if(!valueVn) return
     apa = ['Tidak', 'Iya', 'Mungkin']
     jawaban = pickRandom(apa)
