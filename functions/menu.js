@@ -181,6 +181,8 @@ exports.menu = (v) => {
 ├ ${v}view <link>
 ├ ${v}inspect <link>
 ├ ${v}listreport
+├ ${v}listprem
+├ ${v}listban
 ├ $
 ├ >
 ╰────────`;
