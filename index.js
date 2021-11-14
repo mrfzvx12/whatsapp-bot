@@ -2551,6 +2551,41 @@ switch(VoiceCommand) {
     client.send3ButtonLoc(from, thumb, capt, 'Total hit : ' + isTotalcmd + '\nTotal User : ' + User.length + '\n' + isWm, 'INFORMASI', prefix + 'informasi', 'OWNER', prefix + 'owner', 'VOICE COMMAND', prefix + 'menuvn')
     break
   
+      case 'apakah':
+    if(!valueVn) return
+    apa = ['Tidak', 'Iya', 'Mungkin']
+    jawaban = pickRandom(apa)
+    capt = 'Pertanyaan : Apakah ' + value 
+    capt += '\nJawaban : ' + jawaban 
+    m.reply(capt)
+  break
+
+  case 'siapa':
+  case 'siapakah':
+    if(!valueVn) return 
+    if(!isGroup) return m.reply(msg.group)
+    let member = groupMembers.map(u => u.jid)
+    siapa = pickRandom(member)
+    capt = 'Pertanyaan : Siapakah ' + value 
+    capt += '\nJawaban : @' + siapa.split('@')[0]
+    m.reply(capt, null, {
+          contextInfo: {
+            mentionedJid: client.parseMention(capt),
+          },
+        });
+  break
+
+  case 'kapan':
+  case 'kapankah':
+    if(!valueVn) return
+    No = Math.floor(Math.random() * 30)
+    Apa = ["Jam lagi","Hari lagi","Minggu lagi","Bulan lagi","Tahun lagi"]
+    jawaban = pickRandom(Apa)
+    capt = 'Pertanyaan : Kapankah ' + value 
+    capt += '\nJawaban : ' + No + ' ' + jawaban
+    m.reply(capt)
+  break
+  
   case 'dilan':
     return m.reply(lxa.dilan())
     break  
