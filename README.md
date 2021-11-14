@@ -201,6 +201,8 @@ For more detailed information, please contact me via social media below:
 
 ***
 
+### Donate
+https://saweria.co/mrfzvx
 
 ### Admin & Moderator
 [![mrfzvx12](https://github.com/mrfzvx12.png?size=100)](https://github.com/mrfzvx12) | [![moo-d](https://github.com/moo-d.png?size=100)](https://github.com/moo-d) 
