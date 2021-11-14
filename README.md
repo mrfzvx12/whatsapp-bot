@@ -13,6 +13,8 @@
 <a href="https://github.com/mrfzvx12/whatsapp-bot/network/members"><img title="Fork" src="https://img.shields.io/github/forks/mrfzvx12/whatsapp-bot?style=social"></a>
 <a href="https://github.com/mrfzvx12/whatsapp-bot/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/mrfzvx12/whatsapp-bot?label=Watching&style=social"></a>
 <a href="https://github.com/mrfzvx12/whatsapp-bot/watchers"><img title="Contributor" src="https://img.shields.io/github/contributors/mrfzvx12/whatsapp-bot?logo=github&style=social"></a>
+ 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mrfzvx12/whatsapp-bot)
 </p>
 <p align="center">
 <a href="https://github.com/mrfzvx12/whatsapp-bot"><img src="https://img.shields.io/github/repo-size/mrfzvx12/whatsapp-bot?label=Repo%20size&style=flat"></a>
