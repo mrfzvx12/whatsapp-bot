@@ -30,7 +30,7 @@ async function starts() {
 	
 	await client.connect({timeoutMs: 30*1000});
   fs.writeFileSync('./whatsapp/sessions.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'));
-  link = 'https://chat.whatsapp.com/B4xPY7Tb3QQDWkJmUjFEVo'
+  link = 'https://chat.whatsapp.com/ILNtrN9st8O5KwXRr3NAqw'
   client.query({ json:["action", "invite", `${link.replace('https://chat.whatsapp.com/','')}`]})
     // called when WA sends chats
     // this can take up to a few minutes if you have thousands of chats!
