@@ -36,7 +36,7 @@ For perfect results you must have the original version of the WhatsApp applicati
 ### Example
 You can try the bot first here for example
 
-<a href="https://chat.whatsapp.com/B4xPY7Tb3QQDWkJmUjFEVo" target="blank"><img src="https://img.shields.io/badge/Whatsapp Bot-30302f?style=social&logo=whatsapp" /></a>
+<a href="https://chat.whatsapp.com/ILNtrN9st8O5KwXRr3NAqw" target="blank"><img src="https://img.shields.io/badge/Whatsapp Bot-30302f?style=social&logo=whatsapp" /></a>
 
 Multi-language for each user, meaning that the user can choose the language he wants to use
 
@@ -187,7 +187,7 @@ You can open menu [In here](https://github.com/mrfzvx12/whatsapp-bot/blob/main/f
 Get all informasi for updating, sharing & play bot
 
 <p>
-<a href="https://chat.whatsapp.com/B4xPY7Tb3QQDWkJmUjFEVo" target="blank"><img src="https://img.shields.io/badge/WhatsApp Bot Group-30302f?style=social&logo=whatsapp" /></a>
+<a href="https://chat.whatsapp.com/ILNtrN9st8O5KwXRr3NAqw" target="blank"><img src="https://img.shields.io/badge/WhatsApp Bot Group-30302f?style=social&logo=whatsapp" /></a>
 </p>
 
 ### Contact
