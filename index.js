@@ -375,8 +375,8 @@ client.on('CB:action,,battery', json => {
     infoMSG.push(JSON.parse(JSON.stringify(mek)))
     fs.writeFileSync('./database/msg.data.json', JSON.stringify(infoMSG, null, 2))
     const urutan_pesan = infoMSG.length
-    if (urutan_pesan === 5000) {
-    infoMSG.splice(0, 4300)
+    if (urutan_pesan === 500) {
+    infoMSG.splice(0, 430)
     fs.writeFileSync('./database/msg.data.json', JSON.stringify(infoMSG, null, 2))
     }
 
@@ -2515,7 +2515,7 @@ fungsi = `
     }
 
 
-// user afl
+// user afk
 let jids = [...new Set([...(m.mentionedJid || []), ...(m.quoted ? [m.quoted.sender] : [])])]
   for (let jid of jids) {
     let isOnAfk = cekAfk(jid);
