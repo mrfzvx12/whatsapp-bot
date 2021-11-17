@@ -72,12 +72,19 @@ exports.menu = (v) => {
 ├ ${v}covid
 ├ ${v}translate <lang><text>
 ╰────────
+╭─⊷❲ *PRIMBON* ❳
+├ ${v}artinama <query>
+├ ${v}artimimpi <query>
+├ ${v}zodiakharian <query>
+├ ${v}zodiakmingguan <query>
+╰────────
 ╭─⊷❲ *INTERNET* ❳
 ├ ${v}playstore <query>
 ├ ${v}yts <query>
 ├ ${v}ytsearch <query>
 ├ ${v}cerpen
 ├ ${v}google <query>
+├ ${v}shortlink <link>
 ╰────────
 ╭─⊷❲ *DOWNLOAD* ❳
 ├ ${v}igdl <link>
@@ -99,6 +106,11 @@ exports.menu = (v) => {
 ├ ${v}blackpill <text>
 ├ ${v}castle <text>
 ├ ${v}sans <text>
+├ ${v}halah <text>
+├ ${v}hilih <text>
+├ ${v}huluh <text>
+├ ${v}heleh <text>
+├ ${v}holoh <text>
 ╰────────
 ╭─⊷❲ *DATABASE* ❳
 ├ ${v}addimg <text>
