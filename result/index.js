@@ -60,7 +60,7 @@ const { RandomCerpen } = require('./search/cerpen');
 // information
 const { covid  } = require('./informasi/corona');
 const { namaninja, purba, blackpill, typewriter, sans, castle } =  require('./informasi/text_generator');
-
+const { ArtiMimpi, ArtiNama, zodiakHari, zodiakMinggu } = require('./informasi/primbon');
 
 module.exports = {
   truth,
@@ -84,5 +84,9 @@ module.exports = {
   Ttdl,
   joox,
   yta,
-  ytv
+  ytv,
+  ArtiMimpi,
+  ArtiNama,
+  zodiakHari,
+  zodiakMinggu
 };
