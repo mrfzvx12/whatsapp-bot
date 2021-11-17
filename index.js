@@ -667,6 +667,27 @@ break
     client.sendMessage(from, value, text)
     break
   
+   case 'halah':
+ case 'hilih':
+ case 'huluh':
+ case 'heleh':
+ case 'holoh':
+   var vokal 
+   if(command == 'halah') {
+     vocal = 'a'
+   } else if (command == 'hilih') {
+     vocal = 'i'
+   } else if (command == 'huluh') {
+     vocal = 'u'
+   } else if (command == 'heleh') {
+     vocal = 'e'
+   } else if (command == 'holoh') {
+     vocal = 'o'
+   }
+   capt = value.replace(/[aiueo]/gi, vocal)
+ m.reply(capt)
+ break
+  
   case 'apakah':
     if(!value) return m.reply(msg.notext)
     apa = ['Tidak', 'Iya', 'Mungkin']
@@ -1320,6 +1341,13 @@ case 'nightcore':
    m.reply(res)
    break
   
+  case 'shortlink':
+   if (!value) return m.reply(msg.notext)
+   if (!isUrl) return m.reply('Link invalid')
+   axios.get('https://tinyurl.com/api-create.php?url=' + value).then((i) => {
+     return m.reply(i.data)
+   })
+   break
  
  case 'covid':
    covid = await lxa.covid()
@@ -1345,7 +1373,47 @@ case 'nightcore':
    capt += '\n*Sumber* : ' + cerpen.result.sumber
    m.reply(capt)
    break
+ 
+  case 'artinama':
+   if (!value) return m.reply(msg.notext)
+   arti = await lxa.ArtiNama(value)
+   if (!arti) return m.reply('Error')
+   m.reply(arti.result.replace(/\n\n\n\n/, '').replace(`
+      
+        
+        
+          `, ''))
+   break 
+   
+ case 'artimimpi':
+   if (!value) return m.replu(msg.notext)
+   mimpi = await lxa.ArtiMimpi(value)
+   if (!mimpi) return m.reply('Error')
+   m.reply(mimpi.result.replace(/[.]/gi, '.\n\n').replace(`\n\n\n`, ''))
+   break
+ 
+ case 'zodiakmingguan':
+   if (!value) return m.reply(msg.notext)
+   minggu = await lxa.zodiakMinggu(value)
+   if (!minggu) return m.reply('Error')
+   capt = minggu.data.isi.umum + '\n\n'
+   capt += minggu.data.isi.love + '\n\n'
+   capt += minggu.data.isi.keuangan
+   thumb = await getBuffer(minggu.data.thumb)
+   client.adReply(from, capt, text, 'Zodiak Mingguan', tanggal, thumb, 'https://www.instagram.com/p/CTKtDqeBgY5/?utm_medium=copy_link')
+   break
 
+ case 'zodiakharian':
+   if (!value) return m.reply(msg.notext)
+   harian = await lxa.zodiakHari(value)
+   if (!harian) return m.reply('Error')
+   capt = harian.isi.umum + '\n\n'
+   capt += harian.isi.love + '\n\n'
+   capt += harian.isi.keuangan
+   thumb = await getBuffer(harian.thumb)
+   client.adReply(from, capt, text, 'Zodiak Harian', tanggal, thumb, 'https://www.instagram.com/p/CTKtDqeBgY5/?utm_medium=copy_link')
+   break
+ 
 case 'joox':
     if (!value) return m.reply(msg.notext)
     m.reply(msg.wait) 
