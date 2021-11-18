@@ -60,7 +60,8 @@ Basa sing bisa digunakake
 - English 
 - Jawa
 - SJawa
-- Arab`;
+- Arab
+- Portugis`;
 exports.nobahasa = `Basa ora kasedhiya
 
 Basa sing bisa digunakake
@@ -68,7 +69,8 @@ Basa sing bisa digunakake
 - English
 - Jawa
 - Sunda
-- Arab`;
+- Arab
+- Portugis`;
 exports.online = 'Kasil nguripake bot ing grup iki'
 exports.offline = 'Sukses mateni bot ing grup iki'
 
