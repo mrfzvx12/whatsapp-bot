@@ -59,15 +59,21 @@ Usable language
 - English
 - Jawa
 - Sunda
-- Arab`;
-exports.nobahasa = `Language not available
+- Arab
+- Portugis
+
+Example: #language Arab`;
+exports.nobahasa = `Sorry, the language you requested is not available☹️
 
 Usable language
 - Indonesia
 - English
 - Jawa
 - Sunda
-- Arab`;
+- Arab
+- Portugis
+
+Example: #language Arab`;
 exports.online = 'Successfully turned on the bot in this group';
 exports.offline = 'Successfully turned off bots in this group';
 
