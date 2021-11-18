@@ -1,3 +1,5 @@
+//Hans
+
 // -- send message
 exports.wait = `Por favor espere um momento...`;
 exports.bye = `Adeus...`;
