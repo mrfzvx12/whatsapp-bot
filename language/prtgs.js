@@ -46,3 +46,57 @@ exports.noreply = 'A mensagem que você respondeu não continha uma resposta';
 exports.nolink = (value) => {
   return 'Repita adicionando ligação ' + value;
 };
+exports.addwarn = `⚠️Aviso\nVocê recebe 1 aviso`;
+exports.delwarn = `⚠️Aviso\nSeu aviso diminuiu em 1 aviso`;
+exports.cekwarn = (warn) => {
+  return `O usuário tem um aviso total ${warn}`;
+};
+exports.nowarn = `O usuário não tem nenhum aviso`;
+exports.Pbahasa = `Selecione o idioma que deseja usar
+
+Linguagem utilizávelSelecione o idioma que deseja usar
+
+Idiomas disponíveis :
+- Indonesia
+- English
+- Jawa
+- Sunda
+- Arab
+- Portugis
+
+exemplo : #língua Arab`;
+exports.nobahasa = `Idioma não disponível
+
+Linguagem utilizável
+- Indonesia
+- English
+- Jawa
+- Sunda
+- Arab
+- Portugis
+
+exemplo : #língua Arab`;
+exports.online = 'Comando recebido para ligar bots neste grupo';
+exports.offline = 'Pedidos recebidos desligam bots neste grupo';
+
+// -- group
+exports.onwa = 'O usuário já está no grupo';
+exports.sendlink = 'Convite enviado com sucesso para ';
+exports.open = 'Configurações de grupo alteradas com sucesso para permitir que todos os membros enviem mensagens neste grupo';
+exports.close = 'Configurações de grupo alteradas com sucesso para permitir que apenas administradores enviem mensagens neste grupo';
+exports.name = (value) => {
+  return `Sucesso em mudar de assunto para ${value}`;
+};
+exports.desk = (value) => {
+  return `Alterou com sucesso a descrição do grupo para ${value}`;
+};
+exports.promote = (value) => {
+  return `Promoção de sucesso ${value} como administrador do grupo`;
+};
+exports.demote = (value) => {
+  return 'Sucesso no rebaixamento ' + value;
+};
+
+exports.kick = (value) => {
+  return 'Pedido recebido, emitido '+value;
+};
