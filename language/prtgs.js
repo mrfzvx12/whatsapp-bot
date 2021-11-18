@@ -100,3 +100,95 @@ exports.demote = (value) => {
 exports.kick = (value) => {
   return 'Pedido recebido, emitido '+value;
 };
+exports.On = (value) => {
+ return `Acendeu com sucesso ${value} esse grupo`;
+};
+exports.Off = (value) => {
+  return value + ' desligado para este grupo';
+};
+exports.Thison = (value) => {
+  return value + ' já passou antes';
+};
+exports.Thisoff = (value) => {
+return value+ ' não ligado antes';
+};
+exports.OnorOff = 'Repita adicionando on/off';
+exports.antilink = 'Você foi detectado enviando ligação outros grupos Whatsapp';
+exports.setwel = (value) => {
+  return `Repita adicionando texto
+*Exemplo :*
+!setwelcome Bem-vindo @tag ao @group
+Nome : @nama
+Biografia do WhatsApp : @about
+encontro : @tanggal 
+
+Não se esqueça de se apresentar + leia a descrição do grupo, mana
+
+*Exemplos para cada função*` + value;
+};
+
+exports.setbye = (value) => {
+  return `Repita adicionando texto
+*Exemplo :*
+!setbye Adeus @tag
+
+*Exemplos para cada função*` + value;
+};
+
+exports.setweldone = (value, fungsi) => {
+  return `Substituído com sucesso welcome\n\n`
++ value + `\n\n*Exemplos para cada função*` + fungsi;
+};
+
+exports.setbyedone = (value, fungsi) => {
+  return `Substituído com sucesso bye\n\n`
++ value + `\n\n*Exemplos para cada função*` + fungsi;
+};
+
+exports.default = (value) => {
+  return value + ' Voltar para as configurações iniciais';
+};
+
+exports.main = (value) => {
+  return 'Ainda há ' + value + ' em progresso!';
+};
+exports.nomain = (value) => {
+  return 'Não há nenhum ' + value + ' em progresso!!';
+};
+exports.inmain = (value) => {
+  return 'Você fez ' + value
+};
+exports.hapus = (value) =>{
+  return 'Excluído com sucesso ' + value + ' neste grupo';
+};
+// game
+exports.onGame = 'Ainda há perguntas sem resposta neste chat';
+exports.soal = (text1, text2, text3) => {
+  return `${text1}
+
+*Tempo esgotado*
+${text2}
+
+*PONTOS*
+${text3}
+
+Responda esta mensagem para responder
+A dica de resposta aparece nos últimos 10 segundos`;
+};
+
+exports.timeout = 'Tempo limite, a resposta é ';
+exports.salah = '*Errado* !\nTente novamente';
+exports.hampir = '*Dikit lagi* !\nTente novamente';
+exports.benar = (value, value2) => {
+  return `*Direito*\n A resposta é ${value}\nvocê pega ${value2}`;
+};
+
+// afk
+exports.with = 'Com razão ';
+exports.onAfk = (value) => {
+  return 'agora você está afk ' + value
+};
+exports.offAfk = 'Você voltou do AFK'
+exports.inAfk = (value, time) => {
+  return 'O usuário está no modo AFK ' + value + '\n Sobre : ' + time
+}
