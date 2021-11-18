@@ -57,7 +57,8 @@ exports.Pbahasa = `حدد اللغة التي تريد استخدامها
 - English
 - Jawa
 - Sunda
-- Arab`;
+- Arab
+- Portugis`;
 exports.nobahasa = `اللغة غير متوفرة
 
 لغة قابلة للاستخدام
@@ -65,7 +66,8 @@ exports.nobahasa = `اللغة غير متوفرة
 - English
 - Jawa
 - Sunda
-- Arab`;
+- Arab
+- Portugis`;
 exports.online = 'نجح تشغيل الروبوت في هذه المجموعة'
 exports.offline = 'تم إيقاف تشغيل الروبوتات في هذه المجموعة بنجاح'
 
