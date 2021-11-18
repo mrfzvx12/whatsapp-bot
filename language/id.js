@@ -60,6 +60,7 @@ Bahasa yang dapat digunakan
 - Jawa
 - Sunda
 - Arab
+- Portugis
 
 Contoh :  #bahasa Arab`;
 exports.nobahasa = `Bahasa tidak tersedia
@@ -70,6 +71,7 @@ Bahasa yang dapat digunakan
 - Jawa
 - Sunda
 - Arab
+- Portugis
 
 Contoh :  #bahasa Arab`;
 exports.online = 'Perintah diterima menyalakan bot digroup ini';
