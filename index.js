@@ -152,7 +152,7 @@ const {
 
 const { msgFilter } = require('./functions/antispam')
 const { menu, menuVn } = require('./functions/menu'); // tampilan menu dalam functions/menu
-const { ind, eng, jv, snd, ar } = require('./language/index');
+const { ind, eng, jv, snd, ar, prtgs } = require('./language/index');
 
 // functions dalam ./functions/setting-bot
 let ownerNumber = st.ownerNumber;
@@ -285,7 +285,6 @@ module.exports = client = async (client, mek) => {
        msg = snd;
      } else if (msg === "arab") {
        msg = ar;
-     } else {
      } else if (msg === "Portugis") {
        msg = prtgs;
      } else {
@@ -408,16 +407,6 @@ if(isGroup && budy && isAfk){ //cek Players afk
   await delAfk(sender)
  return m.reply(msg.offAfk)
 }
-	  
-/** 
- * GOOGLE ASISTEN by @alpio adjijanuar
- * maintenance for better experience 
- */
-    
-/**
- * GOOGLE PIYO by @alpio adjijanuar
- * maintenance for better experience 
- */
 
 
 // menambahkan poin ke level dan di akumulasikan untuk menaikkan level
@@ -531,7 +520,7 @@ break
     } else if (value.toLowerCase() === "english") {
       await addBahasa(sender, "english")
       m.reply("Selected English\nNow the bot will reply to your message in English")
-    } else if (value.toLowerCase() === "sunda") {
+    } else if (value.toLowerCase() === "Portugis") {
       await addBahasa(sender, "Portugis")
       m.reply("Português selecionado\n Agora o bot vai responder às suas mensagens em Português")
     } else if (value.toLowerCase() === "jawa") {
