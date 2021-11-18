@@ -1,3 +1,5 @@
+//Hans
+
 // -- send message
 exports.wait = `Mangga antosan sakedap...`;
 exports.bye = `Dadah...`;
@@ -59,7 +61,8 @@ Basa nu bisa dipaké
 - English
 - Jawa
 - Sunda
-- Arab`;
+- Arab
+- Portugis`;
 exports.nolanguage = `Basa teu sadia
 
 Basa nu bisa dipaké
@@ -67,7 +70,8 @@ Basa nu bisa dipaké
 - English
 - Jawa
 - Sunda
-- Arab`;
+- Arab
+- Portugis`;
 exports.online = 'Suksés ngaktipkeun bot dina grup ieu'
 exports.offline = 'Geus hasil mareuman bot dina grup ieu'
 // -- group
