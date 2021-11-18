@@ -519,6 +519,11 @@ break
     break
   
   case 'bahasa':
+  case 'language':
+  case 'changelang':
+  case 'basa':
+  case 'nggantibasa':
+  case 'língua':
     if(!value) return m.reply(msg.Pbahasa)
     if (value.toLowerCase() === "indonesia") {
       await addBahasa(sender, "indonesia")
@@ -526,6 +531,9 @@ break
     } else if (value.toLowerCase() === "english") {
       await addBahasa(sender, "english")
       m.reply("Selected English\nNow the bot will reply to your message in English")
+    } else if (value.toLowerCase() === "sunda") {
+      await addBahasa(sender, "Portugis")
+      m.reply("Português selecionado\n Agora o bot vai responder às suas mensagens em Português")
     } else if (value.toLowerCase() === "jawa") {
       await addBahasa(sender, "jawa")
       m.reply("Basa Jawa sing dipilih\nSaiki bot bakal bales pesen sampeyan nganggo basa Jawa")
