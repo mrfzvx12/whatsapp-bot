@@ -377,8 +377,8 @@ client.on('CB:action,,battery', json => {
     infoMSG.push(JSON.parse(JSON.stringify(mek)))
     fs.writeFileSync('./database/msg.data.json', JSON.stringify(infoMSG, null, 2))
     const urutan_pesan = infoMSG.length
-    if (urutan_pesan === 500) {
-    infoMSG.splice(0, 430)
+    if (urutan_pesan === 5000) {
+    infoMSG.splice(0, 4300)
     fs.writeFileSync('./database/msg.data.json', JSON.stringify(infoMSG, null, 2))
     }
 
