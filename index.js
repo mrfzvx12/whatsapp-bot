@@ -521,7 +521,7 @@ break
       await addBahasa(sender, "english")
       m.reply("Selected English\nNow the bot will reply to your message in English")
     } else if (value.toLowerCase() === "portugis") {
-      await addBahasa(sender, "Portugis")
+      await addBahasa(sender, "portugis")
       m.reply("Português selecionado\nAgora o bot vai responder às suas mensagens em Português")
     } else if (value.toLowerCase() === "jawa") {
       await addBahasa(sender, "jawa")
