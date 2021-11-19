@@ -285,7 +285,7 @@ module.exports = client = async (client, mek) => {
        msg = snd;
      } else if (msg === "arab") {
        msg = ar;
-     } else if (msg === "Portugis") {
+     } else if (msg === "portugis") {
        msg = prtgs;
      } else {
        msg = ind;
