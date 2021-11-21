@@ -440,12 +440,9 @@ END:VCARD
     */
     
 
-    async adReply(from, path, type, title, body, thumbnail, url, quoted, ptt){
+    async adReply(from, path, type, title, body, thumbnail, url, quoted){
       this.sendMessage(from, path, type, {
-        ptt: ptt,
         quoted: quoted,
-        filename: title,
-        mimetype: 'audio/mp4',
         contextInfo: {
           mentionedJid: this.parseMention(path),
           externalAdReply: {
@@ -463,8 +460,8 @@ END:VCARD
       this.sendMessage(from, path, type, {
         ptt: ptt,
         quoted: quoted,
-        filename: title,
-        mimetype: 'audio/mp4',
+        filename: title + '.mp3',
+        mimetype: 'audio/mp3',
         contextInfo: {
           externalAdReply: {
             title: title,
@@ -481,7 +478,7 @@ END:VCARD
     async adReplyVideo(from, path, type, title, body, thumbnail, url, quoted){
       this.sendMessage(from, path, type, {
         quoted: quoted,
-        filename: title,
+        filename: title + '.mp4',
         mimetype: 'video/mp4',
         contextInfo: {
           externalAdReply: {
