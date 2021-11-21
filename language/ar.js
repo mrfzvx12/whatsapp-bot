@@ -1,3 +1,8 @@
+// vn command
+exports.vnCmd = (v) => {
+  return 'استخدم الأوامر باستخدام الملاحظات الصوتية ، وقم بتنشيطها باستخدام الأوامر ' + v + 'voicecommand on/off';
+};
+
 // -- send message
 exports.wait = `من فضلك انتظر لحظة...`;
 exports.bye = `آمنة...`;
