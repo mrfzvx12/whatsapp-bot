@@ -1,4 +1,8 @@
 //Hans
+// vn command
+exports.vnCmd = (v) => {
+  return 'Use comandos usando anotações de voz, ative usando comandos ' + v + 'voicecommand on/off';
+};
 
 // -- send message
 exports.wait = `Por favor espere um momento...`;
