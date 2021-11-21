@@ -164,7 +164,8 @@ let isAuthor = st.author;
 let isPackname = st.packname;
 let isWm = st.wm;
 let isTotalcmd = st.totalcommand;
-let hujanapi = st.hujanApi
+let hujanapi = st.hujanApi;
+let linkIg = st.linkIg;
 // -- thumbnail
 let thumb = fs.readFileSync('./temp/thumb.jpeg'); // !! jangan ganti, mau ganti ada casenya
 
@@ -1400,7 +1401,7 @@ case 'nightcore':
    capt += minggu.data.isi.love + '\n\n'
    capt += minggu.data.isi.keuangan
    thumb = await getBuffer(minggu.data.thumb)
-   client.adReply(from, capt, text, 'Zodiak Mingguan', tanggal, thumb, 'https://www.instagram.com/p/CTKtDqeBgY5/?utm_medium=copy_link')
+   client.adReply(from, capt, text, 'Zodiak Mingguan', tanggal, thumb, linkIg)
    break
 
  case 'zodiakharian':
@@ -1411,7 +1412,7 @@ case 'nightcore':
    capt += harian.isi.love + '\n\n'
    capt += harian.isi.keuangan
    thumb = await getBuffer(harian.thumb)
-   client.adReply(from, capt, text, 'Zodiak Harian', tanggal, thumb, 'https://www.instagram.com/p/CTKtDqeBgY5/?utm_medium=copy_link')
+   client.adReply(from, capt, text, 'Zodiak Harian', tanggal, thumb, linkIg)
    break
  
 case 'joox':
@@ -1427,7 +1428,7 @@ case 'joox':
     lagu = hasil.mp3
     jooxy = await getBuffer(foto)
     path = await getBuffer(lagu)
-    client.adReplyAudio(from, path, document, judul+' - '+artis, artis+' ('+album+')', jooxy, 'https://www.instagram.com/p/CTKtDqeBgY5/?utm_medium=copy_link')
+    client.adReplyAudio(from, path, document, judul+' - '+artis, artis+' ('+album+')', jooxy, linkIg)
   break
 
  case 'ytsearch':
@@ -1459,7 +1460,7 @@ case 'joox':
    msg = res.map(({ title, link, snippet}) => {
     return `*${title}*\n${link}\n${snippet}`
   }).join`\n\n`
-   await client.adReply(from, msg, text, 'GOOGLE SEARCH : ' + value, tanggal, thumb, 'https://www.instagram.com/p/CTKtDqeBgY5/?utm_medium=copy_link')
+   await client.adReply(from, msg, text, 'GOOGLE SEARCH : ' + value, tanggal, thumb, linkIg)
    break
 
  case "playstore":
@@ -1655,7 +1656,7 @@ Judul : ${link[2].title}`
    capt += '\n*Level* : ' + cekLevel(siapa)
    capt += '\n*Poin* : ' + cekPoin(siapa)
    capt += '\n*Warning* : ' + cekWarn(siapa)
-   client.adReply(from, capt, text, 'Profile from database', tanggal, thumb, 'https://www.instagram.com/p/CTKtDqeBgY5/?utm_medium=copy_link', mek)
+   client.adReply(from, capt, text, 'Profile from database', tanggal, thumb, linkIg, mek)
    break
  
  case 'grouplist':
@@ -1729,7 +1730,7 @@ break
    capt += '\n*Detected* : ' + isDetect
    capt += '\n*Welcome* : ' + isWelcome
    capt += '\n\n*Deskripsi* : ' + groupDesc 
-   client.adReply(from, capt, text, groupName, tanggal, thumb, 'https://www.instagram.com/p/CTKtDqeBgY5/?utm_medium=copy_link')
+   client.adReply(from, capt, text, groupName, tanggal, thumb, linkIg)
 break
  
  
@@ -2530,7 +2531,7 @@ fungsi = `
    tag = '@'+sender.split('@')[0]
    if(value.toLowerCase() === 'welcome') {
      capt = welc.replace('@tag', tag).replace('@nama', pushname).replace('@about', about).replace('@tanggal', tanggal).replace('@group', groupName)
-     client.adReply(from, capt, text, 'Selamat datang member baru', 'Member ke ' + groupMembers.length + ' Group ' + groupName, thumb, 'https://www.instagram.com/p/CTKtDqeBgY5/?utm_medium=copy_link');
+     client.adReply(from, capt, text, 'Selamat datang member baru', 'Member ke ' + groupMembers.length + ' Group ' + groupName, thumb, linkIg);
      } else if(value.toLowerCase() === 'bye') {
        capt = bye.replace('@tag', tag).replace('@nama', pushname).replace('@about', about).replace('@tanggal', tanggal).replace('@group', groupName)
        m.reply(capt)
@@ -2699,7 +2700,7 @@ switch(VoiceCommand) {
    msg = way.map(({ title, link, snippet}) => {
     return `*${title}*\n${link}\n${snippet}`
   }).join`\n\n`
-   await client.adReply(from, msg, text, 'GOOGLE SEARCH : ' + value, tanggal, thumb, 'https://www.instagram.com/p/CTKtDqeBgY5/?utm_medium=copy_link')
+   await client.adReply(from, msg, text, 'GOOGLE SEARCH : ' + value, tanggal, thumb, linkIg)
    break
 
   case 'play': 
