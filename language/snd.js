@@ -1,4 +1,8 @@
 //Hans
+// vn command
+exports.vnCmd = (v) => {
+  return 'Anggo paréntah nganggo vpice note, aktipkeun nganggo paréntah ' + v + 'voicecommand on/off';
+};
 
 // -- send message
 exports.wait = `Mangga antosan sakedap...`;
