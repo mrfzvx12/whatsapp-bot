@@ -11,7 +11,7 @@
     "url": "git+https://github.com/mrfzvx12/whatsapp-bot.git"
   },
   "dependencies": {
-    "@adiwajshing/baileys": "^3.5.2",
+    "@adiwajshing/baileys": "^3.5.3",
     "@iamtraction/google-translate": "^1.1.2",
     "@vitalets/google-translate-api": "^7.0.0",
     "async": "^2.4.1",
