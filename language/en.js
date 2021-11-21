@@ -1,3 +1,8 @@
+// vn command
+exports.vnCmd = (v) => {
+  return 'Use commands using voice notes, activate using commands ' + v + 'voicecommand on/off';
+};
+
 // -- send message
 exports.wait = `Please wait a moment...`;
 exports.bye = `Goodbye...`;
