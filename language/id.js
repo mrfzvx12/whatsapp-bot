@@ -1,3 +1,8 @@
+// vn command
+exports.vnCmd = (v) => {
+  return 'Gunakan perintah menggunakan voice note, aktifkan menggunakan perintah ' + v + 'voicecommand on/off';
+};
+
 // -- send message
 exports.wait = `Mohon tunggu sebentar...`;
 exports.bye = `Selamat tinggal...`;
