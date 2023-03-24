@@ -53,7 +53,7 @@
     "request": "^2.88.2",
     "scraper-instagram": "^1.0.17",
     "similarity": "^1.2.1",
-    "spinnies": "^0.3.2",
+    "spinnies": "^0.5.1",
     "tiktok-scraper-without-watermark": "^1.0.6",
     "yt-search": "^2.10.2"
   },
